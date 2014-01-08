@@ -53,8 +53,8 @@ The FLOW app is an Android app that runs on phones or tablets. Users can log in 
 
 #### Technical design documents
 The technical design documents 
-* [Data Model](TechnicalDesign/Dashboard/DataModel.md) - The data model used in the dashboard
-
+* [Data Model](TechnicalDesign/Server/DataModel.md) - The data model used in the dashboard
+* [Services model](TechnicalDesign/Server/Services.md) - The services used by the backend
 
 ## User roles
 We have defined a number of user roles, representing ways that people with different roles can interact with the system. Each roles has a detailed description in the form of a persona. The user roles are:
