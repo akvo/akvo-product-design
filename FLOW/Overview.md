@@ -33,28 +33,28 @@ A technical design describes the internal implementation of the program. It talk
 The FLOW Dashboard is the web-based location where users access and manage their FLOW data. All the data collected through FLOW is stored and processed in the Dashboard. It is also where users can run reports, create and edit surveys, and edit data. Each organization has its own URL to access its online Dashboard.
 
 The Dashboard is organised in sections, each of which represent a functional unit of the system. Each section links to its functional design document.
-* [Surveys](FunctionalDesign/Dashboard/Surveys.md) - Create, edit and publish surveys
-* [Devices](FunctionalDesign/Dashboard/Devices.md) - Manage the devices connected with your Akvo FLOW Dashboard
-* [Data](FunctionalDesign/Dashboard/Data.md) - View, edit, import and clean data collected with Akvo FLOW surveys
-* [Reports](FunctionalDesign/Dashboard/Reports.md) - Viewing and exporting data and results from your surveys
-* [Maps](FunctionalDesign/Dashboard/Maps.md) - Shows the surveys collected with a GPS location as points on a map
-* [Users](FunctionalDesign/Dashboard/Users.md) - Defining users and their permissions
+* [Surveys](Features/Dashboard/FunctionalDesign/Surveys.md) - Create, edit and publish surveys
+* [Devices](Features/Dashboard/FunctionalDesign/Devices.md) - Manage the devices connected with your Akvo FLOW Dashboard
+* [Data](Features/Dashboard/FunctionalDesign/Data.md) - View, edit, import and clean data collected with Akvo FLOW surveys
+* [Reports](Features/Dashboard/FunctionalDesign/Reports.md) - Viewing and exporting data and results from your surveys
+* [Maps](Features/Dashboard/FunctionalDesign/Maps.md) - Shows the surveys collected with a GPS location as points on a map
+* [Users](Features/Dashboard/FunctionalDesign/Users.md) - Defining users and their permissions
 * [Messages](FunctionalDesign/Dashboard/Messages.md) - Lists messages on your dashboard related to activity with surveys and data processing activity
-* [Admin](FunctionalDesign/Dashboard/Admin.md) - Activities for super users (typically Akvo staff)
+* [Admin](Features/Dashboard/FunctionalDesign/Admin.md) - Activities for super users (typically Akvo staff)
 
 #### FLOW app functional design documents
 The FLOW app is an Android app that runs on phones or tablets. Users can log in to the app, download surveys, fill in surveys, and submit data. Users can also download data, if monitoring features are used. Functional elements are:
-* [Users](FunctionalDesign/App/Users.md) - login services, authorization, enumerator versus field manager role, user creation
-* [Surveys](FunctionalDesign/App/Surveys.md) - download surveys, display and complete surveys, see statistics
-* [Data Storage & Synch](FunctionalDesign/App/DataSync.md) - data storage, online and offline synchronization
-* [Monitoring features](FunctionalDesign/App/MonitoringFeatures.md) - downloading and updating existing data
-* [Languages](FunctionalDesign/App/Languages.md) - multi-lingual display of surveys and user interface
-* [RemoteManagement](FunctionalDesign/App/RemoteManagement.md) - updating the app, reporting exceptions to the server
+* [Users](Features/App/FunctionalDesign/Users.md) - login services, authorization, enumerator versus field manager role, user creation
+* [Surveys](Features/App/FunctionalDesign/Surveys.md) - download surveys, display and complete surveys, see statistics
+* [Data Storage & Synch](Features/App/FunctionalDesign/DataSync.md) - data storage, online and offline synchronization
+* [Monitoring features](Features/App/FunctionalDesign/MonitoringFeatures.md) - downloading and updating existing data
+* [Languages](Features/App/FunctionalDesign/Languages.md) - multi-lingual display of surveys and user interface
+* [RemoteManagement](Features/App/FunctionalDesign/RemoteManagement.md) - updating the app, reporting exceptions to the server
 
 #### Technical design documents
 The technical design documents 
-* [Data Model](TechnicalDesign/Server/DataModel.md) - The data model used in the dashboard
-* [Services model](TechnicalDesign/Server/Services.md) - The services used by the backend
+* [Data Model](Features/Dashboard/TechnicalDesign/DataModel.md) - The data model used in the dashboard
+* [Services model](Features/Dashboard/TechnicalDesign/Services.md) - The services used by the backend
 
 ## User roles
 We have defined a number of user roles, representing ways that people with different roles can interact with the system. Each roles has a detailed description in the form of a persona. The user roles are:
