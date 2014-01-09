@@ -52,7 +52,9 @@ An Enumerator opens the app on a device, and logs in. He syncs the app, which wi
 
 With the proper survey group selected, the device displays a list of current known records. If there are none, a message is displayed. The enumerator can start a new record by clicking a 'plus' icon in the action bar of the device, or, perhaps, by clicking a 'create new record' button on top of the list of records.
 
-When the enumerator starts a new record, a screen is shown which displays on top the id of the record, and the surveys available in the survey group. At this stage, only the special 'registration' survey is accessible, the rest are grayed out. The enumerator opens this survey, fills it in, and submits it. He then returns to the screen showing the record id, which now also shows the meta-data taken from the filled-in survey, plus the other available surveys. Now, the registration survey is not available any more, and is grayed out. The rest is available. 
+When the enumerator starts a new record, the registration form is immediately opened. The enumerator fills in the form and submits it. He then returns to the screen showing the record id, which now also shows the meta-data taken from the filled-in survey, plus the other available surveys. Now, the registration survey is not available any more, and is grayed out. The rest is available. 
+
+If the enumerator wants to change the information filled in using the registration form, another 'update registration information' form needs to be present.
 
 The enumerator can now either fill in a survey within this record, or leave the record and create a new one, or select an other existing one.
 
@@ -73,3 +75,16 @@ To allow different surveys to add information to the 'same' piece of information
 
 ### Open issues
 * historic reporting  - how to visualise the history of a record, for example water meter reading, or status of a water point?
+
+### Domain language
+To clarify what we mean by terms, here is a list of domain language:
+
+1. **Data** is collected on **entities**
+2. Data is collected with **forms**
+3. To users, an entity is identified by means of some **identifying data**, which is collected using a the **registration form** form, and which is saved as a single **meta-data** string on the entity record
+4. The combination of the registration form plus other forms is called **entity record**
+
+### Workflow details
+* The simplest case: use a single form to collect data about an entity in a single point in time
+* The complex case: use multiple forms to collect data about an entity accross time
+* The only purpose of the registration form is to start collecting data on the entity across time. If in a later stage an enumerator wants to change the registration information, a separate form is needed. By creating the update survey as a copy of the registration survey, the update survey can prefill the values from a registration survey.
