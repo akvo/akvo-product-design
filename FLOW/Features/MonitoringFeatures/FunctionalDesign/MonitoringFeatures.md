@@ -6,9 +6,6 @@ Github issues:
 https://github.com/akvo/akvo-flow/issues/276
 https://github.com/akvo/akvo-flow-mobile/issues/32
 
-Functional design document:
-https://github.com/akvo/akvo-product-design/FLOW/FunctionalDesign/Features/MonitoringFeatures.md
-
 ### Overview
 Monitoring features will enabe users to download data on existing points on their phones, and add information to these points This feature introduces the concept of a 'monitored entity', which has a identity and can be tracked over time. Multiple different surveys can contribute data to a single entity.
 
