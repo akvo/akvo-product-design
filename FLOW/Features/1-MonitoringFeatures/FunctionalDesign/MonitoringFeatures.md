@@ -11,6 +11,13 @@ Monitoring features will enabe users to download data on existing points on thei
 
 This can be visualised by comparing it with record files containing paper forms: one of the forms creates the record file, and other forms can be added to the record file. A special form may also exist which archives or closes the record file. The enumerator has access to a certain set of record files, including the forms contained in them.
 
+### Marketing description
+**Track things over time with the new FLOW Monitoring Feature**
+
+Taking a survey of something, be it a water point, a person, or a school, is usually a one-time thing. You collect data, analyse the data, take action, and that's it. But in many cases, you also want to go back at a later date, and do a follow-up: is this pump still working? Has the income of this person changed? Has that schools' latrine been repaired? This is what we call monitoring: observing the progress of quality of something, some 'entity', over a period of time.
+
+Using the new *Monitoring features* enables Akvo FLOW users to do this. Regular survey forms can be used to register entities, so they can be retrieved later for further data collection. FLOW users can download existing entities to their phones, and add information using additional survey forms. This makes it possible to see how data has changed over time, or to collect new properties of the same entity.
+
 ### Initial features
 * Surveys can be grouped in a 'Monitoring group'
 * One 'registration' survey has the ability to create new 'monitored entities'
