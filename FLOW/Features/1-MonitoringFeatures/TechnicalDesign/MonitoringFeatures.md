@@ -21,13 +21,13 @@ Monitoring Features Technical Design
 * Data that is part of a Monitored survey group can be exported as raw data files. A single survey will be exported as a single file. The surveyedLocale will be included as the first column
 * Data can also be exported as a comprehensive report. This will assemble the data from surveyedLocales and bring them together in a single excel file. One option to do this is have a structure such as this:
 
-localeId	surveyId	surveyName					Survey 1					Survey 2					Survey 3
-											---------------------	---------------------------		-----------------------------------
-											Question1 	Question2 	Question1	Question2	...		Question1	...
-1			1			Registration		Mark		Westra
-1			2			Bloodtest									12-2-2012	120.5
-1			2			Bloodtest									17-2-2012	110.3
-1			3			Psych. test																	17-2-2012	a bit stressed				
-2			1			Registration		Iván		Perdomo	
-2			2			Bloodtest									13-2-2013	117.5
-2			3			Psych. test																	18-2-2012	healthy	
+|localeId|surveyId|surveyName  | Question1 |Question2| ... |Question1|Question2 | ...|Question1| Question2|
+|---|----|----|----|----|----|----|---|---|---|---|
+|||| Survey 1 |||Survey 2|||Survey 3||
+|1|	1|	Registration|	Mark|Westra|||||||
+|1|	2|	Bloodtest|	|||12-2-2012|120.5||||
+|1|	2|	Bloodtest	||||17-2-2012|110.3||||
+|1|	3|	Psych. test	|||||||17-2-2012|a bit stressed|			
+|2|	1|	Registration|	Iván|Perdomo|||||||
+|2|	2|	Bloodtest	||||13-2-2013|117.5||||
+|2|	3|	Psych. test	|||||||18-2-2012|healthy|
