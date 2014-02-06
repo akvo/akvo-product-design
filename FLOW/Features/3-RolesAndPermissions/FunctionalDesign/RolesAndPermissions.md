@@ -29,7 +29,27 @@ Scenario 3:  A small NGO has implemented a gender equality/economic development 
 Scenario 4:  You are the Project Manager for a malaria-related program based in West Africa.  Your primary task is to manage a group of 50 enumerators.  First you need to make sure all everyone’s device is connected to the dashboard.  To do this, a bulk upload works best.  From inside the app, where you would normally see the option to set a User and Device ID, select “Bulk Upload.”  Visit the Devices tab on the dashboard to check if the device is listed.  If they are, you are all set to go.
 
 ### User Experience 
-How the user experiences the feature, what is the workflow
+
+A Regional Manager, a Project Manager, and a group of Enumerators team up for a water-mapping project in rural Kenya.  An Enumerator gets tasked to go out into the field to map water points and determine if they are 1) functional, and 2) drinkable, or not.  The Enumerator shows up at work and talks to his Project Manager about specific locations he should be mapping and what data he should be collecting. The Project Manager gives the Enumerator a map of three surrounding villages and a device with which to collect data. 
+Device	Dashboard
+Mobile User	User
+Device Admin	Admin
+	Super Admin (Akvo staff)
+
+Table 1: Permission levels on the device and on the dashboard.
+
+Mobile User
+
+The Enumerator, with a Mobile User permission on the Android, opens the app on his device, and logs in.  He syncs the app, which will cause the device to download any survey groups and surveys assigned to him.  He selects the survey group that he knows contains the survey he will be working with.  The Enumerator can start a new record by clicking a 'plus' icon in the action bar of the device, or, perhaps, by clicking a 'create new record' button on top of the list of records.  When the Enumerator starts a new record, the registration form is immediately opened.  The enumerator fills in the form and submits it. 
+
+Mobile Admin, User on the Dashboard
+
+The Project Manager, with Mobile Admin on the Android and User status on the dashboard, has built the survey, so there is no need for the Enumerator to add or edit the survey or the survey responses.  With a User permission level on the dashboard, the Project Manager is able to create, edit, publish and delete surveys and assign devices.  The Project Manager logs into her organization’s dashboard, adds a new group and creates a survey.  She then assigns it to one or many device(s), at which point it becomes available for the Enumerators.
+
+
+Admin and Super Admin on the Dashboard
+
+The Regional Manager has an Admin permission level.  He can log into the dashboard and can see across survey groups and can create and copy surveys.  He can also export data to a spreadsheet and edit it.  Super Admin is a permission level reserved for Akvo staff and with it comes full access to the Dashboard.
 
 ### Technical notes
 Any technical issues or questions that are already known
