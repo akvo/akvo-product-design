@@ -38,7 +38,7 @@ Device Admin	Admin
 
 Table 1: Permission levels on the device and on the dashboard.
 
-Mobile User
+**Mobile User**
 
 The Enumerator, with a Mobile User permission on the Android, opens the app on his device, and logs in.  He syncs the app, which will cause the device to download any survey groups and surveys assigned to him.  He selects the survey group that he knows contains the survey he will be working with.  The Enumerator can start a new record by clicking a 'plus' icon in the action bar of the device, or, perhaps, by clicking a 'create new record' button on top of the list of records.  When the Enumerator starts a new record, the registration form is immediately opened.  The enumerator fills in the form and submits it. 
 
