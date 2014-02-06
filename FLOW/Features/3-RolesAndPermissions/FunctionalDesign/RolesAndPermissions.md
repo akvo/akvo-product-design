@@ -42,12 +42,12 @@ Table 1: Permission levels on the device and on the dashboard.
 
 The Enumerator, with a Mobile User permission on the Android, opens the app on his device, and logs in.  He syncs the app, which will cause the device to download any survey groups and surveys assigned to him.  He selects the survey group that he knows contains the survey he will be working with.  The Enumerator can start a new record by clicking a 'plus' icon in the action bar of the device, or, perhaps, by clicking a 'create new record' button on top of the list of records.  When the Enumerator starts a new record, the registration form is immediately opened.  The enumerator fills in the form and submits it. 
 
-Mobile Admin, User on the Dashboard
+**Mobile Admin, User on the Dashboard**
 
 The Project Manager, with Mobile Admin on the Android and User status on the dashboard, has built the survey, so there is no need for the Enumerator to add or edit the survey or the survey responses.  With a User permission level on the dashboard, the Project Manager is able to create, edit, publish and delete surveys and assign devices.  The Project Manager logs into her organization’s dashboard, adds a new group and creates a survey.  She then assigns it to one or many device(s), at which point it becomes available for the Enumerators.
 
 
-Admin and Super Admin on the Dashboard
+**Admin and Super Admin on the Dashboard**
 
 The Regional Manager has an Admin permission level.  He can log into the dashboard and can see across survey groups and can create and copy surveys.  He can also export data to a spreadsheet and edit it.  Super Admin is a permission level reserved for Akvo staff and with it comes full access to the Dashboard.
 
