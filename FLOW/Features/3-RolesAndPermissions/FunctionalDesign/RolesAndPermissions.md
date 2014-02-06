@@ -5,7 +5,6 @@ Roles and Permissions - Functional design
 Links to relevant issues
 
 ### Overview
-A short overview of what we try to accomplish
 
 Roles and Permissions describe the different levels of an individual’s access on the Akvo FLOW dashboard.  The dashboard includes several tabs: surveys, devices, data, reports, maps, users, and messages.  Access to the information in these tabs is limited depending on an individual’s role and permission level, i.e., “user” versus “admin”.  For example, certain people are able to edit the contents of a survey while others are not.  Roles and Permissions restrict survey group based access as well.
 
