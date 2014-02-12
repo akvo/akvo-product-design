@@ -1,0 +1,48 @@
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+.\#*
+
+# Org-mode (Emacs)
+.org-id-locations
+*_archive
+
+# Vim
+*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# SublimeText project files
+*.sublime-workspace
+
+# Textmate
+*.tmproj
+*.tmproject
+tmtags
+
+# Linux
+.*
+!.gitignore
+*~
+
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
