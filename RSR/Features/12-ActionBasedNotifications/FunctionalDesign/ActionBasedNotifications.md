@@ -27,8 +27,8 @@ To make it easy to mange *your* RSR projects Akvo are introducing notifications.
 *Since a working implementation for notifications in general is fundamental to email notifications; consider implementing non email features first. This will also provide a test case for how many notifications a user will get.*
 	
 ## Non goals
-- Besied subscription, donation & notification(enabled email) notifications, add on project update
-- How about those email templates
+- For the first phase don't implement notifications for project updates, comments or data modifications
+- How about those email templates?
 
 ## Scenarios
 **Scenario 1 - Subscribe to projects**  

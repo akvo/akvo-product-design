@@ -37,7 +37,8 @@ Events happen to an *entity*, the entity can be a project, an organisation or ev
 
 
 ## RSR
-When RSR have saved a new donation to it's database and are about to return the response we will send of a message to the message queue and then return the response quickly. We will probably use signals to hook in our code, making RSR act as a producer and hand of events as messages to the message queue. Messages could look something like this (using JSON):
+When RSR have saved a new donation to it's database and are about to return the response we will send of a message to the message queue and then return the response quickly. We will probably use signals to hook in our code, making RSR act as a producer and hand of events as messages to the message queue. Messages could look something like this (using JSON):  
+```json
 {
  'type': 'project-donation',
  'body': {
@@ -50,11 +51,27 @@ When RSR have saved a new donation to it's database and are about to return the 
           ...
           }
 }
+```
+and   
+
+```json
+{
+ 'type': 'follow-project',
+ 'body': {
+ 		  'service': 'akvo-rsr',
+ 		  'project': <n>,
+          'follower': <x>,
+          'role': ?,
+          'when': <y>,
+          ...
+          }
+}
+```
 
 Key here is that we would have a message 'type', in this example *project-donation*.
 
 ## Message queue
-If we have types of messages we can add message 'handlers' to that queue type and keep our services simple. Initial experimentation have been with RabbitMQ.
+If we have types of messages we can add message 'handlers' to that queue type and keep our services simple. Initial experimentation have been with RabbitMQ. 
 
 ## Service
 
@@ -62,13 +79,14 @@ If we have types of messages we can add message 'handlers' to that queue type an
 Depending on how much logic we put into the message queue this might not be that much.
 
 ### Datastore
+We should store an imutable log (list) data strucutre that represents both Entities and the user event log.
 I would argue to use our current mysql db, unless we want to make a go at introducing Postgres (I know this is on the todo list and also seem to be what the future looks like).
 
 ### API
 RSR needs to:
 - get notifications per user
-- set notifications to *read*
-- manage user conf
+- set notifications as *read*
+- manage user profile (settings & email verification confirmation)
 
 ### Email
 We should probably have an email handler should listen to different email events. 
