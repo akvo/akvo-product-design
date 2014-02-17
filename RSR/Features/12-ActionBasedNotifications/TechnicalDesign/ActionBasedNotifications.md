@@ -2,6 +2,7 @@
 *Action Based Notifications*
 
 ## References
+- [Functional Design](https://github.com/akvo/akvo-product-design/blob/master/RSR/Features/12-ActionBasedNotifications/FunctionalDesign/ActionBasedNotifications.md)
 - [#12@product-design](https://github.com/akvo/akvo-product-design/issues/12)
 - [#444@rsr](https://github.com/akvo/akvo-rsr/issues/444)
 - [#229@rsr](https://github.com/akvo/akvo-rsr/issues/229)
@@ -10,86 +11,86 @@
 
 
 ## Overview
-RSR will push messages to a message queue from which a notification service will consume messages. The notification service will have to route & *massage* notifications to the users notification log. The log should consist of read and unread notifications. A user will have to enable email notifications via email. Email notifications can be configured as *direct* or *summary*(end of month).
+From within the RSR request/response loop we will push a message queue. We will have an external service consuming these messages. The external service will then handle notification routing and persistence. There are several advantages with this approach that validated the introduction to additional moving parts. We should not do too much in the RSR request/response cycle, it's not performant. Even if a new service adds moving parts it gives us the oportunity to break out distinct functionallity and stay away from complecting the request path.
 
-Events happen to an *entity*, the entity can be a project, an organisation or even a user; e.g.: 
+There will be need to have a log per entity event (project, organisation user) but also an log per user notification. To make it easier to reason about events are the thing RSR send to the message queue, and those are loged to the entity. Once we put an event on log file which we will show the user, we call those notifications instead (think request/response). 
 
-- **Project**  
-  A donation to project x
-- **Organisation**  
-  A new user joined organisation y
-- **User**  
-  A user subscribed to project x
+The notification log should have a way to define what notifications are read and which are not. 
 
-### Items
-- RSR (service that act as a producer)
-- Message queue
-- Service
-	- Routing (we might be able push logic into the message queue to simplify our service)
-	- Datastore (entity, user conf, user log)
-	- API (for RSR to use)
-	- Email 'firehose' 
-- Workflow
-	- Add to entity log
-	- Add to users that have a subscription to that entity (RSR IDs?)
-		- if emails are configured to be send directly, create an email event and mark notification as *sent via email*
-		- else add to the notification list
+If email notification are set to *direct* emails should be sent directly. If they are set to *summary* we will have to store those and send them at the end of the month.
 
 
-## RSR
-When RSR have saved a new donation to it's database and are about to return the response we will send of a message to the message queue and then return the response quickly. We will probably use signals to hook in our code, making RSR act as a producer and hand of events as messages to the message queue. Messages could look something like this (using JSON):  
-```json
-{
- 'type': 'project-donation',
- 'body': {
- 		  'service': 'akvo-rsr',
- 		  'project': <n>,
-          'from': <x>,
-          'amount': <n>,
-          'currency': <z>,
-          'when': <y>,
-          ...
-          }
-}
-```
-and   
+## Scenarios
+
+### 1 - Subscribe to projects
+When a user clicks the follow button RSR will post a message that might look something like this (only to get a feeling of the data flow):
 
 ```javascript
 {
- 'type': 'follow-project',
+ 'queue': 'follow-project',
  'body': {
  		  'service': 'akvo-rsr',
- 		  'project': <n>,
-          'follower': <x>,
-          'role': ?,
-          'when': <y>,
+ 		  'project': 42,
+          'follower': 93,
+          'when': <datetime>,
           ...
-          }
+          },
+  'meta': {'content-type': 'application/json', 'type': '...', 'datetime': '?'}
 }
 ```
 
-Key here is that we would have a message 'type', in this example *project-donation*.
+When the service handles the message, the user 93 is set as a subscriber to project 42. All events that project 42 emits from now on will be added to user 93's notification list.
 
-## Message queue
+
+### 2 - Donation notification
+When a donation is completed send a message to the service.
+
+```javascript
+{
+ 'queue': 'project-donation',
+ 'body': {
+ 		  'service': 'akvo-rsr',
+ 		  'project': 42,
+ 		  'amount': 5,
+ 		  'currency': 'EUR',
+ 		  'when': <datetime>,
+          },
+  'meta': {'content-type': 'application/json', 'type': '...', 'datetime': '?'}
+}
+```
+
+When the service handles the message the event is added to project 42's event list (if the project does not have eny events we need to add the project entity). We also need to add a notification log for all users that follows project 42.
+
+
+### 3 - Enabling email notifications
+...
+
+### 4 - Donation notification
+...
+
+## Problems
+Different subscription lists per role.
+
+
+## Moving parts
+
+### RSR
+The changes to RSR should not be substantial, the issue is to make sure to send messages at the correct code *locations*. At the other end we need to query the service for notifications and make them visible in the myAkvo. 
+
+### Message queue
 If we have types of messages we can add message 'handlers' to that queue type and keep our services simple. Initial experimentation have been with RabbitMQ. 
 
-## Service
+### Service
+- **Routing**  
+  Depending on how much logic we put into the message queue this might not be that much. We could have seperate queue handlers per use case and keep the code very simple.
+- **Logic**  
+  Handle fanout of events to notifications attached to users
+- **Datastore**  
+  We should store an imutable log (list) data strucutre that represents both Entities and the user event log. I would argue to use our current mysql db, unless we want to make a go at introducing Postgres.
+- **API**  
+  - get notifications per user
+  - set notifications as *read*
+  - manage user profile (settings & email verification confirmation)
+- **Email**  
+  Depending on what prodiver/solution we chose we need to push calls for emails to another party. If we use MailChimp as was suggested we need to update list per entity and also manage template crafting.
 
-### Routing
-Depending on how much logic we put into the message queue this might not be that much.
-
-### Datastore
-We should store an imutable log (list) data strucutre that represents both Entities and the user event log.
-I would argue to use our current mysql db, unless we want to make a go at introducing Postgres (I know this is on the todo list and also seem to be what the future looks like).
-
-### API
-RSR needs to:
-- get notifications per user
-- set notifications as *read*
-- manage user profile (settings & email verification confirmation)
-
-### Email
-We should probably have an email handler should listen to different email events. 
-
-## Issues
-If we send direct emails about events, should the notification in the UI be mark as read? I don't think so. Maybe in the future we could detect if an email is read or not.
