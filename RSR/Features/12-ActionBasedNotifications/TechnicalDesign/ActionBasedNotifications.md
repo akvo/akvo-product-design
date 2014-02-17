@@ -21,7 +21,7 @@ Events happen to an *entity*, the entity can be a project, an organisation or ev
 - **User**  
   A user subscribed to project x
 
-### Things
+### Items
 - RSR (service that act as a producer)
 - Message queue
 - Service
@@ -54,7 +54,7 @@ When RSR have saved a new donation to it's database and are about to return the 
 ```
 and   
 
-```json
+```javascript
 {
  'type': 'follow-project',
  'body': {
