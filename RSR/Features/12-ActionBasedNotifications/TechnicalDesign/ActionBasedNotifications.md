@@ -75,7 +75,7 @@ Different subscription lists per role.
 ## Moving parts
 
 ### Fancy diagram
-![notifications_v1](https://f.cloud.github.com/assets/31837/2193159/bb336552-9877-11e3-8594-e560c39aaee4.png)
+![notification_service_2](https://f.cloud.github.com/assets/31837/2193228/7fe172f8-9879-11e3-9dde-b449a2f741b2.png)
 
 
 ### RSR
