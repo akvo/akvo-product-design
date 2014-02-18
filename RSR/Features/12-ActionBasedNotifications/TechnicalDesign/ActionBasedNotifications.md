@@ -74,6 +74,10 @@ Different subscription lists per role.
 
 ## Moving parts
 
+### Fancy diagram
+![notifications_v1](https://f.cloud.github.com/assets/31837/2193159/bb336552-9877-11e3-8594-e560c39aaee4.png)
+
+
 ### RSR
 The changes to RSR should not be substantial, the issue is to make sure to send messages at the correct code *locations*. At the other end we need to query the service for notifications and make them visible in the myAkvo. 
 
