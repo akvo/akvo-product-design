@@ -63,17 +63,13 @@ Links to examples:
 
 Initial user scenarios.
 
-1. WASH Liberia
-
-- http://wash-liberia.org
-- http://wash-liberia.org/data-maps/
-- http://wash-liberia.org/wp-content/blogs.dir/6/files/sites/6/2013/01/Final_Review_Version_-_Waterpoint_Atlas___Investment_Plan_x1.pdf
-
-2. SmarterWASH Ghana
-
-3. Akvo - See it happen & pushing data to Akvo Sites.
-
-4. Narrowcasting
+- WASH Liberia
+	- http://wash-liberia.org
+	- http://wash-liberia.org/data-maps/
+	- http://wash-liberia.org/wp-content/blogs.dir/6/files/sites/6/2013/01/Final_Review_Version_-_Waterpoint_Atlas___Investment_Plan_x1.pdf
+- SmarterWASH Ghana
+- Akvo - See it happen & pushing data to Akvo Sites.
+- Narrowcasting
 
 
 ## Tool prototyping / exploration
