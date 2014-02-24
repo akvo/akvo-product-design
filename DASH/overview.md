@@ -53,8 +53,10 @@ Add data (CSV, API, Excel)
 Process this into standardised format
 Produce a library of display options, which allows a user to publish the data visualisations
 
-Links to examples:http://www.gooddata.com/, http://www.tableausoftware.com/trial/tableau-software. gooddata has a good api: http://docs.gooddata.apiary.io/
-
+Links to examples:
+- http://www.gooddata.com/
+- http://www.tableausoftware.com/trial/tableau-software
+- gooddata has a good api: http://docs.gooddata.apiary.io/
 
 
 ##User scenarios
@@ -63,11 +65,9 @@ Initial user scenarios.
 
 1. WASH Liberia
 
-http://wash-liberia.org
-
-http://wash-liberia.org/data-maps/
-
-http://wash-liberia.org/wp-content/blogs.dir/6/files/sites/6/2013/01/Final_Review_Version_-_Waterpoint_Atlas___Investment_Plan_x1.pdf
+- http://wash-liberia.org
+- http://wash-liberia.org/data-maps/
+- http://wash-liberia.org/wp-content/blogs.dir/6/files/sites/6/2013/01/Final_Review_Version_-_Waterpoint_Atlas___Investment_Plan_x1.pdf
 
 2. SmarterWASH Ghana
 
