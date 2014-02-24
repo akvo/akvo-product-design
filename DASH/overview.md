@@ -1,5 +1,4 @@
-What is Akvo DASH?
-===================
+# What is Akvo DASH?
 
 A data mashup system and curated data repository.
 
@@ -25,3 +24,70 @@ Compared to other tools it is a bit like:
 - http://www.pentaho.com/
 
 Software as Service. But open source.
+
+## Service components
+
+- Login service
+- Data import service
+- Data storage
+- UI to manage my data selection
+- Present though
+	- Maps
+	- Graphs
+	- Tables
+	- Other visualisations
+- Present the material on
+	- dash.akvo.org (for everything public)
+	- private and public dashboards
+	- mydomain.dash.akvo.org (for your own branding, like Akvo RSR Pages)
+	- via widgets
+	- via API
+	- data export service
+	- electronic document (pdf / odf)
+
+
+## High Level UX 
+
+Admin interface
+Add data (CSV, API, Excel)
+Process this into standardised format
+Produce a library of display options, which allows a user to publish the data visualisations
+
+Links to examples:http://www.gooddata.com/, http://www.tableausoftware.com/trial/tableau-software. gooddata has a good api: http://docs.gooddata.apiary.io/
+
+
+
+##User scenarios
+
+Initial user scenarios.
+
+1. WASH Liberia
+
+http://wash-liberia.org
+
+http://wash-liberia.org/data-maps/
+
+http://wash-liberia.org/wp-content/blogs.dir/6/files/sites/6/2013/01/Final_Review_Version_-_Waterpoint_Atlas___Investment_Plan_x1.pdf
+
+2. SmarterWASH Ghana
+
+3. Akvo - See it happen & pushing data to Akvo Sites.
+
+4. Narrowcasting
+
+
+## Tool prototyping / exploration
+
+### Database.
+PostgreSQL http://www.postgresql.org
+
+### Visualisations
+Vincent: https://github.com/wrobstory/vincent
+Visualisations on top of D3 with Vega. Vincent makes it easy to build Vega with Python.
+
+### Data structure
+Pandas: http://pandas.pydata.org/
+High-performance, easy-to-use data structures and data analysis tools for Python.
+
+### Data store
+Datastore: Worldbank API, Gooddata API
