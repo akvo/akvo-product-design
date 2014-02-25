@@ -10,10 +10,11 @@
 - [#396@rsr](https://github.com/akvo/akvo-rsr/issues/396)
 
 ## Overview
-The original requirement came from RSR users which wanted to get notified from events happeing. The issue raised the thoguht of building a generic service which other services can also use. 
+The original requirement came from RSR users which wanted to get notified from events happeing. The issue raised the thought of building a generic service which other services can also use. 
 
-In short we would build a service to which services would push notifications, the service would route the events to the correct users' notification log. Users should then have the possibility to besides see notifications in the web UI also be able to get notifications via emails. These emails should be configurable to be either direct or as summaries each month.
+In short we will build a service that other services will emit events towards. The new service will then route the events to the correct users notification log. Users should then have the possibility to notifications in the web UI but also be able to get notifications via emails. These emails should be configurable to be either direct or as summaries each month.
 
+The email feature is something that can happen in phase two.
 
 ## Marketing description
 A notification service will enable a Akvo user to get a notificaiton stream tailored to themselves. 
@@ -43,5 +44,6 @@ Same as the RSR scenario.
 
 
 ## Questions
+- Is there a benefit of having services to register via the API if we want custom emit handlers?
 - Is it appropriate to index users via email? We don't have a global identification service as is so we need to use something. The only alternative I see at the moment is to use RSR internal user id's but that seems very limiting.
 - This raises the question if Akvo should not let the public get an Akvo account. We could have open "Akvo account" & "Akvo trusted network account" (network account). But there are of course implications around this *- difficult stuff*. 

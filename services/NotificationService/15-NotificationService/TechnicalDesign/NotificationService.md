@@ -96,32 +96,34 @@ Initial experiments have been made with Clojure & Compojure. For future developm
 
 
 ## API
-*this is only a quick draft*
+*this is only a quick brain dump*
 
 ;; Services
 /services/
-/services/<id>/
-;; /services/<id>/entities/
-;; /services/<id>/entities/<id>/followers/
-;; /services/<id>/entities/<id>/events/
-;; /services/<id>/entities/<id>/events/last_month/
+/services/<id>/  
+;; /services/<id>/entities/  
+;; /services/<id>/entities/<id>/followers/  
+;; /services/<id>/entities/<id>/events/   
+;; /services/<id>/entities/<id>/events/last_month/  
+;; /services/<id>/types/  
+;; /services/<id>/types/<id>/  
 
-;; /services/<id>/events/last_month/ ;; ?
+;; /services/<id>/events/last_month/ ;; ?  
 
-;; The firehose
-;; /events/
-;; /events/last_month/
+;; The firehose  
+;; /events/  
+;; /events/last_month/  
 
 ;; User
-/users/<id>/preferences/
+/users/<id>/preferences/  
 
-/users/<id>/notifications/
-/users/<id>/notifications/<id>/
-;; /users/<id>/notifications/unread/
-;; /users/<id>/notifications/last_month/
+/users/<id>/notifications/  
+/users/<id>/notifications/<id>/  
+;; /users/<id>/notifications/unread/  
+;; /users/<id>/notifications/last_month/  
 
-/users/<id>/subscriptions/
-/users/<id>/subscriptions/destroy/
+/users/<id>/subscriptions/  
+/users/<id>/subscriptions/destroy/  
 
 ## Issues
 - security between services
