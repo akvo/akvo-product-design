@@ -1,5 +1,5 @@
 # Technical Design
-*Action Based Notifications*
+*Notification service*
 
 ## References
 - [Functional Design](https://github.com/akvo/akvo-product-design/blob/master/RSR/Features/12-ActionBasedNotifications/FunctionalDesign/ActionBasedNotifications.md)
@@ -13,10 +13,6 @@
 ## Overview
 From within the RSR request/response loop we will push a message queue. We will have an external service consuming these messages. The external service will then handle notification routing and persistence. There are several advantages with this approach that validated the introduction to additional moving parts. We should not do too much in the RSR request/response cycle, it's not performant. Even if a new service adds moving parts it gives us the oportunity to break out distinct functionallity and stay away from complecting the request path.
 
-The notification service will expose a REST API which RSR then can consume for it's public facing myAkvo UI.
-
-![rsr notifications](https://f.cloud.github.com/assets/31837/2228742/08d11d66-9ae1-11e3-93ea-08edf3a20f51.png)
-
 There will be need to have a log per entity event (project, organisation user) but also an log per user notification. To make it easier to reason about events are the thing RSR send to the message queue, and those are loged to the entity. Once we put an event on log file which we will show the user, we call those notifications instead (think request/response). 
 
 The notification log should have a way to define what notifications are read and which are not. 
@@ -27,7 +23,7 @@ If email notification are set to *direct* emails should be sent directly. If the
 ## Scenarios
 
 ### 1 - Subscribe to projects
-When a user clicks the follow button RSR will post a message that might look something like this (example JSON):
+When a user clicks the follow button RSR will post a message that might look something like this (only to get a feeling of the data flow):
 
 ```javascript
 {
@@ -72,15 +68,66 @@ When the service handles the message the event is added to project 42's event li
 ### 4 - Donation notification
 ...
 
+## Problems
+Different subscription lists per role.
 
-## Event emitting
-The changes to RSR should not be substantial, the issue is to make sure to send messages at the correct code *locations* via *Django signals*. Initial tests have been make with RabbitMQ and the Python Pika library.
 
-## Notification UI
-Consume REST API & present it.
+## Moving parts
 
-- How do we deal with security?
-- How exposed to the outside is this service?
+### Fancy diagram
+![notification_service_2](https://f.cloud.github.com/assets/31837/2193228/7fe172f8-9879-11e3-9dde-b449a2f741b2.png)
+
+
+### RSR
+The changes to RSR should not be substantial, the issue is to make sure to send messages at the correct code *locations*. At the other end we need to query the service for notifications and make them visible in the myAkvo. 
+
+### Message queue
+If we have types of messages we can add message 'handlers' to that queue type and keep our services simple. Initial experimentation have been with RabbitMQ. 
+
+### Service
+- **Routing**  
+  Depending on how much logic we put into the message queue this might not be that much. We could have seperate queue handlers per use case and keep the code very simple.
+- **Logic**  
+  Handle fanout of events to notifications attached to users
+- **Datastore**  
+  We should store an imutable log (list) data strucutre that represents both Entities and the user event log. I would argue to use our current mysql db, unless we want to make a go at introducing Postgres.
+- **API**  
+  - get notifications per user
+  - set notifications as *read*
+  - manage user profile (settings & email verification confirmation)
+- **Email**  
+  Depending on what prodiver/solution we chose we need to push calls for emails to another party. If we use MailChimp as was suggested we need to update list per entity and also manage template crafting.
+
+
+
+## API
+The API security designed to work in a closed network environment.
+
+;; Services
+/services/
+/services/<id>/
+;; /services/<id>/entities/
+;; /services/<id>/entities/<id>/followers/
+;; /services/<id>/entities/<id>/events/
+;; /services/<id>/entities/<id>/events/last_month/
+
+;; /services/<id>/events/last_month/ ;; ?
+
+;; The firehose
+;; /events/
+;; /events/last_month/
+
+;; User
+/users/<id>/preferences/
+
+/users/<id>/notifications/
+/users/<id>/notifications/<id>/
+;; /users/<id>/notifications/unread/
+;; /users/<id>/notifications/last_month/
+
+/users/<id>/subscriptions/
+/users/<id>/subscriptions/destroy/
+
 
 
 
