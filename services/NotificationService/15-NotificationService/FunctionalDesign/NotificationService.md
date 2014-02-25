@@ -2,8 +2,8 @@
 *Notification service*
 
 ## References
-- [Technical Design](https://github.com/akvo/akvo-product-design/blob/master/RSR/Features/12-ActionBasedNotifications/TechnicalDesign/ActionBasedNotifications.md)
-- [#12@product-design](https://github.com/akvo/akvo-product-design/issues/12)
+- [Technical Design](https://github.com/akvo/akvo-product-design/blob/master/services/NotificationService/15-NotificationService/TechnicalDesign/NotificationService.md)
+- [#15@product-design](https://github.com/akvo/akvo-product-design/issues/15)
 - [#444@rsr](https://github.com/akvo/akvo-rsr/issues/444)
 - [#229@rsr](https://github.com/akvo/akvo-rsr/issues/229)
 - [#144@rsr](https://github.com/akvo/akvo-rsr/issues/144)
