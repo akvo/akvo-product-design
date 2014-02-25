@@ -1,61 +1,84 @@
-Roles and Permissions - Functional design
--------------
-
-### Documents
-Links to relevant issues
+# Roles and Permissions - Functional design
 
 ### Overview
 
-Roles and Permissions describe the different levels of an individual’s access on the Akvo FLOW dashboard.  The dashboard includes several tabs: surveys, devices, data, reports, maps, users, and messages.  Access to the information in these tabs is limited depending on an individual’s role and permission level, i.e., “user” versus “admin”.  For example, certain people are able to edit the contents of a survey while others are not.  Roles and Permissions restrict survey group based access as well.
+Roles and Permissions describe the different levels of an individual’s access on the Akvo FLOW dashboard and the FLOW mobile app. The dashboard includes several tabs: surveys, devices, data, reports, maps, users, and messages. Access to the information in these tabs is limited depending on an individual’s role and permission level, i.e., “user” versus “admin”. For example, certain people are able to edit the contents of a survey while others are not. Roles and Permissions restrict access based on survey group as well. Dashboard roles are customised sets of permissions, app roles are fixed.
 
 ### Marketing description
-
-Use Roles and Permissions to keep order on the dashboard; protect data from being tampered with.  It doesn’t make sense for everyone in a given company/organization to share the same access to different sections of the dashboard.  A Project Manager needs to be able to access the surveys that are coming in from the field, while a User only must be able to upload data from the field.  Roles and Permissions provide structure within this hierarchy of access.
+The FLOW dashboard is a place where lots of things happen: surveys get created, edited and distributed, incoming data is edited, cleaned and exported, new users are added and deleted. As Akvo FLOW is a tool meant to be used by organisations, it is important that means exist to restrict who can do what. Roles and permissions keep this order on the dashboard. The Admin and User roles provide default choices in managing permissions, but you can also create your own custom roles. For example, you might want to give a certain type of user access to surveys in a certain survey group only, or perhaps you want to have translator role, who can only edit translations of surveys and nothing else. Or what about a 'view-only' role so your boss can take a look but not touch anything?
 
 ### Initial features
-The initial list of functionalities that this feature will contain
-
-### Non goals
-What this feature will not contain
+* Fine-grained permissions per action
+* Default roles of Admin and User on the Dashboard, and Super Admin for Akvo staff
+* Default roles of Device Admin and Mobile user on the FLOW app
+* All roles on the dashboard are customisable 
 
 ### Scenarios
 
-Scenario 1:  You are a Regional Manager managing multiple country programs in East Africa.  The projects vary from public health issues to schools being built in rural regions.  It is your responsibility to oversee these different projects and thus you need access to data from multiple countries and multiple programs.  Your colleague who manages one malaria project in rural Kenya, however, does not need access to other programs in the region.  She can see data from a specific set of surveys disseminated in her region and pertaining to malaria only.
+Scenario 1: You are a Regional Manager managing multiple country programs in East Africa. The projects vary from public health issues to schools being built in rural regions. It is your responsibility to oversee these different projects and thus you need access to data from multiple countries and multiple programs. Your colleague who manages one malaria project in rural Kenya, however, does not need access to other programs in the region. She can see data from a specific set of surveys collected in a survey group only.
 
-Scenario 2:  The local government in rural Columbia is concerned about access to water over the next several generations and is thus engaged in a project to map water points throughout the area.  They have given a small grant to an NGO using Akvo’s tools to take up the task.  The Project Manager builds the survey and has access to deleting and publishing them, while the Field Manager only has access to edit.
+Scenario 2: A small NGO has implemented a gender equality/economic development project, teaching women in northern India to start small businesses and be the breadwinners in their families. The initiative has been so successful that the program model is being replicated in several additional regions. A translator has been hired to translate surveys to local languages or dialects for this purpose.  The permission to have access to translations is then limited to the translator.
 
-Scenario 3:  A small NGO has implemented a gender equality/economic development project, teaching women in northern India to start small businesses and be the breadwinners in their families.  The initiative has been so successful that the program model is being replicated in several additional regions.  A translator has been hired to translate surveys for this purpose.   The permission to have access to translations is then limited to the translator.
-
-Scenario 4:  You are the Project Manager for a malaria-related program based in West Africa.  Your primary task is to manage a group of 50 enumerators.  First you need to make sure all everyone’s device is connected to the dashboard.  To do this, a bulk upload works best.  From inside the app, where you would normally see the option to set a User and Device ID, select “Bulk Upload.”  Visit the Devices tab on the dashboard to check if the device is listed.  If they are, you are all set to go.
+Scenario 3: In organisation X, the project manager in charge of data collection accross 10 countries creates new surveys and managed the survey groups. The actual content of the surveys is edited by country coordinators, who only have access to certain survey groups, and who cannot create new surveys, only edit them.
 
 ### User Experience 
+**Super Admin**
+Akvo staff members have a super admin role in the dashboard. This means two things: 
 
-A Regional Manager, a Project Manager, and a group of Enumerators team up for a water-mapping project in rural Kenya.  An Enumerator gets tasked to go out into the field to map water points and determine if they are 1) functional, and 2) drinkable, or not.  The Enumerator shows up at work and talks to his Project Manager about specific locations he should be mapping and what data he should be collecting. The Project Manager gives the Enumerator a map of three surrounding villages and a device with which to collect data. 
-Device	Dashboard
-Mobile User	User
-Device Admin	Admin
-	Super Admin (Akvo staff)
+* That they can perform certain REST requests, which are only allowed for super users
+* That they have access to a tab [Akvo Staff], where certain operations can be performed, such as copy surveys from one instance to another, copy data from one instance to another, force-delete data, etc.
 
-Table 1: Permission levels on the device and on the dashboard.
+**Dashboard Admin**
+A admin user has access to a tab called [Roles and Permissions], where roles and permissions can be defined. It provides a user interface to manage existing roles, for which permissions can be added or removed. It also provides an interface to create custom roles. Which users has which roles is determined in the [Users] tab.
 
-**Mobile User**
+**User with some role**
+When a user is logged in which some role, the dashboard is shown adapted to that role - things that are not possible within that role are hidden. For example, when a role does not permit deleting a survey, that button will not be shown in the dashboard.
 
-The Enumerator, with a Mobile User permission on the Android, opens the app on his device, and logs in.  He syncs the app, which will cause the device to download any survey groups and surveys assigned to him.  He selects the survey group that he knows contains the survey he will be working with.  The Enumerator can start a new record by clicking a 'plus' icon in the action bar of the device, or, perhaps, by clicking a 'create new record' button on top of the list of records.  When the Enumerator starts a new record, the registration form is immediately opened.  The enumerator fills in the form and submits it. 
+**Mobile admin**
+An app user with the 'Mobile Admin' role can perform certain tasks in the app that the mobile user does not have access to. These include, for example: delete surveys, delete all data from phone, manually install surveys, update the app, etc.
 
-**Mobile Admin, User on the Dashboard**
+**Mobile user**
+An app user with the role 'Mobile user' has basic access to the app, which allows the tasks that an enumerator performs. This includes data collection, data syncing in case of a monitoring group, change language settings, etc. 
 
-The Project Manager, with Mobile Admin on the Android and User status on the dashboard, has built the survey, so there is no need for the Enumerator to add or edit the survey or the survey responses.  With a User permission level on the dashboard, the Project Manager is able to create, edit, publish and delete surveys and assign devices.  The Project Manager logs into her organization’s dashboard, adds a new group and creates a survey.  She then assigns it to one or many device(s), at which point it becomes available for the Enumerators.
+**Survey group based access**
+The access of a user to surveys and data can be restricted per survey group. In the user tab, an administrator can give users access to all data, or to specific survey groups.
 
 
-**Admin and Super Admin on the Dashboard**
 
-The Regional Manager has an Admin permission level.  He can log into the dashboard and can see across survey groups and can create and copy surveys.  He can also export data to a spreadsheet and edit it.  Super Admin is a permission level reserved for Akvo staff and with it comes full access to the Dashboard.
+### Roles and permissions
 
-### Technical notes
-Any technical issues or questions that are already known
+**Surveys**
 
-### Open issues
-Any known issues that need to be decided
+* Create survey
+* Edit survey
+* Delete survey
+* Edit translations
+* Edit notifications
+* Publish survey
+* Approve surveys
+* Access to surveys tab
 
-### Details
-Details, details, details.
+**Devices**
+
+* assign surveys to devices
+* access to devices tab
+
+**Data**
+
+* Access to data tab
+* bulk upload zip data
+* edit data in the dashboard
+* clean data by export/import to excel
+
+**Reports**
+
+* Export raw data
+* create charts 
+
+**Users**
+
+* Create new users
+* Edit users
+* Delete users
+
+
