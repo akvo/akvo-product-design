@@ -10,12 +10,12 @@ Akvo internal services will emit events to the notification service. The job of 
 
 *A RSR user follows a specific project. That project receives a donation that makes it fully funded. The user should then see a notification in myAkvo and if he/she have enabled email notification also get an email.*
 
-Even if the service should be generic in that it will show the users "Akvo" stream it's still will include a lot of nongeneric eventhandling. Examples can be that when a project is fully funded and we should email administrative staff who can act, or when we want to send an email because of a new user signup. Hence we will need to explictly deal with different kinds of messages in a tailored way. It will be a balance act on being generic and also deal with the problems at hand.
+Even if the service should be generic in that it will show the users "Akvo" stream it's still will include a lot of non-generic event handling. Examples can be that when a project is fully funded and we should email administrative staff who can act, or when we want to send an email because of a new user signup. Hence we will need to explicitly deal with different kinds of messages in a tailored way. It will be a balance act on being generic and also deal with the problems at hand.
 
-This is the first component in the new service oriented platform and we will have to introduce some ground work that in future services will already be established practice. An example of that is communicaiton between services. The email feature is something that can happen in phase two.
+This is the first component in the new service oriented platform and we will have to introduce some ground work that in future services will already be established practice. An example of that is communication between services. The email feature is something that can happen in phase two.
 
 ## Marketing description
-A notification service will enable a Akvo user to get a notificaiton stream tailored to themselves. 
+A notification service will enable a Akvo user to get a notification stream tailored to themselves. 
 
 ## Initial features
 - (with the help of an admin *user* it should be possible to create services)?
@@ -30,4 +30,4 @@ A notification service will enable a Akvo user to get a notificaiton stream tail
 - Lay the foundation or be a starting point of discussions around the future Akvo platform
 
 ## Non goals
-The first itteration should probably not include email, it's a isolated feature that can easiy be added later.
+The first iteration should probably not include email, it's a isolated feature that can easily be added later.

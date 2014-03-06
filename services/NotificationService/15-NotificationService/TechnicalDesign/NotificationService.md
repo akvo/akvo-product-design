@@ -9,7 +9,7 @@
 ## Overview / Summary
 The notification service responds to events emitted by services which are then routed to the proper users notification log. Beside the service itself we define a communicate channel (a message queue), and message formats (protocol buffers).
 
-This diagram is an example workflow with Akvo as the emmitting service. It's only a rough sketch to paint a picture so don't sweat over the details. To follow the flow do realise that the event handlers to the right is the same as the ones in the service.
+This diagram is an example workflow with Akvo as the emitting service. It's only a rough sketch to paint a picture so don't sweat over the details. To follow the flow do realise that the event handlers to the right is the same as the ones in the service.
 
 ![notification_service_2](https://f.cloud.github.com/assets/31837/2193228/7fe172f8-9879-11e3-9dde-b449a2f741b2.png)
 
@@ -18,23 +18,23 @@ Akvo internal services will push events to the Notification Service (NS). There 
 
 HTTP have the benefit of not introducing any extra infrastructure. It's also very friendly under development. Some of the cons of using HTTP is that we create a one to one relationship. We will need to keep NS downtime to a minimum even while upgrades or we face performance issues on the service side. The performance of NS will also become a problem of the services that will wait for their response before moving on. 
 
-On the flip side using a message queue does introduce an additional infrastructure item to manage. But it does decouple the services emitting events (producers) with NS (consumer). We could easily take down NS for an upgrade and let messages queue up and then be consumed when NS is up again. Since we disconnect the services it's get easier to change the arcitecure in the future. If we face a performance problem (I would argue that it's unlikley) we could have multiple consumer processes to chew on the queue.
+On the flip side using a message queue does introduce an additional infrastructure item to manage. But it does decouple the services emitting events (producers) with NS (consumer). We could easily take down NS for an upgrade and let messages queue up and then be consumed when NS is up again. Since we disconnect the services it's get easier to change the architecture in the future. If we face a performance problem (I would argue that it's unlikely) we could have multiple consumer processes to chew on the queue.
 
 It seems that the pros of a message queue usage introduces enough benefits to validate the management of it (which should be fairly simple).
 
 ### Message queue
 There are a number of messages queues to choice from, RabbitMQ, HornetMQ, Zero and so on. Initial testing was based on Rabbit since it support the AMQP standard, is very proven, we have team expertise, it have an very friendly we UI, is easy to install. 
 
-One could argue that there will be a balance act to leverage features from the queue to keep the NS implemenation simple and to not leak too much to the producing services.
+One could argue that there will be a balance act to leverage features from the queue to keep the NS implementation simple and to not leak too much to the producing services.
 
 ### Message encoding
-If we push of messages in a fire and forget way it's important that we know that we can handle the messges when they arive at NS. This is one of the reasons for keeping a schema for valid messages, which raised the thought of using protobufs to define that a message is valid before we send them of. 
+If we push of messages in a fire and forget way it's important that we know that we can handle the messages when they arrive at NS. This is one of the reasons for keeping a schema for valid messages, which raised the thought of using protobufs to define that a message is valid before we send them of. 
 
 ## Publishing user notifications
 There are different ways to make services get to the data from the notification service. It could range from creating new queue on the message queue for each user, send http requests to service or what seems like the most idiomatic and sane thing to do, expose a REST API for other services to consume.
 
 ### How about users?
-Since we don't have a common user serivce - yet. We will have to deal with seperate users per service.
+Since we don't have a common user service - yet. We will have to deal with separate users per service.
 
 ## Notification service
 For the service itself the obvious choices is Python or Clojure, both would be proper choices. The choice have been made to use Clojure.
@@ -56,7 +56,7 @@ The use of external provider?
 - templates
 
 ## Simple example 
-A very simplified example of the message queue dance between services & langauges (without protobufs).
+A very simplified example of the message queue dance between services & languages (without protobufs).
 A Python producer, RabbitMQ & Clojure producer & consumer.
 
 ```python
