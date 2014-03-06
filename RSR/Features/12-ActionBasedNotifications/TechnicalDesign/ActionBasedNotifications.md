@@ -11,7 +11,7 @@
 
 
 ## Overview
-From within the RSR request/response loop we will push a message queue. We will have an external service consuming these messages. The external service will then handle notification routing and persistence. There are several advantages with this approach that validated the introduction to additional moving parts. We should not do too much in the RSR request/response cycle, it's not performant. Even if a new service adds moving parts it gives us the oportunity to break out distinct functionallity and stay away from complecting the request path.
+From within the RSR request/response loop we will push the event to a message queue. We will have an external service consuming these messages. The external service will then handle notification routing and persistence. There are several advantages with this approach that validated the introduction to additional moving parts. We should not do too much in the RSR request/response cycle, it's not performant. Even if a new service adds moving parts it gives us the oportunity to break out distinct functionallity and stay away from complecting the request path.
 
 The notification service will expose a REST API which RSR then can consume for it's public facing myAkvo UI.
 
@@ -77,11 +77,7 @@ When the service handles the message the event is added to project 42's event li
 The changes to RSR should not be substantial, the issue is to make sure to send messages at the correct code *locations* via *Django signals*. Initial tests have been make with RabbitMQ and the Python Pika library.
 
 ## Notification UI
-Consume REST API & present it.
-
-- How do we deal with security?
-- How exposed to the outside is this service?
-
+Consume REST API & render it in myAkvo.
 
 
 

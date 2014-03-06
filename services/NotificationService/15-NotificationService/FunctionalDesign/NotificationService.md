@@ -2,19 +2,17 @@
 *Notification service*
 
 ## References
-- [Technical Design](https://github.com/akvo/akvo-product-design/blob/master/services/NotificationService/15-NotificationService/TechnicalDesign/NotificationService.md)
 - [#15@product-design](https://github.com/akvo/akvo-product-design/issues/15)
-- [#444@rsr](https://github.com/akvo/akvo-rsr/issues/444)
-- [#229@rsr](https://github.com/akvo/akvo-rsr/issues/229)
-- [#144@rsr](https://github.com/akvo/akvo-rsr/issues/144)
-- [#396@rsr](https://github.com/akvo/akvo-rsr/issues/396)
+- [Technical Design](https://github.com/akvo/akvo-product-design/blob/master/services/NotificationService/15-NotificationService/TechnicalDesign/NotificationService.md)
 
 ## Overview
-The original requirement came from RSR users which wanted to get notified from events happeing. The issue raised the thought of building a generic service which other services can also use. 
+Akvo internal services will emit events to the notification service. The job of the notification service is to react and forward the event as a notification to the correct users in the correct medium. An example can look like this.
 
-In short we will build a service that other services will emit events towards. The new service will then route the events to the correct users notification log. Users should then have the possibility to notifications in the web UI but also be able to get notifications via emails. These emails should be configurable to be either direct or as summaries each month.
+	A RSR user follows a specific project. That project receives a donation that makes it fully funded. The user should then see a notification in myAkvo and if he/she have enabled email notification also get an email.
 
-The email feature is something that can happen in phase two.
+Even if the service should be generic in that it will show the users "Akvo" stream it's still will include a lot of nongeneric eventhandling. Examples can be that when a project is fully funded and we should email administrative staff who can act, or when we want to send an email because of a new user signup. Hence we will need to explictly deal with different kinds of messages in a tailored way. It will be a balance act on being generic and also deal with the problems at hand.
+
+This is the first component in the new service oriented platform and we will have to introduce some ground work that in future services will already be established practice. An example of that is communicaiton between services. The email feature is something that can happen in phase two.
 
 ## Marketing description
 A notification service will enable a Akvo user to get a notificaiton stream tailored to themselves. 
@@ -26,12 +24,13 @@ A notification service will enable a Akvo user to get a notificaiton stream tail
 - the service should be able to emit events based on a *type*.
 - the service should expose a REST API for other services to consume.
 
+## Goals
+Define a defined way to communicate between different services.
 
 ## Non goals
 A service should not be able to push whatever events to the service but they should follow pre-defined contract. Otherwise we will have problems both in consuming messages and in presenting the data in the web UI.
 
 The first itteration should probably not include email, it's a isolated feature that can easiy be added later.
-
 
 ## Scenarios
 *these needs to be worked on*
@@ -42,8 +41,3 @@ Same as the RSR scenario.
 **Scenario 2 - Donation notification**  
 Same as the RSR scenario.
 
-
-## Questions
-- Is there a benefit of having services to register via the API if we want custom emit handlers?
-- Is it appropriate to index users via email? We don't have a global identification service as is so we need to use something. The only alternative I see at the moment is to use RSR internal user id's but that seems very limiting.
-- This raises the question if Akvo should not let the public get an Akvo account. We could have open "Akvo account" & "Akvo trusted network account" (network account). But there are of course implications around this *- difficult stuff*. 

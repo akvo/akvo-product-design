@@ -2,12 +2,20 @@
 *Action Based Notifications*
 
 ## References
+
 - [Technical Design](https://github.com/akvo/akvo-product-design/blob/master/RSR/Features/12-ActionBasedNotifications/TechnicalDesign/ActionBasedNotifications.md)
 - [#12@product-design](https://github.com/akvo/akvo-product-design/issues/12)
 - [#444@rsr](https://github.com/akvo/akvo-rsr/issues/444)
 - [#229@rsr](https://github.com/akvo/akvo-rsr/issues/229)
 - [#144@rsr](https://github.com/akvo/akvo-rsr/issues/144)
 - [#396@rsr](https://github.com/akvo/akvo-rsr/issues/396)
+
+### Notification service
+*The notification service itself are broken out to it's own documents under /services/*
+
+- [#15@product-design](https://github.com/akvo/akvo-product-design/issues/15)
+- [Function Design](https://github.com/akvo/akvo-product-design/blob/master/services/NotificationService/15-NotificationService/FunctionalDesign/NotificationService.md)
+- [Technical Design](https://github.com/akvo/akvo-product-design/blob/master/services/NotificationService/15-NotificationService/TechnicalDesign/NotificationService.md)
 
 ## Overview
 There goes a lot of manual labour into supervising projects in RSR. To be on top of many projects as a RSR admin, partner admin or project editor you need to scan RSR in a pull way (manually polling RSR). RSR users crave for notifications & monitoring tools to help them manage their projects & organisations in an efficient way.
@@ -39,7 +47,7 @@ A signed in RSR user navigates to a project of interest. On the project the user
 *Comment: this scenario points out the problem with having sign in functionallity on the RSR pages and admin splitted. It's hard to provide a workflow that is seamless and where the user does not have to switch between worlds to get a full picture. We also need to think about if we should show a follow button if the user is not signed in. Personly I think it will be odd since most people can't get an account*
 
 **Scenario 2 - Donation notification**  
-A project recieves a donation, then a user will see a notification in his/hers myAkvo, informing that that the project got a donation. The ammount will be visiable.  
+A project recieves a donation, then a user will see a notification in his/hers myAkvo, informing that that the project got a donation. The date, ammount & if public donor will be visiable.
 
 **Scenario 3 - Enabling email notifications**  
 At myAkvo the user see a greyed out email settings and a button *enable email notifications*. The user pushes the button get a message that he/she got an email with a confirmation email. The user clicks the link in the email and are now confirmed for email notifications. In myAkvo the email settings for notifications are now enabled. The user clicks email notifications. The user now will get an email saying that he/she will receive emails when event happens to the project.
