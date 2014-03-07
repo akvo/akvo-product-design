@@ -6,9 +6,9 @@
 - [Technical Design](https://github.com/akvo/akvo-product-design/blob/master/services/NotificationService/15-NotificationService/TechnicalDesign/NotificationService.md)
 
 ## Overview
-The job of the notification service is to react on events from services and make those events into notifications based on users. One could argue that the notification service twists the perspective from services to users. Making it possible to ask what happend in the system, from a user perspective. 
+The job of the notification service is to react on events from services and make those events into notifications based on users. One could argue that the notification service twists the perspective from services to users. Making it possible to ask what happened in the system, from a user perspective. 
 
-Services that will send messages to the notification service will initially be RSR but as we move forward FLOW, DASH & new services will also benefit from the common solution. The messages sent from services will origin in a service event (e.g. maybe a donation in RSR). An important job for the notification service is to keep track of what users should have what notifications. Further users should also be able to configure how they recieve the notificaitons (emails as events happen or as a summary in the end of the month).  
+Services that will send messages to the notification service will initially be RSR but as we move forward FLOW, DASH & new services will also benefit from the common solution. The messages sent from services will origin in a service event (e.g. maybe a donation in RSR). An important job for the notification service is to keep track of what users should have what notifications. Further users should also be able to configure how they receive the notifications (emails as events happen or as a summary in the end of the month).  
 
 An example can look like this:
 <pre>
@@ -17,14 +17,14 @@ An example can look like this:
 3. If the user have enabled email notifications we should also send an email
 </pre>
 
-Users should be able to configure how they want emails, html, text, directly or in montly summaries. We shall make it possible for services to ask for a users notifications.
+Users should be able to configure how they want emails, html, text, directly or in monthly summaries. We shall make it possible for services to ask for a users notifications.
 
 We should try and keep the events/messages generic, but services can emit different kinds of events to the notifications system. Examples of such events are events that should trigger email verification workflows (e.i. new users/password reset).
 
 This is the first component in the new service oriented platform and we will have to introduce some ground work that in future services will already be established practice. An example of that is communication between services.
 
 ## Marketing description
-A notification service will enable a Akvo user to get a tailored notification stream tailored. 
+A notification service will enable a Akvo user to get a tailored notification stream. 
 
 ## Initial features
 - (with the help of an admin *user* it should be possible to create services)?
