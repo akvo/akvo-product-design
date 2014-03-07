@@ -6,16 +6,25 @@
 - [Technical Design](https://github.com/akvo/akvo-product-design/blob/master/services/NotificationService/15-NotificationService/TechnicalDesign/NotificationService.md)
 
 ## Overview
-Akvo internal services will emit events to the notification service. The job of the notification service is to react and forward the event as a notification to the correct users in the correct medium. An example can look like this.
+The job of the notification service is to react on events from services and make those events into notifications based on users. One could argue that the notification service twists the perspective from services to users. Making it possible to ask what happend in the system, from a user perspective. 
 
-*A RSR user follows a specific project. That project receives a donation that makes it fully funded. The user should then see a notification in myAkvo and if he/she have enabled email notification also get an email.*
+Services that will send messages to the notification service will initially be RSR but as we move forward FLOW, DASH & new services will also benefit from the common solution. The messages sent from services will origin in a service event (e.g. maybe a donation in RSR). An important job for the notification service is to keep track of what users should have what notifications. Further users should also be able to configure how they recieve the notificaitons (emails as events happen or as a summary in the end of the month).  
 
-Even if the service should be generic in that it will show the users "Akvo" stream it's still will include a lot of non-generic event handling. Examples can be that when a project is fully funded and we should email administrative staff who can act, or when we want to send an email because of a new user signup. Hence we will need to explicitly deal with different kinds of messages in a tailored way. It will be a balance act on being generic and also deal with the problems at hand.
+An example can look like this:
+<pre>
+1. A user follows a RSR project and that project receives a donation
+2. The user should then see that donation in myAkvo
+3. If the user have enabled email notifications we should also send an email
+</pre>
 
-This is the first component in the new service oriented platform and we will have to introduce some ground work that in future services will already be established practice. An example of that is communication between services. The email feature is something that can happen in phase two.
+Users should be able to configure how they want emails, html, text, directly or in montly summaries. We shall make it possible for services to ask for a users notifications.
+
+We should try and keep the events/messages generic, but services can emit different kinds of events to the notifications system. Examples of such events are events that should trigger email verification workflows (e.i. new users/password reset).
+
+This is the first component in the new service oriented platform and we will have to introduce some ground work that in future services will already be established practice. An example of that is communication between services.
 
 ## Marketing description
-A notification service will enable a Akvo user to get a notification stream tailored to themselves. 
+A notification service will enable a Akvo user to get a tailored notification stream tailored. 
 
 ## Initial features
 - (with the help of an admin *user* it should be possible to create services)?
@@ -28,6 +37,3 @@ A notification service will enable a Akvo user to get a notification stream tail
 - Help Akvo staff with administrative tasks
 - Define a defined way to communicate between different services
 - Lay the foundation or be a starting point of discussions around the future Akvo platform
-
-## Non goals
-The first iteration should probably not include email, it's a isolated feature that can easily be added later.
