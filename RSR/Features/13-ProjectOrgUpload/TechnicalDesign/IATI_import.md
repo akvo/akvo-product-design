@@ -69,11 +69,11 @@ We are in the process of on-boarding RAIN in the IATI XML import process. RAIN's
 
  On a lower technical level there are also a reasons for change. We are using the Tastypie API framework for the major part of the RSR API and it has served us well when creating the read API. But it is quite hard to use when you need to heavily customize the behaviour and there is now a "competitor", the Django REST framework, that is more modern in its design, and overall a nicer framework to use. The current implementation is also uses separate resources (API endpoints, URLs...) for the "normal" RSR models, like Organisation and Project etc, and the resources for the IATI import. This makes for code duplication and thus becomes a maintenance burden.
 
- ## Plan for change of the XML loading process
+## Plan for change of the XML loading process
 
  My proposal is to move as much as possible of the complexity of transforming the XML outside of RSR. The RSR API should allow for data input as one canonical data structure only (although it can still support multiple data formats following this structure). The transformation of incoming data, for example in the form of IATI formatted XML from Cordaid, happens in a separate application. Information needed to be able to transform the data uses the API to query RSR.
 
-## Implementation steps
+### Implementation steps
 
 To ensure that we have a working import process at all times I think this change has to be made in several steps.
 
