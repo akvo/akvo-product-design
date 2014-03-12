@@ -6,7 +6,7 @@ Curently we are importing XML from Cordaid using three command line scripts. Two
 
 ### Current import process
 
-The following is a more detailed overview of what happens when we import IATI activites and attendant information. (Steps marked (g) are general steps that apply to all imports, (p) means partly general. All other steps describe Cordaid-specific tasks.).
+The following is a more detailed overview of what happens when we import IATI activites and attendant information. (Steps marked (g) are general steps that apply to all imports, (p) means partly general. All other steps describe Cordaid-specific tasks. [(N)]() references the step in the [outline below](#implementation-steps) that would implement the current script step.).
 
 ### pre_import.py
 
