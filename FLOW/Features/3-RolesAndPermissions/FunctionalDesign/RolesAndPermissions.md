@@ -2,15 +2,18 @@
 
 ### Overview
 
-Roles and Permissions describe the different levels of an individual’s access on the Akvo FLOW dashboard and the FLOW mobile app. The dashboard includes several tabs: surveys, devices, data, reports, maps, users, and messages. Access to the information in these tabs is limited depending on an individual’s role and permission level, i.e., “user” versus “admin”. For example, certain people are able to edit the contents of a survey while others are not. Roles and Permissions restrict access based on survey group as well. Dashboard roles are customised sets of permissions, app roles are fixed.
+Roles and Permissions describe the different levels access a user has on the Akvo FLOW dashboard and the FLOW mobile app. Access can be restricted either by activity, such as creating or editing a survey, making a report, or deleting data, or by specific survey or group of surveys. A set of user permissions is called a 'role'. Roles can be changed and customised, in order to fit the workflow of a particular organisation. On the device, roles are fixed and limited to 'mobile user' and 'mobile admin'.
+
 
 ### Marketing description
 The FLOW dashboard is a place where lots of things happen: surveys get created, edited and distributed, incoming data is edited, cleaned and exported, new users are added and deleted. As Akvo FLOW is a tool meant to be used by organisations, it is important that means exist to restrict who can do what. Roles and permissions keep this order on the dashboard. The Admin and User roles provide default choices in managing permissions, but you can also create your own custom roles. For example, you might want to give a certain type of user access to surveys in a certain survey group only, or perhaps you want to have translator role, who can only edit translations of surveys and nothing else. Or what about a 'view-only' role so your boss can take a look but not touch anything?
 
 ### Initial features
 * Fine-grained permissions per action
+* Limit access to particular survey or survey group
+* Ability to lock down surveys and questions
 * Default roles of Admin and User on the Dashboard, and Super Admin for Akvo staff
-* Default roles of Device Admin and Mobile user on the FLOW app
+* Default roles of Mobile Admin and Mobile user on the FLOW app
 * All roles on the dashboard are customisable 
 
 ### Scenarios
@@ -32,7 +35,7 @@ Akvo staff members have a super admin role in the dashboard. This means two thin
 A admin user has access to a tab called [Roles and Permissions], where roles and permissions can be defined. It provides a user interface to manage existing roles, for which permissions can be added or removed. It also provides an interface to create custom roles. Which users has which roles is determined in the [Users] tab.
 
 **User with some role**
-When a user is logged in which some role, the dashboard is shown adapted to that role - things that are not possible within that role are hidden. For example, when a role does not permit deleting a survey, that button will not be shown in the dashboard.
+When a user is logged in which some role, the dashboard is shown adapted to that role - things that are not possible within that role are hidden. For example, when a role does not permit deleting a survey, that button will not be shown in the dashboard. When a role does not permit access to a certain tab, that tab is not shown.
 
 **Mobile admin**
 An app user with the 'Mobile Admin' role can perform certain tasks in the app that the mobile user does not have access to. These include, for example: delete surveys, delete all data from phone, manually install surveys, update the app, etc.
@@ -57,6 +60,8 @@ The access of a user to surveys and data can be restricted per survey group. In 
 * Publish survey
 * Approve surveys
 * Access to surveys tab
+* Lock surveys
+* Lock questions
 
 **Devices**
 
