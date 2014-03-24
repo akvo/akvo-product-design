@@ -5,8 +5,6 @@
 https://github.com/akvo/akvo-rsr/issues/334
 
 ## Overview
-We have been mentioning for some time that we are working on an Export of IATI Data of RSR Projects for some time. This is something that we need to work on.
-
 The idea is that the data we have in the database should be mapped to the IATI Standard and an export should be provided which is based on the API that we have implemented in RSR to be able to perform this action on a regular basis.
 
 ## Marketing description
@@ -31,12 +29,21 @@ The Export may be initially designed to only be carried out by a command line in
 We will not be exporting projects that exist outside of the RSR Database.
 
 ## Scenarios
-Providing IATI Files that organisations submit to the IATI Registry themselves.
+~~Providing IATI Files that organisations submit to the IATI Registry themselves.~~
+``this requirement is not needed - the input for this is covered in the below additions of having the links available on the site``
 
 Submissions directly to the IATI Registry on behalf of organisations.
 
+Provide a link on a project page that allows the available data to be provided in an IATI XML format for viewing in the browser or downloading directly. This file should contain the project data available, but is likely to be missing the Reporting organisation and other vital information in order for it to be used to publish.
+
+Provide a link on an organisation page that allows the entire data for that organisation to be provided in an IATI XML format for viewing in the browser or downloading directly. This link should only be available for Organisations that are Support Partners - have Support Partner listed in the ``rsr_organisation_partner_types`` table.
+
 ## Known Issues
 We need to determine the Reporting organisation to be included within the file.
+
+Need to look at Organisation Identifiers, at the moment we do not hold IATI Ids for most organisations, and we should determine how we tackle this in the short and longer term.
+
+We need to look at the current Categories to determine how we map these to the DAC sector codes. We will be moving to this model entirely within RSR shortly, but this is likely to be after the export functionality has been implemented and started to be used.
 
 ## References
 
