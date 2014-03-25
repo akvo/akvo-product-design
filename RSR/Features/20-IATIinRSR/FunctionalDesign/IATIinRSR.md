@@ -7,7 +7,6 @@ Storing IATI Data in RSR
 Flat IATI PDF form for collecting a single set of IATI Details: https://adobeformscentral.com/?f=X5McQ-PPAzygFlHh5bw00g
 
 
-
 ### Overview
 IATI provides a standard reporting format for organisations of varing sizes and structures to be able to communicate about the activities within the framework of comparability.
 
@@ -62,23 +61,37 @@ We will not be visualising the newly added information within the existing RSR v
 
 ### Scenarios
 
-#####IATI Importers
+##### IATI Importers
 Organisations that are using the IATI Import functionality will be able to have their entire IATI files stored within RSR and not only the existing RSR fields. Websites built on the RSR API can be built to visualise all information that they have entered into their IATI file.
 
-#####IATI Exporters
+##### IATI Exporters
 Organisations that are using the IATI Export functionality will be able to publish their entire IATI files using RSR and not have to self publish any information.
 
-#####IATI First Timers
+##### IATI First Timers
 Organisations that would like to start collecting IATI information on their projects and publishing this to the standard will be able to enter the IATI fields such as Transactions into their projects on a manual one-by-one basis as they are entering their projects to allow an easy transition into IATI.
 
 ### User Experience 
-How the user experiences the feature, what is the workflow
+Users should be able to enter their IATI Data into RSR within the same user interface that they enter their RSR Data.
+
+In the short term we could look into building an extension for the existing RSR Admin to be able to accommodate these additional fields to be entered by partners.
+
+
+#### To be considered later
+
+I think in the longer term we should look into a separate interface (probably fed by an API connection) to collect this data in a clean and organised way, giving lots of user friendly functionality such as:
+- Saving partial projects
+- Sharing partial projects 
+- Apporval of project content
+- Responsive design for varying screen size
+- Intuitive layout and design
+- Spelling and grammar checking
+- Image upload and editing
+- File attachments
+- Video embedding
+
 
 ### Technical notes
-Any technical issues or questions that are already known
+We need to look at the codelists that support IATI and ensure that these are kept up to date within our repository and codebse. There is a Github Repository dedicated to IATI Codelists: https://github.com/IATI/IATI-Codelists
 
 ### Open issues
-Any known issues that need to be decided
-
-### Details
-Details, details, details.
+We need to look at the mapping of fields that are present in both IATI and RSR to ensure we have a solid and stable mapping process that is logical and can (and will be) explained to our Partner Network so that any changes can be accommodated.
