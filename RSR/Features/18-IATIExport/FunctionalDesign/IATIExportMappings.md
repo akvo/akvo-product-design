@@ -92,7 +92,7 @@ The *@ref* attribute is included in the IATI export. However, currently only 3 o
 
 <span style="color:red;">**Not included**</span>
 
-The *@type* attribute is not included in the IATI export.  The RSR database currentlt does not support categories of organisations.
+The *@type* attribute is not included in the IATI export.  The RSR database currently does not support categories of organisations.
 
 ### [IATI Identifier](http://iatistandard.org/activities-standard/iati-identifier/)
 
@@ -104,9 +104,9 @@ To clarify; an organisation can be the support partner for a project and have on
 
 ### [Other Identifier](http://iatistandard.org/activities-standard/other-identifier/)
 
-<span style="color:red;">**Not included**</span>
+<span style="color:green;">**Included**</span>
 
-Currently this node is not included. However, this node might be used to indicate the internal organisation id field in RSR.
+It is possible to specify an internal organisation ID in RSR, being the ID that the reporting organisation uses internally. This identifier is included in the *other-identifier* node in the IATI export, as well as the organisation details in the *@owner-ref* and *@owner-name* arguments.
 
 ### [Activity Website](http://iatistandard.org/activities-standard/activity-website/)
 
@@ -172,9 +172,15 @@ The *@type* argument is either *start-actual*, which is linked to the *date_requ
 
 ### [Contact info](http://iatistandard.org/activities-standard/contact-info/)
 
-<span style="color:red;">**Not included**</span>
+<span style="color:green;">**Included**</span>
 
-The *contact-info* node is not added in the IATI export. However, contact information is available in RSR, so this can be added in a later stadium.
+The *contact-info* node is included in the IATI export. The following five elements are included, based on the organisational information in RSR:
+
+- Organisation
+- Website
+- Telephone
+- Person name
+- Email
 
 ### [Participating Organisation](http://iatistandard.org/activities-standard/participating-org/)
 
@@ -423,9 +429,9 @@ The *@format* attribute is included in the IATI export. However, since there it 
 
 #### [Title](http://iatistandard.org/activities-standard/document-link/title/)
 
-<span style="color:red;">**Not included**</span>
+<span style="color:green;">**Included**</span>
 
-The title of is not included in the *document-link* node. However, often a caption of the image is available in RSR, so this could be added as the title.
+The *title* of a document link is included in the IATI export. This relates to the caption of the photo in RSR.
 
 #### [Category](http://iatistandard.org/activities-standard/document-link/category/)
 
