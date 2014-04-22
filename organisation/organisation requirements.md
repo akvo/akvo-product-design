@@ -52,6 +52,36 @@ Organisational requirements
 - to promote sharing of systems development among organisations and countries which could save money on shared systems development
 - to promote open systems (open source, open content, open APIs), which we believe embodies better democracy
 
+4. Akvo does not work on high-risk data
+---------------------------------------
+**Requirement**: We do not work on data which need very high levels of security protection.
+
+**Implementation**: We don't handle data in the systems which we manage which requires high levels of security protection or anonymisation. We will communicate this to our partners. 
+
+**Rationale**: Some data which one could collect with our systems could be needing high levels of security protection. For example, one could imagine collecting data about transports to refugee camps near to a war zone. We don't have a big enough team to work on highly sensitive data.
+
+The need for open data is big enough for us to work on without having to take on this specific high-risk narrow target market.
+
+5. Privacy
+----------
+
+**Requirement**: We need privacy for some of our data
+
+**Implementation**: We host data in Europe, primarily in the Netherlands. We don't consider the US having adequate data protection legislation and will move away from US services when possible.
+
+**Rationale**: Even when you are working with open data there is always some data which needs to be kept private. Examples would be: 
+
+- household data from surveys
+- user data from user accounts, login information, API keys etc.
+
+Other data that we want to keep private is data which could be used to compete against us. In particular there are some data which we don't want to tempt our competitors or potential future competitors with, so we shouldn't put it under their control. This in particular is: 
+
+- web site traffic data
+
+As we are working with information which could potentially be politically sensitive, such as data on water, and we have several partners which we work with that are national governments and large multilateral organisations, we should host data in jurisdictions with good privacy and data protection laws.
+
+
+
 Technical requirements
 ======================
 None yet.
