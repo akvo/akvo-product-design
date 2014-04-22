@@ -26,7 +26,7 @@ application, api, etc).
 ### Marketing description
 
 Akvo Accounts is the central service that enables having just **one**
-username/password combination acroll *all* Akvo products.
+username/password combination across *all* Akvo products.
 
 Imagine just one user that enables you editing Akvopedia, accessing the
 FLOW dashboard across several instances, editing a RSR project, and
@@ -95,7 +95,7 @@ in the context of authorization access to a secured resource
 * The requirements for granting access to a given resource are quite broad
 and different across products (e.g. RSR needs may not be aligned with
 FLOW ones)
-* There should be a mimimal _Role_ associated with any authorized user
+* There should be a minimal _Role_ associated with any authorized user
 (e.g. `user`) that has the ability to login in. Depending on the
 application definition, a `user` can have more privileges than just
 logging in
