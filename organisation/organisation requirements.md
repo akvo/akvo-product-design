@@ -1,5 +1,7 @@
 # Akvo Foundation organisation requirements 
 
+Discussions about this can be held in issue #27 https://github.com/akvo/akvo-product-design/issues/27
+
 Table of contents
 -----------------
 - Overview
