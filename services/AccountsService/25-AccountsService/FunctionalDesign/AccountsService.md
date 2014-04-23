@@ -38,13 +38,17 @@ site, etc.
 * A single service where all Akvo user will login
 * An administration page where Akvo Admins can grant permissions to a
 secured resources
-* Integration with current Akvo products (RSR, FLOW, Website, etc)
+* Integration with current Akvo products (RSR, FLOW, Website, etc) will
+be rolled out over time as it fits the product schedule and strategic
+requirements.
+* A suitable service URL should be used. Suggestion is
+https://login.akvo.org
 
 ### Non goals
 
 * The first iteration does not aim to support authentication options
 like YubiKey and similars
-* Some advanced login capabilities like two-factor authentication are 
+* Some advanced login capabilities like two-factor authentication are
 not in the scope of the first iteration, but the system should be able
 to support it in the near future.
 * The authentication/authorization of internal services is out of the
