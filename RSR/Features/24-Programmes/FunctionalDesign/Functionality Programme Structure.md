@@ -18,7 +18,7 @@ An RSR Programme feature would enable Akvo users to add, change and retrieve hig
 ## Initial features
 The initial list of functionalities that this feature could contain:
 
-###Programme information###
+### Programme information
 Containing:
 
 * Programme description
@@ -32,7 +32,7 @@ Containing:
 * Locations
 * Contact information
 
-###Collaboration tools###
+### Collaboration tools
 With the purpuse to:
 
 * Initiate, create and develop projects
@@ -40,7 +40,7 @@ With the purpuse to:
 * Arrange funding
 * Get approval for project execution
 
-###Paperless reporting###
+### Paperless reporting
 With the purpose to:
 
 * Create reporting requirements for projects
@@ -56,19 +56,27 @@ We will not replace Akvo Sites or Akvo Pages
 
 ## Scenarios
 **Scenario 1 - Programme managers**
+
 A programme manager provides Akvo with the details needed to set up the programme information page. In MyAkvo the programme manager is able to add, change and remove partners, projects and user roles. Moreover the programme manager can create reporting requirements, trackers and reminders.
 
 **Scenario 2 - Member organisations**
+
 Organisations working within the programme have their projects made visible within the programme structure and can collaborate and report accordingly.
 
-**Scenario 3 - Organisation users**
+**Scenario 3 - Programme partner organisations**
+
 The users of programme member organisations are able to login to their admin interface to collaborate on projects, update and report.
 
 **Scenario 4 - Akvo users**
+
 Users of Akvo.org would like to be able to see some of the multilateral programmes that Akvo partners are working on.
 
 **Scenario 5 - Akvo**
+
 Akvo needs to have its own portal to visualise all programmes within RSR.
+
+
+
 
 ## User Experience 
 Users should be able to navigate to this feature from Akvo.org to find programmes within RSR.
