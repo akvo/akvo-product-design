@@ -9,6 +9,10 @@ We would of course ensure that the current functionality of RSR continues to ope
 ## References
 Document on [paperless reporting](https://docs.google.com/document/d/12Ql0CyjN5rV33m5pcmYimz1RX-4dCYolCq01jHQijqk/edit)
 
+Mockup on [programme structure page](https://github.com/akvo/akvo-product-design/blob/master/RSR/Features/24-Programmes/FunctionalDesign/Assets/Programme%20mockup.png)
+
+Mockup on [draft project within programme](https://github.com/akvo/akvo-product-design/blob/master/RSR/Features/24-Programmes/FunctionalDesign/Assets/Project%20mockup.png)
+
 ## Marketing description
 Many organisations operate in collaborative structures with common goals. It is important for them to have a place for showing their partner network, management structure, work progress, budget flows and more. Moreover, they need to have useful tools for collaboration and paperless reporting.
 
@@ -32,6 +36,9 @@ Containing:
 * Locations
 * Contact information
 
+See [mockup](https://github.com/akvo/akvo-product-design/blob/master/RSR/Features/24-Programmes/FunctionalDesign/Assets/Programme%20mockup.png) for an example
+
+
 ### Collaboration tools
 With the purpuse to:
 
@@ -39,6 +46,7 @@ With the purpuse to:
 * Invite partners to collaborate
 * Arrange funding
 * Get approval for project execution
+
 
 ### Paperless reporting
 With the purpose to:
@@ -50,6 +58,8 @@ With the purpose to:
 * Track budget and funding information over time
 * Monitor and evaluate KPIs
 * Report notifications to users working on projects
+
+See [mockup](https://github.com/akvo/akvo-product-design/blob/master/RSR/Features/24-Programmes/FunctionalDesign/Assets/Project%20mockup.png) for an example
 
 ## Non goals
 We will not replace Akvo Sites or Akvo Pages
