@@ -81,12 +81,7 @@ To allow different surveys to add information to the 'same' piece of information
 * historic reporting  - how to visualise the history of a record, for example water meter reading, or status of a water point?
 
 ### Domain language
-To clarify what we mean by terms, here is a list of domain language:
-
-1. **Data** is collected on **monitored entities**", or **entities** in short" 
-2. Data is collected with **forms**
-3. To users, an entity is identified by means of some **identifying data**, which is collected using a the **registration form** form, and which is saved as a single **meta-data** string on the entity record
-4. The combination of the registration form plus other forms is called **entity record**
+The domain language is described here: [domain language](https://github.com/akvo/akvo-product-design/tree/master/FLOW/System/DomainLanguage.md)
 
 ### Workflow details
 * The simplest case: use a single form to collect data about an entity in a single point in time
