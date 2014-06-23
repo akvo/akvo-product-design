@@ -6,7 +6,7 @@ The need for two-way communication through the API is coming from multiple direc
 
 ### Tech base
 
-Currently RSR uses the framework[Tastypie](https://django-tastypie.readthedocs.org/en/latest/) to provide most of the RSR data for reading and a custom solution for loading IATI formatted data as RSR projects.
+Currently RSR uses the framework [Tastypie](https://django-tastypie.readthedocs.org/en/latest/) to provide most of the RSR data for reading and a custom solution for loading IATI formatted data as RSR projects.
 
 In the years since the RSR API work started another framework, the [Django REST framework (DRF)](http://www.django-rest-framework.org/), has made great progress and is, to my mind, a superior base to build the RSR API on. Since the current API is used, in a read-only mode, in various places, we will need to support it at least for the near future. However the new read/write API should be based on DRF.
 
@@ -14,11 +14,11 @@ In the years since the RSR API work started another framework, the [Django REST 
 
 There are two major uses of the new API, but as we will see they will use the same solution. 
 
-There have been inquiries from organisations if it's possible to load project information into RSR using the API. This information currently lives in external database and would need to be transformed into an RSR-compatible format that can be consumed by the API. 
+There have been inquiries from organisations if it's possible to load project information into RSR using the API. This information currently lives in external databases and would need to be transformed into an RSR-compatible format that can be consumed by the API. 
 
 We also have IATI-formatted data that needs to be loaded into RSR. This is currently done by transforming the IATI XML using XSLT into a format that is, mostly, compatible with Tastypie's XML API format, and together with post-processing in the API itself the IATI data is turned into RSR project data. The IATI import is currently a very "custom" solution and is in need of generalization. The complexity of the transform is also in the "wrong" place, as it is part of the API.
 
-To be able to handle a lot of different needs in terms of getting data into RSR the API interface should be as simple as possible. Any special cases that need to be taken into account should be managed externally. So the two use cases above should use API in the same way to enter/edit data into RSR, meaning that all "data massaging" needs to be handled on the outside, before the data is sent to RSR.
+To be able to handle a lot of different needs in terms of getting data into RSR the API interface should be as simple as possible. Any special cases that need to be taken into account should be managed externally. So the two use cases above should use the API in the same way to enter/edit data into RSR, meaning that all "data massaging" needs to be handled on the outside, before the data is sent to RSR.
 
 #### Technically this boils down to:
 
