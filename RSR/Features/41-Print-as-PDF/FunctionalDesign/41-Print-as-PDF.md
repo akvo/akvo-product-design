@@ -26,45 +26,45 @@ You'll be able to create a full report of your project containing all included i
 
 ## Initial features
 #### Scenarios
-Provide a complete project overview as a PDF file containing all information about a project.
-Provide a simple project view with just the basic information on a project.
-Provide an update export containing all the project updates for a project.
-Provide a filtered project update export containing all updates posted within 2 given dates.
+- Provide a complete project overview as a PDF file containing all information about a project.
+- Provide a simple project view with just the basic information on a project.
+- Provide an update export containing all the project updates for a project.
+- Provide a filtered project update export containing all updates posted within 2 given dates.
 
 #### High Level Requirements
-Provide pdf files that collect colours and fonts from the Akvo Pages custom CSS.
-Place a timestamp on the exorted pdf informing the date and time that the information is captured.
-Provide live URLs on the export to allow users to click through to the live content.
-Ensure the Powered by Akvo logo is present on the final PDF.
+- Provide pdf files that collect colours and fonts from the Akvo Pages custom CSS.
+- Place a timestamp on the exorted pdf informing the date and time that the information is captured.
+- Provide live URLs on the export to allow users to click through to the live content.
+- Ensure the Powered by Akvo logo is present on the final PDF.
 
 ## Non Goals
 Only information included within the project content stored in RSR should be included within the exported pdf.
 
 ## User Experience
-GIVEN a user viewing a project
-WHEN the user selects to print as PDF
-THEN they are provided with a selection of options to choose from.
+GIVEN a user viewing a project  
+WHEN the user selects to print as PDF  
+THEN they are provided with a selection of options to choose from  
 
 #### Complete Project
-GIVEN a user printing as PDF
-WHEN they select a complete export
-THEN all project content, updates and related information is included
+GIVEN a user printing as PDF  
+WHEN they select a complete export  
+THEN all project content, updates and related information is included  
 
 #### Simple Project
-GIVEN a user printing as PDF
-WHEN they select a simple project
-THEN just the project summary and high level information is included
+GIVEN a user printing as PDF  
+WHEN they select a simple project  
+THEN just the project summary and high level information is included  
 
 #### Project Updates
-GIVEN a user printing as PDF
-WHEN they select project updates
-THEN the project title and all the project updates are included
+GIVEN a user printing as PDF  
+WHEN they select project updates  
+THEN the project title and all the project updates are included  
 
 #### Filtered Project Update 
-GIVEN a user printing as PDF
-WHEN they select filtered project updates
-THEN they are required to enter a from and to date
+GIVEN a user printing as PDF  
+WHEN they select filtered project updates  
+THEN they are required to enter a from and to date  
 
-GIVEN a user printing filtered project updates
-WHEN they enter a from and to date
-THEN the project title and all updates that are posted within the 2 dates are included
+GIVEN a user printing filtered project updates  
+WHEN they enter a from and to date  
+THEN the project title and all updates that are posted within the 2 dates are included  
