@@ -18,7 +18,7 @@ https://github.com/akvo/akvo-product-design/issues/41
 
 
 ## Marketing description
-There are many reasons that you might need to share the content of one or more of your RSR projects with others. But if it's for deicsion making, validation, official reporting or for live presenting then sending the web view URL might not be enough to meet your needs.
+There are many reasons that you might need to share the content of one or more of your RSR projects with others. But if it's for decision making, validation, official reporting or for live presenting then sending the web view URL might not be enough to meet your needs.
 
 With this new feature, you'll be able to print the contents of your project in a clear well layed out PDF file that can be sent as an attachment to an email, included within a larger report or printed on paper.
 
@@ -30,12 +30,15 @@ You'll be able to create a full report of your project containing all included i
 - Provide a simple project view with just the basic information on a project.
 - Provide an update export containing all the project updates for a project.
 - Provide a filtered project update export containing all updates posted within 2 given dates.
+- Provide an option for images and maps to be excluded.
 
 #### High Level Requirements
 - Provide pdf files that collect colours and fonts from the Akvo Pages custom CSS.
 - Place a timestamp on the exorted pdf informing the date and time that the information is captured.
 - Provide live URLs on the export to allow users to click through to the live content.
 - Ensure the Powered by Akvo logo is present on the final PDF.
+- Photos from project and updates should be included.
+- Maps of project locations should be included.
 
 ## Non Goals
 Only information included within the project content stored in RSR should be included within the exported pdf.
@@ -68,3 +71,8 @@ THEN they are required to enter a from and to date
 GIVEN a user printing filtered project updates  
 WHEN they enter a from and to date  
 THEN the project title and all updates that are posted within the 2 dates are included  
+
+#### Exclude Images and Maps
+GIVEN a user printing as PDF
+WHEN they select to exclude images and maps
+THEN these should not be included
