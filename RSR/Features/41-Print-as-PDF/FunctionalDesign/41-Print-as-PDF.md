@@ -73,6 +73,6 @@ WHEN they enter a from and to date
 THEN the project title and all updates that are posted within the 2 dates are included  
 
 #### Exclude Images and Maps
-GIVEN a user printing as PDF
-WHEN they select to exclude images and maps
-THEN these should not be included
+GIVEN a user printing as PDF  
+WHEN they select to exclude images and maps  
+THEN these should not be included  
