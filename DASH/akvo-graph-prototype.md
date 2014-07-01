@@ -9,6 +9,7 @@ The purpose of the Akvo Graph prototype is to quickly test a few components and 
 Suggested components to try:
 
 - SpreadJS: http://wijmo.com/widgets/wijmo-enterprise/spreadjs/
+- Handsontable: https://github.com/warpech/jquery-handsontable (also has a list of other similar projects)
 - Vincent: https://github.com/wrobstory/vincent
 
 
