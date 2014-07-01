@@ -86,11 +86,11 @@ If present RSR Up asks the user whether they would like to include this informat
 
 ## Questions
 
-1. Should we always display the timestamp information within the information displayed?
-*Yes, this should be displayed alongside the other data like credit and caption*
-2. What can we look into with regard to verification of metadata included within images?
-*Not needed at this time, the manually collected location is leading in terms of display. Will look into this option later on.*
-3. Should the options be on the app level or account level when adding updates?
-4. Is there a use case for also requesting/including geolocation directly from the device or web browser?
-*Yes - based on further user discussion, adding location from the device directly is a more appropriate solution to implement, whilst also capturing the geolocation information from images uploaded rather than losing this information in the resizing process.*
-5. How does the information taken from gallery images work within this process?
+1. Should we always display the timestamp information within the information displayed?  
+**Yes, this should be displayed alongside the other data like credit and caption**
+2. What can we look into with regard to verification of metadata included within images?  
+**Not needed at this time, the manually collected location is leading in terms of display. Will look into this option later on.**
+3. Should the options be on the app level or account level when adding updates?  
+4. Is there a use case for also requesting/including geolocation directly from the device or web browser?  
+**Yes - based on further user discussion, adding location from the device directly is a more appropriate solution to implement, whilst also capturing the geolocation information from images uploaded rather than losing this information in the resizing process.**
+5. How does the information taken from gallery images work within this process?  
