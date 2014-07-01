@@ -15,9 +15,9 @@ Priority order for requirements of including Geolocation information within upda
 3. For showing where updates are being made from.
 
 ## Marketing description
-~~With the release of RSR Up we've brought project updating to the field on your Android device, but now we will be expanding the reach and effectiveness of both this and direct web updating by including the Geolocation from your uploaded images within the information stored and visualised on RSR.
+~~With the release of RSR Up we've brought project updating to the field on your Android device, but now we will be expanding the reach and effectiveness of both this and direct web updating by including the Geolocation from your uploaded images within the information stored and visualised on RSR.~~
 
-When you take an image, most devices capture and store the geolocation of where the image was taken within the hidden meta-data. Previously this information is lost within the uploading process, but with this neew feature we'll be capturing and storing both the geo-coordinates and the timestamp of when an image is taken so that this can be used wherever you wish.~~
+~~When you take an image, most devices capture and store the geolocation of where the image was taken within the hidden meta-data. Previously this information is lost within the uploading process, but with this neew feature we'll be capturing and storing both the geo-coordinates and the timestamp of when an image is taken so that this can be used wherever you wish.~~
 
 With the release of RSR Up we've brought project updating to the field on your Android device, but now we will be expanding the reach and effectiveness of both this and direct web updating by including location information from users who are submitting updates.
 
