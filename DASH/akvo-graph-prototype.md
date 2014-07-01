@@ -23,20 +23,24 @@ n/a
 - Select chart type
 - Preview chart type
 - Manipulate data
-- Record data manipulations (keep a history)
 - Save data
 - Publish chart
+
+Wishlist items for later:
+
+- Record data manipulations (keep a history)
 
 ### First pass
 
 - Go to a web page and select an Excel spreadsheet file or CSV file to upload
 - Load the file and have it be presented in online spreadsheet format in a Javascript spreadsheet presentation and manipulation component
 - Select a chart type (bar and line chart)
+- Add chart access labels
 - Preview the chart type
 
 ### Second pass
 
-- Allow anipulation of the data
+- Allow manipulation of the data
 - Save data
 - Publish the data through a widget or similar
 
@@ -44,6 +48,7 @@ n/a
 
 - Grab data (how many updates have there been per month in Akvo RSR) from an API
 - Call an API on a scheduled basis
+- Investigate if it is possible to cut and paste data from other sources (such as a spreadsheet) into the browser data presentation.
 
 ## Non-goals
 
