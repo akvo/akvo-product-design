@@ -68,3 +68,5 @@ Scenarios 3: A user wants to visualise the incoming data on a daily basis for an
 The application should not emulate a full spreadsheet. It is a data publishing tool. Simple datasets can be hand entered or imported into Akvo Graph and visualised. 
 
 ## Technical notes
+
+n/a
