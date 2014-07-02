@@ -34,7 +34,7 @@ Software as Service. But open source.
 - UI to manage my data selection
 - Present though
 	- Maps
-	- Graphs
+	- Graphs ([prototype spec here](https://github.com/akvo/akvo-product-design/blob/master/DASH/akvo-graph-prototype.md))
 	- Tables
 	- Other visualisations
 - Present the material on
