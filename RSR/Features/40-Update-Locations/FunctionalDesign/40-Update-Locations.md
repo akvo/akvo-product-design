@@ -4,9 +4,9 @@
 We need to start collecting and displaying Geolocations within individual project updates. This will allow the information to be used within project and programme reporting as well as being displayed on maps and visualisations for organisations and Akvo itself.
 
 ## References
-https://github.com/akvo/akvo-product-design/issues/40
-https://github.com/akvo/akvo-rsr-up/issues/22
-https://github.com/akvo/akvo-rsr/issues/646
+https://github.com/akvo/akvo-product-design/issues/40  
+https://github.com/akvo/akvo-rsr-up/issues/22  
+https://github.com/akvo/akvo-rsr/issues/646  
 
 Amitangshu user input:
 Priority order for requirements of including Geolocation information within updates:  
