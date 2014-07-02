@@ -9,10 +9,10 @@ https://github.com/akvo/akvo-rsr-up/issues/22
 https://github.com/akvo/akvo-rsr/issues/646
 
 Amitangshu user input:
-Priority order for requirements of including Geolocation information within updates:
-1. For proving that an update was made in a particular place and at a particular time
-2. For displaying on a map.
-3. For showing where updates are being made from.
+Priority order for requirements of including Geolocation information within updates:  
+1. For proving that an update was made in a particular place and at a particular time  
+2. For displaying on a map.  
+3. For showing where updates are being made from.  
 
 ## Marketing description
 ~~With the release of RSR Up we've brought project updating to the field on your Android device, but now we will be expanding the reach and effectiveness of both this and direct web updating by including the Geolocation from your uploaded images within the information stored and visualised on RSR.~~
