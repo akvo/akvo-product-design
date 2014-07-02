@@ -15,7 +15,7 @@ Suggested components to try:
 
 ## Marketing description
 
-n/a
+Akvo GRAPH is part of the data mashup and publishing service, Akvo DASH. With Akvo GRAPH you can easily take data, from spreadsheets, CSV files, Akvo tools or other sources, and quickly visualise the data in the form of line charts, bar charts and other types of charts. Akvo GRAPH allows you to quickly publish your charts in Akvo DASH and as widgets in your blog or other websites. 
 
 ## Initial features
 
@@ -68,3 +68,5 @@ Scenarios 3: A user wants to visualise the incoming data on a daily basis for an
 The application should not emulate a full spreadsheet. It is a data publishing tool. Simple datasets can be hand entered or imported into Akvo Graph and visualised. 
 
 ## Technical notes
+
+n/a
