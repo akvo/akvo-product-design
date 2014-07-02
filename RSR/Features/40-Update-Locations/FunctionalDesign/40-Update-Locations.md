@@ -4,20 +4,20 @@
 We need to start collecting and displaying Geolocations within individual project updates. This will allow the information to be used within project and programme reporting as well as being displayed on maps and visualisations for organisations and Akvo itself.
 
 ## References
-https://github.com/akvo/akvo-product-design/issues/40
-https://github.com/akvo/akvo-rsr-up/issues/22
-https://github.com/akvo/akvo-rsr/issues/646
+https://github.com/akvo/akvo-product-design/issues/40  
+https://github.com/akvo/akvo-rsr-up/issues/22  
+https://github.com/akvo/akvo-rsr/issues/646  
 
 Amitangshu user input:
-Priority order for requirements of including Geolocation information within updates:
-1. For proving that an update was made in a particular place and at a particular time
-2. For displaying on a map.
-3. For showing where updates are being made from.
+Priority order for requirements of including Geolocation information within updates:  
+1. For proving that an update was made in a particular place and at a particular time  
+2. For displaying on a map.  
+3. For showing where updates are being made from.  
 
 ## Marketing description
-~~With the release of RSR Up we've brought project updating to the field on your Android device, but now we will be expanding the reach and effectiveness of both this and direct web updating by including the Geolocation from your uploaded images within the information stored and visualised on RSR.
+~~With the release of RSR Up we've brought project updating to the field on your Android device, but now we will be expanding the reach and effectiveness of both this and direct web updating by including the Geolocation from your uploaded images within the information stored and visualised on RSR.~~
 
-When you take an image, most devices capture and store the geolocation of where the image was taken within the hidden meta-data. Previously this information is lost within the uploading process, but with this neew feature we'll be capturing and storing both the geo-coordinates and the timestamp of when an image is taken so that this can be used wherever you wish.~~
+~~When you take an image, most devices capture and store the geolocation of where the image was taken within the hidden meta-data. Previously this information is lost within the uploading process, but with this neew feature we'll be capturing and storing both the geo-coordinates and the timestamp of when an image is taken so that this can be used wherever you wish.~~
 
 With the release of RSR Up we've brought project updating to the field on your Android device, but now we will be expanding the reach and effectiveness of both this and direct web updating by including location information from users who are submitting updates.
 
@@ -86,11 +86,11 @@ If present RSR Up asks the user whether they would like to include this informat
 
 ## Questions
 
-1. Should we always display the timestamp information within the information displayed?
-Yes, this should be displayed alongside the other data like credit and caption
-2. What can we look into with regard to verification of metadata included within images?
-Not needed at this time, the manually collected location is leading in terms of display. Will look into this option later on.
-3. Should the options be on the app level or account level when adding updates?
-4. Is there a use case for also requesting/including geolocation directly from the device or web browser?
-Yes - based on further user discussion, adding location from the device directly is a more appropriate solution to implement, whilst also capturing the geolocation information from images uploaded rather than losing this information in the resizing process.
-5. How does the information taken from gallery images work within this process?
+1. Should we always display the timestamp information within the information displayed?  
+**Yes, this should be displayed alongside the other data like credit and caption**
+2. What can we look into with regard to verification of metadata included within images?  
+**Not needed at this time, the manually collected location is leading in terms of display. Will look into this option later on.**
+3. Should the options be on the app level or account level when adding updates?  
+4. Is there a use case for also requesting/including geolocation directly from the device or web browser?  
+**Yes - based on further user discussion, adding location from the device directly is a more appropriate solution to implement, whilst also capturing the geolocation information from images uploaded rather than losing this information in the resizing process.**
+5. How does the information taken from gallery images work within this process?  
