@@ -1,5 +1,7 @@
 # Akvo Graph prototype
 
+Akvo Graph is part of Akvo DASH: https://github.com/akvo/akvo-product-design/blob/master/DASH/overview.md
+
 ## Overview
 
 The purpose of the Akvo Graph prototype is to quickly test a few components and learn how to assemble the right tools and information flow for parts of the Akvo DASH system. If it turns out it is suitable we will reuse some of the components in the Akvo Graph implementation. 
