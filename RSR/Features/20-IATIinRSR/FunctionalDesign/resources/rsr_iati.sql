@@ -104,7 +104,8 @@ CREATE TABLE `rsr_country_budget` (
   `code` varchar(128) DEFAULT NULL,
   `percentage` decimal(2,0) DEFAULT NULL,
   `type` varchar(128) DEFAULT NULL,
-  `text` varchar(128) DEFAULT NULL
+  `text` varchar(128) DEFAULT NULL,
+  `project_id` int(11) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
