@@ -5,18 +5,18 @@
 ###Visualise updatelocation within the update (Up, RSR & Pages)
 
 #### RSR Web Update View
-![RSR Web Update View](https://raw.githubusercontent.com/akvo/akvo-product-design/master/RSR/Features/40-Update-Locations/VisualDesign/mockups/updateview.png)
+![RSR Web Update View](https://raw.githubusercontent.com/akvo/akvo-product-design/master/RSR/Features/40-Update-Locations/Visual%20Design/mockups/updateview.png)
 
 #### RSR Up Update View
-![RSR Up Update View](https://raw.githubusercontent.com/akvo/akvo-product-design/master/RSR/Features/40-Update-Locations/VisualDesign/mockups/up_updateview-1.png)
+![RSR Up Update View](https://raw.githubusercontent.com/akvo/akvo-product-design/master/RSR/Features/40-Update-Locations/Visual%20Design/mockups/up_updateview-1.png)
 
 ###Visualise updatelocation within the project (Up, RSR & Pages)
 
 #### RSR Web Project View
-![RSR Web Project View](https://raw.githubusercontent.com/akvo/akvo-product-design/master/RSR/Features/40-Update-Locations/VisualDesign/mockups/projectview.png)
+![RSR Web Project View](https://raw.githubusercontent.com/akvo/akvo-product-design/master/RSR/Features/40-Update-Locations/Visual%20Design/mockups/projectview.png)
 
 #### RSR Up Project View
-![RSR Up Project View](https://raw.githubusercontent.com/akvo/akvo-product-design/master/RSR/Features/40-Update-Locations/VisualDesign/mockups/up_projectview-1.png)
+![RSR Up Project View](https://raw.githubusercontent.com/akvo/akvo-product-design/master/RSR/Features/40-Update-Locations/Visual%20Design/mockups/up_projectview-1.png)
 
 ###Visualise updatelocation within a global map (RSR)
 
@@ -25,11 +25,11 @@
 
 ###Visualise updatelocation within Akvo Pages map (Pages)
 
-![RSR Web Pages Map](https://raw.githubusercontent.com/akvo/akvo-product-design/master/RSR/Features/40-Update-Locations/VisualDesign/mockups/pagesmap.png)
+![RSR Web Pages Map](https://raw.githubusercontent.com/akvo/akvo-product-design/master/RSR/Features/40-Update-Locations/Visual%20Design/mockups/pagesmap.png)
 
 ###Visualise updatelocation within Widgets  (RSR & Pages)
 
-![RSR Widgets](https://raw.githubusercontent.com/akvo/akvo-product-design/master/RSR/Features/40-Update-Locations/VisualDesign/mockups/widgets.png)
+![RSR Widgets](https://raw.githubusercontent.com/akvo/akvo-product-design/master/RSR/Features/40-Update-Locations/Visual%20Design/mockups/widgets.png)
 
 ## User Experience 
 How the user experiences the feature, what is the workflow
