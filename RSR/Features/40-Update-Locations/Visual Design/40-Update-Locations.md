@@ -21,7 +21,7 @@
 ###Visualise updatelocation within a global map (RSR)
 
 #### RSR Web Global Map
-![RSR Web Global Map](https://github.com/akvo/akvo-product-design/blob/master/RSR/Features/40-Update-Locations/VisualDesign/mockups/globalmap.png)
+![RSR Web Global Map](https://raw.githubusercontent.com/akvo/akvo-product-design/master/RSR/Features/40-Update-Locations/Visual%20Design/mockups/globalmap.png)
 
 ###Visualise updatelocation within Akvo Pages map (Pages)
 
