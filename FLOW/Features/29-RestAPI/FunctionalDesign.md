@@ -30,8 +30,8 @@ Initially, the following API requests will be implemented:
 * **get project entities** - entities created by a project, including metadata
 * **get project entity details** — details of a single project entity: includes all answers to questions. Depending on parameters, only show latest values, or all values.
 
-**PUT**
-* **put form response** — supply answers to questions in a form. Depending on project settings, should include an entity id.
+**POST**
+* **post form response** — supply answers to questions in a form. Depending on project settings, should include an entity id.
 
 ### Scenarios
 **Scenario 1**

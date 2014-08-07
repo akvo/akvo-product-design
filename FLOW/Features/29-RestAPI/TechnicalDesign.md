@@ -24,3 +24,5 @@ To be decided.
 
 Requests must include a URL-encoded api_key.
 
+### Implementation
+The REST service will use the same code as the REST service serving the dashboard.
