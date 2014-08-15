@@ -7,6 +7,7 @@ The following process has been determined from looking at the user flow and what
 
 ## User problems
 5. Users don't understand and cannot follow the registration process.
+13. Users don't see changes in their permissions or access.
 
 ## User stories
 1. Preethi can easily register for an RSR account.
