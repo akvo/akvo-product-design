@@ -65,9 +65,7 @@ In order to tackle all of these issues, cover the user stories and solve the ass
 1. Registration Process
 2. Header and Footer
 3. Listing Pages
-4. Project Pages
-5. Updates Pages
-6. Organisation Pages
-7. Searching and Filtering
-8. MyRSR
-9. Comments
+4. Project, Update and Organisaion Pages
+5. Searching and Filtering
+6. MyRSR
+7. Comments
