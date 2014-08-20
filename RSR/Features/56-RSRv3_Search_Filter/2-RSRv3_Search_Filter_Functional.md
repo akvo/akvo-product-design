@@ -5,6 +5,12 @@ Project, Update and Organisation listing pages would make use of this feature in
 
 Auto-completion of search terms would be desirable, but we would need to determine what words/strings can be used to populate the completion process.
 
+## User problems
+1. Users cannot find projects and organisations easily.
+
+## User stories
+5. Klaus can find the information he is looking for.
+
 ### Key search functionality
 - Search available on all text fields
 - Advanced search on specific fields or field sets
