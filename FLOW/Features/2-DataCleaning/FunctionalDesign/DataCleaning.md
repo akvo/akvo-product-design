@@ -39,6 +39,7 @@ In a first implementation, we will introduce:
 * search-and-replace in a column
 * filter a column
 * capture change audit information 
+* edit individual cells
 
 ### Non goals
 What this feature will not contain
