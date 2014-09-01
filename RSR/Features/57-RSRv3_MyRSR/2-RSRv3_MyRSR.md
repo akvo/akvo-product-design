@@ -64,6 +64,18 @@ This list should also provide the user with the Search and Filtering functionali
 
 In particular, some thought needs to be given to how draft projects should be displayed to users that have permissions to publish. At the moment this is only Akvo staff that have this permission, but if we roll this out then we might consider the idea that project editors can give a sign off on draft projects to allow them to be published by the necessary admin users.
 
+#### Search, filter and sorting
+
+We should add a search and filtering section on this page that provides access for the user to filter the results displayed by:
+
+- Entering a word/keyword
+- Following status
+- Project status
+- Organisation
+- Publishing status
+
+This should utilise the search and filtering options and follow the same underlying process that we will be defining in https://github.com/akvo/akvo-product-design/issues/51.
+
 ### My updates
 This section will provide users with access to see all the updates that they have posted within RSR.
 
