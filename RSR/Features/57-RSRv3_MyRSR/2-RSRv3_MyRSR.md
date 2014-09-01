@@ -88,7 +88,7 @@ Updates should be displayed in a list with at least the following information:
 - Image/video
 - Title
 - Text
-- Caption & credit
+- ~~Caption & credit~~
 - Date posted
 - Edit possible for X minutes
 
