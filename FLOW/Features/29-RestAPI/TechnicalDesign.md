@@ -4,21 +4,25 @@ Title
 -------------
 
 ### Overview
-A short overview of what we try to accomplish
+The aim is to create a REST api for Akvo FLOW.
 
-### Minimum Viable Product
-The first versionn of the product that can be deployed.
+### Location
+The API will be available under /api
 
-### Final Product
-What the feature should look like when completely finished.
+### Versioning
+The API will be versioned by using v1, v2, etc, in the path:
+/api/v1/projects, /api/v2/projects, etc.
 
-### Technologies
-Listing of the tech stack of the feature, any dependencies on versions, additional libraries or resources.
+### Protocol
+https only
 
-### Testing
-How the feature can be tested, and what tests will be written during the creation/implementation.
+### Datatypes
+json only
 
-### Estimates
-Details of any timing estimates for how long this feature is expected to take, including end date and/or number of people working on this.
+### Authentication
+To be decided.
 
-Approved and ready for Coding by: 
+Requests must include a URL-encoded api_key.
+
+### Implementation
+The REST service will use the same code as the REST service serving the dashboard.

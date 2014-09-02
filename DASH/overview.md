@@ -21,6 +21,7 @@ Compared to other tools it is a bit like:
 - Google Maps
 - Google Graphs
 - Geckoboard, http://www.geckoboard.com
+- Klipfolio, http://www.klipfolio.com/features
 - http://www.pentaho.com/
 
 Software as Service. But open source.
@@ -33,13 +34,13 @@ Software as Service. But open source.
 - UI to manage my data selection
 - Present though
 	- Maps
-	- Graphs
+	- Graphs ([prototype spec here](https://github.com/akvo/akvo-product-design/blob/master/DASH/akvo-graph-prototype.md))
 	- Tables
 	- Other visualisations
 - Present the material on
 	- dash.akvo.org (for everything public)
 	- private and public dashboards
-	- mydomain.dash.akvo.org (for your own branding, like Akvo RSR Pages)
+	- mydomain.akvodash.org (for your own branding, like Akvo RSR Pages)
 	- via widgets
 	- via API
 	- data export service
@@ -80,6 +81,10 @@ PostgreSQL http://www.postgresql.org
 ### Visualisations
 Vincent: https://github.com/wrobstory/vincent
 Visualisations on top of D3 with Vega. Vincent makes it easy to build Vega with Python.
+
+### Graphs
+SpreadJS: http://wijmo.com/widgets/wijmo-enterprise/spreadjs/
+Excel-compatible HTML5 spreadsheet component
 
 ### Data structure
 Pandas: http://pandas.pydata.org/
