@@ -40,6 +40,13 @@ The main project page will contain:
 - Focus areas and sectors
 - Results
 - Links
+- Project Hierarchy
+
+An additional element of Project Hierarchy has been added. This section should be a visual representation of a projects connections with other projects. Shown in diagram format, it should allow a user to see which projects funded, which projects are funded by and which projects are siblings of the current project.
+
+The linked projects should be accessible by clicking on the icons representing them.
+
+We might also want to consider additional filtered lists where a list (using the project list layout spec) is displayed showing all projects that are directly connected with the project in question.
 
 ### Funding page
 The funding page of the project will contain:
