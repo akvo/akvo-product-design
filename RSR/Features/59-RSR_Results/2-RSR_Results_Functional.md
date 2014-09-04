@@ -32,6 +32,7 @@ We have implemented the data structure of IATI within the RSR database, but we h
 
 Within the IATI standard, we have the following elements:
 
+- Policy Markers
 - DAC 3 and 5 sector codelists
 - Budgets
 - Transactions
