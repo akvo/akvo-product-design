@@ -38,19 +38,19 @@ Another option is to keep them in a separate kind, and store them one by one
 The simplest option will probably be to use a materialised path:
 
 employee table (emp_table):
-ENAME|	PATH
---- | ---
-KING |	1
-JONES |	1.1
-SCOTT |	1.1.1
-ADAMS |	1.1.1.1
-FORD |	1.1.2
-SMITH |	1.1.2.1
-BLAKE |	1.2
-ALLEN |	1.2.1
-WARD |	1.2.2
-CLARK |	1.3
-MILLER |	1.3.1
+ENAME	PATH
+
+* KING 	1
+* JONES 	1.1
+* SCOTT 	1.1.1
+* ADAMS 	1.1.1.1
+* FORD 	1.1.2
+* SMITH 	1.1.2.1
+* BLAKE 	1.2
+* ALLEN 	1.2.1
+* WARD 	1.2.2
+* CLARK 	1.3
+* MILLER 	1.3.1
 
 which could be serialised in JSON and then deflated:
 
