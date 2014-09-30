@@ -13,21 +13,21 @@ Auto-completion of search terms would be desirable, but we would need to determi
 
 
 ### MUST HAVES
-Preethi can filter a list of projects by Country.
-Klaus can find all projects within a OECD DAC Sector.
-Anne can locate a project using the Internal ID that her orgainsation uses for a project.
-Matthijs can find a project knowing only that it has "minerals" somewhere in the description fields.
-Sandra can create a list of projects that have/have not been updated from within a certain country or sector.
-Tim can utilise [Deep linking](https://en.wikipedia.org/wiki/Deep_linking) functionality to direct users to pre-determined search & filtering selections.
-Preethi can generate a list of updates by filtering on coutry and/or user.
+- Preethi can filter a list of projects by Country.
+- Klaus can find all projects within a OECD DAC Sector.
+- Anne can locate a project using the Internal ID that her orgainsation uses for a project.
+- Matthijs can find a project knowing only that it has "minerals" somewhere in the description fields.
+- Sandra can create a list of projects that have/have not been updated from within a certain country or sector.
+- Tim can utilise [Deep linking](https://en.wikipedia.org/wiki/Deep_linking) functionality to direct users to pre-determined search & filtering selections.
+- Preethi can generate a list of updates by filtering on coutry and/or user.
 
 ### COULD HAVES
-Sandra can find projects with specific budget values.
-Klaus can start typing a project title to see close matches to choose from.
-Sandra could create a complex search and filter query that is automatically applied to the project list when she is logged in.
-Matthijs can check performance of his colleagues by filtering for projects being worked on by individual users.
-Tim could validate his API query results by replicating the filtering options on the web.
-Anne can see a list of common/popular search terms.
+- Sandra can find projects with specific budget values.
+- Klaus can start typing a project title to see close matches to choose from.
+- Sandra could create a complex search and filter query that is automatically applied to the project list when she is logged in.
+- Matthijs can check performance of his colleagues by filtering for projects being worked on by individual users.
+- Tim could validate his API query results by replicating the filtering options on the web.
+- Anne can see a list of common/popular search terms.
 
 
 ### Key search functionality
