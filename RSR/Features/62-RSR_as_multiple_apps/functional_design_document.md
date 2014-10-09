@@ -43,7 +43,7 @@ MyRSR imports the RSR models from the Back-end, but uses its own urls, views, fo
 
 #### Pages
 
-The Pages sites run on *.akvoapp.org (and CNAME domains). Pages imports the models from Back-end but the data available to a Pages site is limited to only the objects used on that particular site. Pages has its own set of urls, views and templates. Pages is **read-only**. A Pages site may include an API that only provides the data that is used to populate that site. For a more in-depth description of the underlying technology see [the technical design document](technical_design_document.md).
+The Pages sites run on *.akvoapp.org (and CNAME domains). Pages imports the models from Back-end but the data available to a Pages site is limited to only the objects used on that particular site. Pages has its own set of urls, views and templates. Pages is __read-only__. A Pages site may include an API that only provides the data that is used to populate that site. For a more in-depth description of the underlying technology see [the technical design document](technical_design_document.md).
 
 ### Open issues
 

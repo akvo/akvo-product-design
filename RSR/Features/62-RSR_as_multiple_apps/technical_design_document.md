@@ -8,7 +8,7 @@ Multi-tenancy using PostgreSQL
 
 For a functional overview of where this feature would be used [look here](functional_design_document.md).
 
-[TL;DR](#TL;DR)
+[TL;DR](#TLDR)
 
 Modern Postgres (preferably ver 9.4 or later) provides for two technologies that are of interest for RSR's version of multi-tenancy: Schemas and Materialized Views. Together they provide the DB infrastructure needed to make Pages sites both more performant and easier to write code for while guaranteeing that a Pages site runs on only the data it "should" have access to.
 
@@ -65,7 +65,15 @@ When accessing a Pages instance, middleware determines the schema to use based o
 Too much techno babble? Well, this is kinda hard to explain, so let's just look at a real world RSR example: Today when home page of Cordaid's Pages site is called the SQL to construct the project list looks like this (somewhat simplified):
 
 ```
-SELECT DISTINCT * FROM `rsr_project` INNER JOIN `rsr_partnership` ON ( `rsr_project`.`id` = `rsr_partnership`.`project_id` ) INNER JOIN `rsr_publishingstatus` ON ( `rsr_project`.`id` = `rsr_publishingstatus`.`project_id` ) WHERE (`rsr_partnership`.`organisation_id` = 273  AND `rsr_publishingstatus`.`status` = 'published') ORDER BY `rsr_project`.`id` DESC'
+SELECT DISTINCT *
+FROM   `rsr_project`
+    INNER JOIN `rsr_partnership`
+        ON ( `rsr_project`.`id` = `rsr_partnership`.`project_id` )
+    INNER JOIN `rsr_publishingstatus`
+        ON ( `rsr_project`.`id` = `rsr_publishingstatus`.`project_id` )
+WHERE  ( `rsr_partnership`.`organisation_id` = 273
+    AND `rsr_publishingstatus`.`status` = 'published' )
+ORDER  BY `rsr_project`.`id` DESC
 ```
 (In reality it's even more complex, above we ignore the fact we can now also use keywords to further expand or limit the project selection.)
 
