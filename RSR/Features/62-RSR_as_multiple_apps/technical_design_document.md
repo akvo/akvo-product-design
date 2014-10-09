@@ -8,7 +8,7 @@ Multi-tenancy using PostgreSQL
 
 For a functional overview of where this feature would be used [look here](functional_design_document.md).
 
-[TL;DR](#TLDR)
+[TL;DR](#user-content-tldr)
 
 Modern Postgres (preferably ver 9.4 or later) provides for two technologies that are of interest for RSR's version of multi-tenancy: Schemas and Materialized Views. Together they provide the DB infrastructure needed to make Pages sites both more performant and easier to write code for while guaranteeing that a Pages site runs on only the data it "should" have access to.
 
