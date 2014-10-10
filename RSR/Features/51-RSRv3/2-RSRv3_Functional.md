@@ -60,12 +60,17 @@ This provides:
 3. Opportunities to customise Akvo Pages further to include or exclude the additional functionality being developed on a per partner basis.
 
 ### Plan of Action
-In order to tackle all of these issues, cover the user stories and solve the associated problems, the following items will be individually itemised and specified for design and development.
+In order to tackle all of these issues, cover the user stories and solve the associated problems, the following items will be individually itemised and specified for design and development, in the following loose order.
 
-1. Registration Process
-2. Header and Footer
-3. Listing Pages
-4. Project, Update and Organisaion Pages
-5. Searching and Filtering
-6. MyRSR
-7. Comments
+1. Header and Footer
+2. Registration Process
+3. MyRSR
+4. Postgres
+5. Listing Pages (slice data)
+6. Searching and Filtering
+7. Project, Update and Organisation Pages
+8. Comments
+9. Maps
+10. Notifications
+11. Tests
+12. Followings
