@@ -6,7 +6,7 @@
 ### References
 
 * https://github.com/akvo/akvo-product-design/issues/25
-
+* [Technical specification](https://github.com/akvo/akvo-product-design/blob/master/services/AccountsService/25-AccountsService/TechnicalDesign/AccountsService.md)
 
 ### Overview
 
