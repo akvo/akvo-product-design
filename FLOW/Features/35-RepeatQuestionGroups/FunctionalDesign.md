@@ -48,9 +48,7 @@ The project manager can define a static list of items (for example the same list
 If the type/name of products is unknown, the amount of repetitions can be chosen by the enumerator. This way, each time a repeated question group is answered, the user will be prompted to add another set.
 
 ### Technical notes
-TODO
+The first iteration will consist of a JSON-encoded string, containing the data for all the questions in the group. The JSON value will include an attribute in each question block, with the item name the block refers to. More technical details are available at https://github.com/akvo/akvo-product-design/blob/master/FLOW/Features/35-RepeatQuestionGroups/TechnicalDesign.md
 
-### Open issues
-TODO
 
 Approved and ready for Visual Design by: 
