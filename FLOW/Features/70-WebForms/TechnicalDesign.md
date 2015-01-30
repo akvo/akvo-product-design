@@ -15,6 +15,7 @@ The minimum level of functionality for this product should:
 A final production should have:
 * a well defined page flow for filling in multiple forms or single forms per survey
 * the possibility for customising/styling the forms with logos, images etc.
+* the possibility to embed the web based submission forms into a web page?
 
 ### Technologies
 Listing of the tech stack of the feature, any dependencies on versions, additional libraries or resources.
