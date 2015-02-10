@@ -20,30 +20,50 @@ A final production should have:
 ### Technologies
 Listing of the tech stack of the feature, any dependencies on versions, additional libraries or resources.
 
-* Clojurescript client: Retrieves published survey definitions and renders them; supports local storage of responses as survey is being filled out; supports validation of input; submits responses to FLOW services backend
+* Clojurescript client:
+	- gets form definition from API in JSON format from flow services
+	- renders from in html
+	- stores asnwer data locally until submit time
+	- at submit, sends data to flow services in JSON format
 
-* Akvo FLOW services backend: Hosts clojurescript client, handle unique identification of each webform request/response; generates zip file containing survey response and posts to object store, informs GAE that responses have been submitted.
+* Akvo FLOW services backend: 
+	- reads form XML format from s3
+	- caches XML
+	- services form definition API
+	- services form data submission API
+	- serializes form data to object store
+	- notifies GAE that data is ready for ingestion.
 
-* FLOW Dashboard: embedding web forms?
+* FLOW Dashboard:
+	- UI for generating web form access URL with unique code for survey
 
-* Object store: store zipped survey responses
+* Object store: store zipped survey responses, in same way as device.
 
 
 ### Testing:
 
+### Milestones:
 
-### Estimates:
+Akvo FLOW services backend:
+1. From the URL, determine the requested survey and the instance. Should this be encoded in the URL somehow, or be retrieved by the FLOW Services? This system will be multitenant, so it will need to know from which instance a request comes. The easiest might be to include the instance in the URL, and add a unique code, after which FLOW services does a GET request to the instance to know which survey is requested. The unique code (or list of codes) could then be managed on the GAE instance.
 
-Clojurescript client:
-* Survey definition retrieval + rendering
-* Survey response input validation
-* Survey response processing + submission
+2. Read the XML file and cache it locally (check version of survey using head request)?
 
-FLOW services backend:
-* Survey response management (unique identification + coupling to a request)
-* Survey response processing, i.e. generation of zip
+3. Implement an API that delivers a JSON representation of the survey from the XML file
 
-FLOW Dashboard:
-* Embedding webforms?
+4. Implement an API that receives response data in JSON, and serializes this to a format recognised by GAE. Includes storing it in the object store, and notify google app engine, using the same endpoint as devices use
 
-Approved and ready for Coding by: 
+Clojurescript Client:
+1. Based on the URL, read the form definition from FLOW services
+
+2. Render html forms based on the definition
+
+3. Store data in local storage
+
+4. Upon submit, serialize data and PUT it to FLOW services data api
+
+FLOW Dashboard
+
+1. UI to create one or more unique web links for survey. 
+
+2. It should be possible to retract / delete a link
