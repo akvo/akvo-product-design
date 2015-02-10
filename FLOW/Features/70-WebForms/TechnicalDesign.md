@@ -29,6 +29,7 @@ Listing of the tech stack of the feature, any dependencies on versions, addition
 * Akvo FLOW services backend: 
 	- reads form XML format from s3
 	- caches XML
+	- creates JSON version of form definition and caches it
 	- services form definition API
 	- services form data submission API
 	- serializes form data to object store
@@ -47,7 +48,7 @@ Listing of the tech stack of the feature, any dependencies on versions, addition
 Akvo FLOW services backend:
 1. From the URL, determine the requested survey and the instance. Should this be encoded in the URL somehow, or be retrieved by the FLOW Services? This system will be multitenant, so it will need to know from which instance a request comes. The easiest might be to include the instance in the URL, and add a unique code, after which FLOW services does a GET request to the instance to know which survey is requested. The unique code (or list of codes) could then be managed on the GAE instance.
 
-2. Read the XML file and cache it locally (check version of survey using head request)?
+2. Read the XML file and create JSON version. Cache the json version
 
 3. Implement an API that delivers a JSON representation of the survey from the XML file
 
