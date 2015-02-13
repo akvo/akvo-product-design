@@ -19,7 +19,7 @@ Based on methodology created for designing public transportation networks in lar
 
 Following on from the Red Routes work, we have taken each of the features and placed these into a Trello board. This activity has also enabled a numbering convention to be applied to RSR features, giving a standard reference point for ongoing development and improvements.
 
-[RSR Features Trello Baord](https://trello.com/b/PVwdKgoU/rsr-features)
+[RSR Features Trello Board](https://trello.com/b/PVwdKgoU/rsr-features)
 
 ## User Stories
 

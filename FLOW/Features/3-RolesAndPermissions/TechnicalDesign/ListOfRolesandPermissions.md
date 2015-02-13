@@ -12,21 +12,30 @@
 
 ## List of dashboard permissions
 
-### Survey Group/Project
-* Delete SurveyGroup/Project
-* Create SurveyGroup/Project
-* Edit SurveyGroup/Project
-* View SurveyGroup/Project
-* Enable Monitoring Features on SurveyGroup/Project
 
-### Survey/Forms
-Delete Survey/Form
-* Create Survey/Form
-* Publish Survey/Form
-* Define Registration Form
-* Copy Survey/Form
-* Edit Survey/Form
-* View Survey/Form
+### Survey Definition and Management
+
+#### Folders and Surveys
+* Delete Folders/Surveys
+* Create Folders/Surveyss
+* Edit Folders/Surveys
+* View Folders/Surveys
+
+#### Survey Forms
+* Delete Survey Forms
+* Create Survey Forms
+* Edit Survey Forms
+* View Survey Forms
+
+### Data Viewing and Manipulation
+* Delete Data (via dashboard `Data > Inspect Data`)
+* Create Data (via dashboard `Data > Bulk Upload` and `Data > Data Cleaning > Import Data`)
+* Edit Data (via dashboard `Data > Inspect Data` and `Data > Data Cleaning > Import Data`)
+* View Data (via dashboard `Data > Inspect Data`, `Data > Data Cleaning > Export Data`, `Reports > Charts`, `Reports > Export Reports` and `Maps`)
+
+### User management
+* Delete Users
+* Create & Modify Users
 
 ### Notifications and Translations
 * Delete Notifications
@@ -47,23 +56,6 @@ Delete Survey/Form
 * Remove Device From Group
 * Create New Survey/Form Assignment
 * Initiate Manual Survey/Form Transfer
-
-### Data Viewing and Manipulation
-* Inspect Data (only surveys allowed to view)
-* Bulk Upload Data (needs to be restricted & user needs to be associated to survey)
-* Download Raw Report (restricted to surveys with view access)
-* Import Cleaned Data (restricted to surveys with edit access)
-
-* View charts (Surveys where user has at least view access)
-* Export Reports (Surveys where user has at lease view access)
-
-* View Maps - view surveys that you hav access to viewing
-
-### User management
-* Delete User
-* Create User
-* Edit User
-* View User
 
 ### Messages
 * View Messages
