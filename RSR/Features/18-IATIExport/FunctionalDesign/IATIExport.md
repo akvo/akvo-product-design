@@ -38,6 +38,31 @@ Provide a link on a project page that allows the available data to be provided i
 
 Provide a link on an organisation page that allows the entire data for that organisation to be provided in an IATI XML format for viewing in the browser or downloading directly. This link should only be available for Organisations that are Support Partners - have Support Partner listed in the ``rsr_organisation_partner_types`` table.
 
+## User Stories
+
+### Creating an IATI XML File
+
+- #339 - As an authorised Member I can create an IATI XML file for a single project
+- #340 - As an authorised Member I can create an IATI XML file for all projects from an organisation
+- #341 - As an authorised Member I can decide to publish a created IATI XML file
+- #342 - As an authorised Member I can see what IATI Mandatory information is missing from the created file
+- #343 - As an authorised Member I can preview a created file
+ 
+### Viewing an IATI XML File
+
+- #346 - As a User I can download a public IATI XML file for a single project
+- #347 - As a User I can download a public IATI XML file for an organisation
+- #348 - As a User I can preview a public IATI XML file in RSR
+- #349 - As a User I can find the Published Information for a project or organisation in the IATI Registry
+- 
+### Publishing an IATI XML File
+
+- #354 - As an authorised Member I can request to have Akvo publish my IATI XML File
+- #355 - As an authorised Member I can choose to publish my IATI XML File myself
+- #356 - As an authorised Member I can link my published IATYI XML File to my project / organisation pages
+- #357 - As an authorised Member I can submit the necessary details needed by the IATI Registry for publication
+- #358 - As an authorised Member I can set the publishing frequency
+
 ## Known Issues
 We need to determine the Reporting organisation to be included within the file.
 
