@@ -54,7 +54,7 @@ Provide a link on an organisation page that allows the entire data for that orga
 - #347 - As a User I can download a public IATI XML file for an organisation
 - #348 - As a User I can preview a public IATI XML file in RSR
 - #349 - As a User I can find the Published Information for a project or organisation in the IATI Registry
-- 
+
 ### Publishing an IATI XML File
 
 - #354 - As an authorised Member I can request to have Akvo publish my IATI XML File
