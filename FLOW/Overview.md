@@ -58,12 +58,10 @@ The technical design documents
 
 ## User roles
 We have defined a number of user roles, representing ways that people with different roles can interact with the system. Each roles has a detailed description in the form of a persona. The user roles are:
-* [Enumerator](userRoles/Enumerator.md)
-* [Field Manager](userRoles/FieldManager.md)
-* [Project Manager](userRoles/ProjectManager.md)
-* [Director](userRoles/Director.md)
-* [Donor](userRoles/Donor.md)
-* [External data user](userRoles/DataUser.md)
-* [Akvo staff](userRoles/AkvoStaff.md)
-
-We have also formulated a number of [user stories](useCases).
+* [Enumerator](UserRoles/Enumerator.md)
+* [Field Manager](UserRoles/FieldManager.md)
+* [Project Manager](UserRoles/ProjectManager.md)
+* [Director](UserRoles/Director.md)
+* [Donor](UserRoles/Donor.md)
+* [External data user](UserRoles/DataUser.md)
+* [Akvo staff](UserRoles/AkvoStaff.md)
