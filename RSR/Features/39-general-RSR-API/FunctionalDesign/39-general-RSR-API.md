@@ -1,4 +1,4 @@
-# RSR Programme structure
+# RSR General API
 
 ## Overview
 We need to build a stable and straightforward API feature for our partners to be able to easily and effectively communicate with the RSR data set and replace many of the manual processes that we currently employ in order for us to work with some of our API enabled partners.

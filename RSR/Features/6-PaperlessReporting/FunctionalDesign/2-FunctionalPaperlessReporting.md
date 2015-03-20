@@ -63,6 +63,58 @@ Matthijs needs to collect all country reports and create an overall programme re
 Klaus needs to review incoming country and programme reports to check for highlights and sign off before these are delivered to their funders.
 Klaus needs to use progress reports for organisational steering and management.
 
+### User Stories
+
+#### Setup Paperless Reporting Framework
+
+- #300 - As an authorised Member I can create a Framework for Results Reporting
+- #301 - As an authorised Member I can enter required indicators for the Framework
+- #302 - As an authorised Member I can enter optional indicators for the Framework
+- #303 - As an authorised Member I can enter the reporting frequency requireed for the Framework
+- #304 - As an authorised Member I can define Indicator progress classification
+- #305 - As an authorised Member I can allocate the Framework to be applied to partner organisations
+- #306 - As an authorised Member I can set the Framework to be available for any organisation to use.
+
+#### Roll-out & Management of Paperless Reporting
+
+- #315 - As an authorised Member I can apply an existing Framework to my project/programme
+- #316 - As an authorised Member I can apply an existing Framework to my organisations' projects/programmes
+- #317 - As an authorised Member I can apply an existing Framework to a partner organisations' projects/programmes
+- #318 - As an authorised Member I can setup partner and user notifications for completion of the Reporting Framework
+- #319 - As an authorised Member I can set the approval process for incoming reporting information
+- #320 - As an authorised Member I am notified of incoming reporting information
+- #321 - As an authorised Member I can approve pending reporting information
+- #328 - As an authorised Member I can add custom indicators to an existing Framework
+
+#### Submit Paperless Reporting Information
+
+- #326 - As an authorised Member I can enter benchmark, target and actual data about indicators on my project/programme
+- #327 - As an authorised Member I can see the required and optional indicators set for my project/programme
+- #329 - As an authorised Member I can enter comments or annotations of entered data
+- #330 - As an authorised Member I can add custom indicators to my project/prgramme
+- #331 - As an authorised Member I can select the type of update/report I want to submit
+- #332 - As an authorised Member I can see all previously entered information for my project/programme
+- #333 - As an authorised Member I can upload supporting documents for my project/programme reporting
+- #334 - As an authorised Member I can make updates to other project data
+
+#### View Paperless Reports
+
+- #279 - As a user I can view the project/programme locations on a map and can distinguish between direct and indirect locations
+- #280 - As a user I can view the participating partners on a project/programme and see their participatory role
+- #281 - As a user I can view the project/programme Identifiers
+- #282 - As a User I can view the timeline of events on the project/programme
+- #283 - As a User I can view project/programme data for a specific date
+- #284 - As a User I can view the progress of indicators on a project/programme
+- #285 - As a User I can view the comments/annotations on indicators
+- #286 - As a User I can view the qualitative update reports added to the project/programme
+- #287 - As a User I can view the sub-projects or related projects/programmes
+- #288 - As a User I can view the Result-Status of sub-projects/programmes
+- #289 - As a User I can view the Result-Status of the project/programme
+- #290 - As a User I can view the Updates and Update-Reports added to the project/programme
+- #291 - As a User I can view the Funding information of the project/programme
+- #292 - As a User I can view the Budget information of the project/programme
+- #293 - As a User I can view the Published Report information
+- #294 - As an authorised Member I can view the Draft Report information
 
 ### Technical notes
 Any solution should be incorporated within RSR such that information is accessible from the corresponding RSR Project page(s).
