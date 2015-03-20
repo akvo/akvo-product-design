@@ -29,8 +29,8 @@ Akvo DASH will be a system to easily bring in your own data, combine it with oth
 Akvo DASH will allow you to make data driven decisions to steer and direct your organization or the funds you manage. Is the intervention working? Is money being spent wisely? Can we improve what we do, today?
 
 ## Akvo DASH brings together four important components:
-￼
-[PICTURE]
+
+![PICTURE][Akvo-DASH-DATA]
 
 1. Your own data, which you can easily load onto the system, for example food security data or water point monitoring data from Akvo FLOW.
 
@@ -41,3 +41,6 @@ Akvo DASH will allow you to make data driven decisions to steer and direct your 
 4. A publishing system for data which will allow you to publish the resulting data mashup under your own brand and on your own chosen URL. Publish to a limited audience, or to the world. Any public datasets will also be seen on a central web site, easily made available under an open source license, at your choice.
 
 The Akvo DASH system will be built around open standards, using open data, with open APIs, on top of and released as, open source software. Just like all the other Akvo tools.
+
+
+[Akvo-DASH-DATA]: img/Akvo-DASH-DATA.png
