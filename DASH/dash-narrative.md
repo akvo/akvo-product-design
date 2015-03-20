@@ -42,5 +42,7 @@ Akvo DASH will allow you to make data driven decisions to steer and direct your 
 
 The Akvo DASH system will be built around open standards, using open data, with open APIs, on top of and released as, open source software. Just like all the other Akvo tools.
 
+For more detail, see: https://github.com/akvo/akvo-product-design/blob/master/DASH/overview.md
+
 
 [Akvo-DASH-DATA]: img/Akvo-DASH-DATA.png
