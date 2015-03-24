@@ -136,20 +136,34 @@ Details, details, details.
 Approved and ready for Visual Design by: 
 
 ### Glossary
+
 **Project:** A project refers to an RSR Project that is equivalent of an Activity in IATI. This can also refer to a Programme in RSR or IATI. Within RSR these terms should be used independently when describing the data as we make distinction at that level.
+
 **Organisation:** Most of this functionality has been described to cater for the needs of an organisation. This could also refer to the people working for a Consortia or group, rather than a single organisation.
+
 **Field Set:** Field set has been used to describe a collection of fields in a specified format that are created to meet the specific needs of an organisation or group. An example of this would be the field set of DGIS used to collect paperless reporting data.
+
 **User:** A user is anyone using the system being described.
+
 **Member:** A member is someone with an account on the system being described.
+
 **Authorised:** Autohrised refers to that the person has completed the login process to identify themselves with the account they have on the system being described.
 
 ### Footnotes
+
 <sup>1</sup> The approval process needs further clarification. This could involve several layers or roles that act independently. To flesh out these requirements we should model out one or more partners existing processes.
+
 <sup>2</sup> The Export of data is to be done at the Data Management level. In the event that this is built as a true independent system from RSR, then it is unlikely that we will offer IATI XML as an export option.
+
 <sup>3</sup> When a project already exists but a form is submitted to edit that project, then the data should be updated with the entered content from the form.
+
 <sup>4</sup> Entering RSR covers all the functionality we currently offer within the RSR Admin and Project PDF forms. It is out of scope of this document to describe data entry methods or functions, but these should be declared and described within the Visual Design to ensure the user is provided with a clear and easy process to enter RSR projects in their entireity.
 This also includes the functionality to be able to add multiple instances of a data element where permitted.
+
 <sup>5</sup> As above with RSR fields, there are some practical implementations of IATI data that we need to support but should be covered within the data entry design.
+
 <sup>6</sup> It should be possible to combine new and existing field sets with custom fields.
+
 <sup>7</sup> Implicitly implied that this is optional, so it should also be possible to not add an approval process, in which this should happen automatically.
+
 <sup>8</sup> A standalone view to review all the missing information is implied here.
