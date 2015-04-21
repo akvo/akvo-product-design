@@ -48,21 +48,29 @@ At the same time, you can download a copy of this data in a variety of useful fo
 Once your data is live, of course there are times when you need to edit or update it. It's possible to do this either by using the original or creating a new editing form. From the interface you can retrieve existing data to prepoppulate the form fields to make it easy for this to be modified and resubmitted.
 
 ### Features
+
+#### Must have
 - Create a form containing RSR (incl IATI) fields to populate a project
-- Save form offline for entry without connectivity
-- Share partially completed form for collaboration
-- Add organisation specific fields to form field set
-- Set privacy of custom fields
-- Add existing field data sets such as DGIS Reporting to the form fields
-- Modify the form layout, pagination and order
-- Setup approval process <sup>1</sup>
-- Data Export formats in XML, JSON, CSV/XLS, PDF (not to include IATI XML) <sup>2</sup>
-- Device size responsive UI
-- Customisable partner branding for forms
-- Single sign on with RSR
 - Prepopulation of form with existing project data
 - Resubmission to edit existing projects <sup>3</sup>
-- Creation of update forms to modfy or add to existing project data
+- Save form more often while making changes for entry with limited connectivity
+- Device size responsive UI
+- Single sign on with RSR
+
+#### Should have
+- Share partially completed form for collaboration with admins of reporting organisation and field partners
+- Creation of update forms to modify or add to existing project data
+- Add existing field data sets such as DGIS Reporting to the form fields
+- Modify the form layout, pagination and order
+- Setup approval process, project editors can only edit unpublished projects, admins can edit published <sup>1</sup>
+
+#### Nice to have
+- Add organisation specific fields to form field set
+- Set privacy of custom fields
+
+#### Won't have
+- Data Export formats in XML, JSON, CSV/XLS, PDF (not to include IATI XML) <sup>2</sup>
+- Customisable partner branding for forms
 
 ### User Stories
 
