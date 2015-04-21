@@ -50,82 +50,86 @@ Once your data is live, of course there are times when you need to edit or updat
 ### Features
 
 #### Must have
-- Create a form containing RSR (incl IATI) fields to populate a project
+- Access to project form from My Projects in MyRSR
+- Show project form, divided into sections, with help texts
+- Submit project form with project data
 - Prepopulation of form with existing project data
 - Resubmission to edit existing projects <sup>3</sup>
 - Device size responsive UI
 - Single sign on with RSR
+- Auto-save form while editing for entry with limited connectivity
+- Save any (draft) project, regardless of data filled in
+- Publish projects only when RSR mandatory fields are filled in
 
 #### Should have
-- Auto-save form while editing for entry with limited connectivity
 - Share partially completed form for collaboration
-- Creation of update forms to modify or add to existing project data
-- Add existing field data sets such as DGIS Reporting to the form fields
-- Modify the form layout, pagination and order
 - Setup approval process, project editors can only edit unpublished projects, admins can edit published <sup>1</sup>
+- Assign responsible(s) for a project to fill in, check or complete project information
+- Creation of update forms to modify or add to existing project data
+- Specify custom mandatory fields (IATI, DGIS)
+- Specify default, but adjustable, values of all projects for an organisation
 
 #### Nice to have
+- Add existing field data sets such as DGIS Reporting to the form fields
 - Add organisation specific fields to form field set
 - Set privacy of custom fields
+- Modify the form layout, pagination and order
 
 #### Won't have
+- Create a form containing RSR (incl IATI) fields to populate a project
 - Data Export formats in XML, JSON, CSV/XLS, PDF (not to include IATI XML) <sup>2</sup>
 - Customisable partner branding for forms
 
 ### User Stories
 
-#### Create Forms for Data Entry
+#### Must have
+- #381 - As a User I can complete a form with project data
+- #387 - As a User I can view the helptext to assist in completing the form
+- #382 - As a User I can save an incomplete form and return to finish it later
+- #388 - As a User I can complete the form on any device with a modern browser
+- #373 - As an authorised Member I can require that submitted forms be approved by an Admin before being ready for publication <sup>7</sup>
+- #376 - As an authorised Member I can create a form that is prepopulated with retrieved existing values for a specific project
+- #399 - As an authorised Member I can share a private link to forms that can only be accessed with an RSR login
+- #393 - As an authorised Member I can view the contents of a pending form
+- #395 - As an authorised Member I can approve the form for submission
+- #401 - As an authorised Member I can see who submitted and approved a form
 
-- #363 - As an authorised Member I can create a form that allows people to enter RSR data <sup>4</sup>
-- #364 - As an authorised Member I can create a form that allows people to enter IATI data <sup>5</sup>
-- #365 - As an authorised Member I can create a form with my own organisation branding
+#### Should have
+- #383 - As a User I can save an incomplete form and send it to a colleague to continue
+- #374 - As an authorised Member I can setup who and when notifications are sent about forms being submitted, approved and published or when a form needs to be completed
+- #391 - As an authorised Member I am notified when a form is submitted that needs to be approved
+- #390 - As an authorised Member I can set which fields are mandatory
+
+#### Nice to have
 - #377 - As an authorised Member I can specify default values for any field or data value in forms I create
 - #366 - As an authorised Member I can modify the layout of forms I create
 - #367 - As an authorised Member I can change the order of questions within forms I create
 - #369 - As an authorised Member I can add custom fields to forms I create
+- #372 - As an authorised Member I can set fields to be private that are subsequently not published on open platforms
+- #404 - As an authorised Member I can see the progress of partial and fully completed forms
+- #392 - As an authorised Member I can see all forms pending approval
+- #397 - As an authorised Member I can ask questions to the submitter of the form
+- #402 - As an authorised Member I can verify and modify the fields that are to be published or remain private
+
+#### Won't have
+- #363 - As an authorised Member I can create a form that allows people to enter RSR data <sup>4</sup>
+- #364 - As an authorised Member I can create a form that allows people to enter IATI data <sup>5</sup>
+- #365 - As an authorised Member I can create a form with my own organisation branding
 - #370 - As an authorised Member I can select to add a pre-determined set of fields to forms I create
 - #371 - As an authorised Member I can create a set of fields to add to forms I create <sup>6</sup>
-- #372 - As an authorised Member I can set fields to be private that are subsequently not published on open platforms
-- #373 - As an authorised Member I can require that submitted forms be approved by an Admin before being ready for publication <sup>7</sup>
-- #374 - As an authorised Member I can setup who and when notifications are sent about forms being submitted, approved and published or when a form needs to be completed
 - #375 - As an authorised Member I can create a form that is used to edit existing project data
-- #376 - As an authorised Member I can create a form that is prepopulated with retrieved existing values for a specific project
 - #378 - As an authorised Member I can create a form that adds project data over time to existing projects
 - #379 - As an authorised Member I can add drop-down lists to forms I create
 - #380 - As an authorised Member I can add multiple select fields to forms I create
 - #386 - As an authorised Member I can customise the Help text visible to users of forms I create
-- #390 - As an authorised Member I can set which fields are mandatory
 - #398 - As an authorised Member I can share a public link to forms that can be accessed by anyone
-- #399 - As an authorised Member I can share a private link to forms that can only be accessed with an RSR login
-- #404 - As an authorised Member I can see the progress of partial and fully completed forms
-
-#### Completing a Form
-
-- #381 - As a User I can complete a form with project data
-- #382 - As a User I can save an incomplete form and return to finish it later
-- #383 - As a User I can save an incomplete form and send it to a colleague to continue
+- #405 - As a User I can upload a file with the correct form data included
 - #384 - As a User I can save a form that allows me to complete it offline
 - #385 - As a User I can submit a form that I have completed offline once I have connectivity again
-- #387 - As a User I can view the helptext to assist in completing the form
-- #388 - As a User I can complete the form on any device with a modern browser
 - #389 - As a User I can submit a form when I have completed all mandatory fields
-- #405 - As a User I can upload a file with the correct form data included
-
-#### Approve Submitted Form
-
-- #391 - As an authorised Member I am notified when a form is submitted that needs to be approved
-- #392 - As an authorised Member I can see all forms pending approval
-- #393 - As an authorised Member I can view the contents of a pending form
 - #394 - As an authorised Member I can see which fields have not been completed of a pending form <sup>8</sup>
-- #395 - As an authorised Member I can approve the form for submission
 - #396 - As an authorised Member I can decline the form for submission
-- #397 - As an authorised Member I can ask questions to the submitter of the form
-
-#### Publish Submitted Data
-
 - #400 - As an authorised Member I can see submitted and approved forms
-- #401 - As an authorised Member I can see who submitted and approved a form
-- #402 - As an authorised Member I can verify and modify the fields that are to be published or remain private
 - #403 - As an authorised Member I can set where published forms are sent to
 
 ### Technical notes
