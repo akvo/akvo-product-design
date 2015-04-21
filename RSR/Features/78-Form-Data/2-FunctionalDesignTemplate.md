@@ -53,12 +53,12 @@ Once your data is live, of course there are times when you need to edit or updat
 - Create a form containing RSR (incl IATI) fields to populate a project
 - Prepopulation of form with existing project data
 - Resubmission to edit existing projects <sup>3</sup>
-- Save form more often while making changes for entry with limited connectivity
 - Device size responsive UI
 - Single sign on with RSR
 
 #### Should have
-- Share partially completed form for collaboration with admins of reporting organisation and field partners
+- Auto-save form while editing for entry with limited connectivity
+- Share partially completed form for collaboration
 - Creation of update forms to modify or add to existing project data
 - Add existing field data sets such as DGIS Reporting to the form fields
 - Modify the form layout, pagination and order
