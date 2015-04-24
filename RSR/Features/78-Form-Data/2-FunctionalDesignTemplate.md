@@ -138,20 +138,26 @@ Once your data is live, of course there are times when you need to edit or updat
 - As an authorised Member I can view the contents of a pending form
 - As an authorised Member I can approve the form for submission
 
-### Technical notes
-This item could be resolved in a number of different ways, ranging from using an off-the-shelf platform such as an alternative to Adobe Forms Central with some customisation, we could look at building an entire solution from scratch, or we could utilise modules or elements from our existing products and expand on these.
-
-This is a diagram showing a high level example of how this could be created. In this example while we have 2 export options, these should not cause replicated work. Exports should be done with the native data model unless exporting in IATI format for which we should only maintain a single functional process.
-
-![potential architectural structure](https://raw.githubusercontent.com/akvo/akvo-product-design/master/RSR/Features/78-Form-Data/rsr_data_management.png)
-
-### Open issues
-Any known issues that need to be decided
-
 ### Details
-Details, details, details.
+The following sections should be present:
+- General information
+- Contact information
+- Partners
+  - Includes reporting organisation
+- Descriptions
+- Photo
+- Links and documents
+- Locations
+  - If coordinates are present, maybe include map?
+- Focus
+- Finance
+  - Big section; includes budgets, transactions and planned disbursements
+  - Maybe we could split this up in subsections?
+- Results
+  - Big section; includes results, indicators and indicator periods
 
-Approved and ready for Visual Design by: 
+### Technical notes
+On a technical level we should take a look at the possibilities of auto-saving forms and validating forms on client and server side. What happens when we auto-save a form that is not valid for example?
 
 ### Glossary
 
