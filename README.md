@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/akvo/akvo-product-design.png?label=ready&title=Ready)](https://waffle.io/akvo/akvo-product-design)
 akvo-product-design
 ===================
 
