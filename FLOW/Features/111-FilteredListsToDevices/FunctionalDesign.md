@@ -35,6 +35,10 @@ Any technical issues or questions that are already known
 ### Open issues
 1. What happens when an enumerator creates a new data point? 
     - If a list of data points is assigned to a user, he sees the list on his screen. What if he needs to create a new data point? Does this one automatically join his list? Does it join a list based on the inputed information? Is there a list of unassigned data pooints? Does the user on the dashboard need to create an updated version of her assignemnt? How does Flow inform her about this change?
+2. Allow also for surveys which do not have monitoring enabled. 
+    - This would mean to enable synchronising data points on to the devices also for surveys which do not have monitoring enabled 
+3. Define how we specify data points.
+    - Currently data points are geographically referenced. We should take into consideration situations when an enumerator gathers information on a repeating bases about something/someone which does not neccessarily have a geographic location, as monitoring distributors in a supply chain, companies in a project, students, health patients. 
 
 ### Details
 Details, details, details.
