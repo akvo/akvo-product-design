@@ -6,7 +6,7 @@ Filtered lists to devices
 ### Overview
 Currently the use steps are: a form is published, assigned to a device and data points are created once data is collected. The enumerator then has long list of data points on his app. In many cases the enumerator has to update only a certain number of data points from this long list. Currently there is no way to filter or pre-select which data points should be assigned to which enumerator.
 
-The aim of this feature is to provide the ability to create a group of data points based on a filter which then the project manager can assign to an user or a group of users. This solves the problem of having the search through a long list of data points in order to find the one data point that the enumerator needs to update.
+The aim of this feature is to provide the ability to create a group of data points based on a filter which then the project manager can assign to an user or a group of users. This solves the problem of having to search through a long list of data points in order to find the few data points that the enumerator needs to update.
 
 ### Marketing description
 A marketing description of this feature.
@@ -14,7 +14,11 @@ A marketing description of this feature.
 ### Initial features
 The initial list of functionalities that this feature will contain:
 - *Data points to assing*. Enable to select not only the survey and form but also one or multiple data points to assign. 
-- *Allow filtering of the data points.* In order to creat specific lists the user can define his selection based on a filter, which represents a property/question from the registration form, or the time spam of last updates
+- *Allow filtering of the data points.* In order to creat specific lists the user can define his selection based on a filter, which represents:
+    - a property/answer to a question from the registration form, 
+    - the time spam of last updates, 
+    - the user who registered the data point
+    - the combination of the above
 - *History of filtered assignemnts.* Show in a list which data points where assigned to whom and based on what criteria was this list created
 
 **Limitation**
