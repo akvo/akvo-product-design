@@ -36,7 +36,7 @@ Look-up questions will only work between registration forms in surveys with enab
 Any technical issues or questions that are already known
 
 ### Open issues
-1. Need to decide wheather we will allow only a single select or multi select option. Will we allow the user to link only one propety or multiple?
+1. During the data collection the relation works in a way that the question concerned shows an options list, which is based on the relation property. The question is, will we allow the user to select only one option or multiple? This is an issue because it then defines the amount of data sets one can link together. 
 2. How many look-up relations can a user create in one form? 
 
 ### Details
