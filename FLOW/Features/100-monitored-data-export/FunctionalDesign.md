@@ -41,19 +41,21 @@ The user defines filters in order to decrease the number of data points and data
     - I want to see only the data points updated from June 1 till June 17 2015 and only updated by John.
   - *Specifying the view of collected data.* In many cases, after user filters which data she wants to see, she also wants to specify more what she sees. She can define that by selecting which forms, or sets of questions and related answers she wants to view. 
     - Examples: 
-    - I want to see only the data points updated from June 1 till June 17 2015. Now I want to view only the properties from the Registration form.  
-    - I want to see only the data collected by John. Now I want to see only the answers from question 1 from form A; from questions 5,6,10 from form B; and from all the questions from form C.  
+    - I have filtered the data points that were updated from June 1 till June 17 2015. Now I want to view only the properties from the Registration form.  
+    - I have filtered the data collected by John. Now I want to see only the answers from question 1 from form A; from questions 5,6,10 from form B; and from all the questions from form C.  
 
 - **Generating a report** 
-- *Creating a new report.* This will be possible either to generate a report from the predefined view, via a 'Generate a report' button or by creating a new report in the report tab. The user can name the report the way he wants in a text bar. The user can filter which data points he wants to report and also specify his view, same as in the viewing function. Once the report is ready he clicks on the 'generate report' button.
-- *List of generated reports* This list shows the user all the reports she has generated up till now. With every report the user sees the date when it was generated, by whom, and she can either view, download or delete the report. Editing a report from this list will not be possible. Then the user needs to generate a new report again. After defining a new report she clicks on 'Generate a report' and the screen with the list of reports will appear showing the new report in the list and that it is being generated. Once the report is ready, the view, download, and delete buttons will be active. 
+- *Creating a new report.* TO BE DISCUSSED
+- *Generating a report from viewing data* TO BE DISCUSSED 
+- *History list of generated reports* This list shows the user all the reports she has generated up till now. With every report the user sees the date when it was generated, by whom, and she can either view, download or delete the report. Editing a report from this list will not be possible. Then the user needs to generate a new report again. After defining a new report she clicks on 'Generate a report' and the screen with the list of reports will appear showing the new report in the list and that it is being generated. Once the report is ready, the view, download, and delete buttons will be active. 
 - *Combined reports.* Applying lookup questions in reports and in viewing
 
 **In the app** 
 
-- *Filter the data points list in the app based on time.* This filter is added to simplify the data collection process. When an enumerator is collecting data about households in a village he needs to be able to track which data points he has already updated. By adding a filter based on time, the enumerator can see the remaining not-updated data points. 
-- *Filter data points on a map view based on time.* As stated above.
-- *Filter data points based on status* 
+- *Assign a filtered list of data points* Enable the dashboard user to create a filtered list of data points to assign to a device. For more information see https://github.com/akvo/akvo-product-design/issues/111 
+- *On the device filter the data points list based on time.* This filter is added to simplify the data collection process. When an enumerator is collecting data about households in a village he needs to be able to track which data points he has already updated. By adding a filter based on time, the enumerator can see the remaining not-updated data points. 
+- *On the device filter data points on a map view based on time.* As stated above.
+- *On the device filter data points based on status* 
 - *Difference in displaying active and archived data points*
 
 ### Non goals
