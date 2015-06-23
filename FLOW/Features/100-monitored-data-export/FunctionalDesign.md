@@ -16,9 +16,7 @@ A marketing description of this feature.
 
 **On the dashboard** 
 
-- *Data point status* In monitoring we recognize two functions a form has and how they relate to data points: one form registers a data point and other update/monitor a data point. We can translate this into a data point status which is registered and active. Because this information is vital for the users when it comes to maintaining a clear overview of all the data points related to a survey, we will visualize the data point status on the dashboard when viewing the data. 
-  - *Form function - close data point.* In addition to the two above mentioned form functions we will add an additional one, which is to close [archive or deactivate] a data point. A data point will be closed when an answer to a chosen question is selected in a form. Thus we will have three functions of forms and three types of status for data points: registered, active, archived.
-  - NEED TO CREATE A SEPARATE ISSUE FOR THIS CHANGE
+- *Data point status* In monitoring we recognize two functions a form has and how they relate to data points: one form registers a data point and other update/monitor a data point. We can translate this into a data point status which is registered and active. Because this information is vital for the users when it comes to maintaining a clear overview of all the data points related to a survey, we will visualize the data point status on the dashboard when viewing the data. Furthermore, we will be adding a third function to forms, which is to close [archive or deactivate] a data point. A data point will be closed when an answer to a chosen question is selected in a form. Thus we will have three functions of forms and three types of status for data points: registered, active, archived. For more information on the third function/status see https://github.com/akvo/akvo-product-design/issues/112
 
 - **Viewing data on the dashboard.** 
 There are three ways of viewing the data points and collected data: (1) all data points, (2) one specific data point, (3) a selected group of data points. 
