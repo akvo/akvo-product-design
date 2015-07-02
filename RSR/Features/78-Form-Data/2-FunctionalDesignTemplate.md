@@ -70,6 +70,7 @@ Once your data is live, of course there are times when you need to edit or updat
 - Creation of update forms to modify or add to existing project data
 - Specify default values for an organisation
 - View history logs of every project
+- Ability to have private projects
 
 #### Nice to have
 - Add organisation specific fields to form field set
@@ -107,6 +108,7 @@ Once your data is live, of course there are times when you need to edit or updat
 - As a Project Editor I can submit an update form
 - As a Notified User I can be notified when I need to fill in project data
 - As a Notified User I am notified when a project is published
+- As an authorised user I can see private projects
 
 #### Nice to have
 - As a Reporting Organisation Admin I can modify the layout of forms I create
