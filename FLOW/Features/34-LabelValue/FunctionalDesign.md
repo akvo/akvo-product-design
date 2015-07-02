@@ -1,19 +1,31 @@
 # Functional Design document
 
-Title
+Adding label value to questions options
 -------------
 
 ### Documents
 Links to relevant issues
 
 ### Overview
-A short overview of what we try to accomplish
+The aim is to add labels to question options. The options will then have a label/code and the value/name of the option. The main purpose for this is to make it easier to import FLOW data into existing databases. 
+
 
 ### Marketing description
 A marketing description of this feature.
 
 ### Initial features
-The initial list of functionalities that this feature will contain
+
+1. User interface when creating a new option question 
+  - Textfield where to type in the code and a second one next to it to type in the "Item name (mandatory)"
+  - Add button to add a new option 
+  - Once created show both fields for visual confirmation
+  - Resuse the cascading question UI
+2. In the app not visualize the code, only the item name
+3. Viewing the data on the dashboard
+  - Show both code and item name in the anwer column
+  - Need to define a way how to clearly visualize this - copy the way we will use for cascade codes
+4. In reports
+  - Show both code and item name 
 
 ### Non goals
 What this feature will not contain
