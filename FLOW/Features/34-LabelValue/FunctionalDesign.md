@@ -22,10 +22,12 @@ A marketing description of this feature.
   - Resuse the cascading question UI
 2. In the app not visualize the code, only the item name
 3. Viewing the data on the dashboard
-  - Show both code and item name in the anwer column
+  - Show both code and item name in the answer column
   - Need to define a way how to clearly visualize this - copy the way we will use for cascade codes
 4. In reports
-  - Show both code and item name 
+  - Two options: 
+    - Show both code and item name/value 
+    - Enable user to select how they want to export such data- if they want to have only the code, only the value, both (how to visualize in a spread sheet?)
 
 ### Non goals
 What this feature will not contain
