@@ -63,6 +63,16 @@ The 2nd phase will potentially bring additional functions as:
 
 **Step 3: Visualization in the Inspect data tab**
 
+1. In the answer field show a map box with the geoshape layer rendered on it.
+   - automatically visualize the map and geoshape as an answer
+   - map is zoomed in to show the geoshape in a visible size
+   - map enables zooming in and out and the geoshape respectively grows or shrinks
+2. Showing computed values related to the geoshape next to the map box
+   - computed values will stand as an answer to the geoshape question:
+      - Total size of the geoshape:
+      - Length of the geoshape:
+      - Total number of points:
+
 **Step 4: Exporting geoshapes**
 
 **Step 5: Minor UX fixes and improvements on the app** 
