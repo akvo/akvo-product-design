@@ -25,10 +25,12 @@ The initial list of functionalities that this feature will contain:
      1. New question type - lookup question 
      2. Opens lookup question Settings
      3. In Settings select folder > survey > form > question (user selects second form + question, from where the lookup question will reference the collected data) 
+        - the user will be able to select multiple references (question + anwer) from the chosen form to create the lookup dropdown.
+           - In form A I select “Name” as my reference from form B. I add “picture” to be shown next to name in dropdown. When collecting data user see a list of Name + picture 
      4. In Settings select how it will display on the app: dropdown: if it is a single select or multiselect via check boxes (dropdown with multiselect needs a good UI visalization) 
      5. Confirm/ Save button or Cancel button
-   - When previewing the survey user gets a visual confirmation of the added question + dropdown/option list,  where she can see the looked up options from her selected survey > form
-   - The question ‘name’ will be by default the same as the name of the lookedup question from the referenced form
+   - When previewing the survey user gets a visual confirmation of the added lookup question + dropdown/option list, where she can see the looked up options from her selected survey > form
+   - The question ‘name’ will be by default the same as the name of the lookedup question(s) from the referenced form (using the same principle as we currently build data point names)
    - User can add a lookup question reference from these question types: Free text, number, photo. 
    - Lookup question cannot be used as a ‘data point name’. 
    - Dependecy rule:
@@ -44,7 +46,7 @@ Look up questions can only reference: non monitoring forms and registration form
 #### 2. Data collection level on the app
 
 - Works as a normal option question - User can select a single option or multiple, what is already pre-set during the survey > form > question creation
-   - If we use the dropdown format, we need to figure out how to do multiple select. Perhaps a choose + add to list structure
+   - If we use the dropdown format, we need to figure out how to do multiple select. 
 - What if in my look up dropdown there is an item missing? 
    - The user needs to go out of the survey, select the second referenced form, enter the data, save it, sync, go back to the previous survey data point and finish the data input. 
    - FLOW must be able to synchronise the new data entry from the referenced form and update the look up question list in the first form, for the user to select the newly added option. 
@@ -53,16 +55,16 @@ Look up questions can only reference: non monitoring forms and registration form
 #### 3. Viewing collected data
 
 - Answer to the look up question appears as an option question - the selected option/options from the list is/are shown as the answer
-E- diting the answer acts the same as an option question
-
+- Editing the answer acts the same as an option question
 
 #### 4. Exporting collected data in raw data reports
 
 Exporting the collected data will happen in 2 ways: 
 
 **1. Using current raw data report structure** 
-   - The selected option from the look up question list appears as the answer in the cell 
-   - Following column will provide data point ID/ instance ID from the selected option (to allow the users to compare two raw data reports and see more details from the referenced form)
+   - The selected option from the lookup question list appears as the answer in the cell
+     - If the selected option is built from 2 questions ("Name" and "Photo") we will render the answer as a string    
+   - Following we will provide the reference information on the source form: data point ID from the selected option (to allow the users to compare two raw data reports and see more details from the referenced form)
    - No more data from the referenced form will be provided
 
 **2. Combined report** - which brings together information from two self-standing data sets that are connected via the lookup question 
@@ -70,16 +72,15 @@ Exporting the collected data will happen in 2 ways:
    - select to create a ‘combined report’
    - FLOW generates the referenced form name
    - user selects from the referenced form which questions + answers will be in the combined report or all
-   - data is generated  in two sheets and are referenced to each other based on the position in a row (row position has and order number = row ID, through which the reference is created)
-      - Need to add names to the sheets, or in a different way indicate which sheet is which form 
+   - data is generated in two sheets and are referenced to each other based on:
+      - the position in a row (row position has and order number = row ID, through which the reference is created)
+      - the sheet name
+      - the data point ID
+   - Need to add names to the sheets, or in a different way indicate which sheet is which form 
        - Sheet name = Form name + Form ID
 
 ### Non goals
 
-In later iterations we can consider the possibility to allow the user to define a lookup question and add what other information from the 2nd form will be shown in the app in the list 
-   - In form A I select “Name” as my reference form form B
-   - I add “picture” to be shown next to name in dropdown
-   - When collecting data user see a list of Name + picture 
 
 ### Scenarios
 
