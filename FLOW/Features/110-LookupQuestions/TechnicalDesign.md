@@ -10,8 +10,8 @@ in Akvo FLOW Dashboard and App.
 ### Minimum Viable Product
 
 * In Akvo FLOW Dashboard:
-  * A user must be able to mark a question as _Lookup_ type
-  * A user must be able to select which _Form_ will be linked to the question, that populates the 
+  * A user must be able to define a question as _Lookup_ type
+  * A user must be able to select which _Survey_ will be linked to the question, that populates the 
   possible values
 * In Akvo App:
   * A user filling a form with a _Lookup_ question, gets a dropdown with possible values to select one
