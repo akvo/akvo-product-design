@@ -37,9 +37,4 @@ as part of the response
 * When syncing data we only sync the datapoint `id` and `name`
 
 ### Testing
-How the feature can be tested, and what tests will be written during the creation/implementation.
-
-### Estimates
-Details of any timing estimates for how long this feature is expected to take, including end date and/or number of people working on this.
-
-Approved and ready for Coding by:
+[TBD]
