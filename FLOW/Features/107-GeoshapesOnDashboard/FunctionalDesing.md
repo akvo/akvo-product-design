@@ -75,6 +75,17 @@ The 2nd phase will potentially bring additional functions as:
 
 **Step 4: Exporting geoshapes**
 
+1. exporting geo shapes within data reports - as a geoJSON string as the answer in the cell 
+2. exporting geo shapes as a self standing answer
+   - location of the export button with format selection - preferably when viewing the geo shape: on the map and in the data tab
+   - type of export file - shapefile - .shp and/or kml file - .kml
+   - requested, if exported file can also bring all the attributes that have been surveys (nice to have)
+
+**Limitations**
+
+- we will not allow to import a shape back, only export possible
+- we will NOT allow for a user to import and edited shape back into FLOW, too complex
+
 **Step 5: Minor UX fixes and improvements on the app** 
 
 ###Scenarios
