@@ -2,31 +2,23 @@
 We will implement a data approval / workflow system. Basically, this means that datapoints can have a status, and that we have rules and UI to move from one status to another.
 
 ## Conceptual model
-The conceptual model is that of a state machine.
-The conceptual model consists of:
-* datapoints can be assigned a **status type**
-* a status type defines the different **statuses** that the status type contains, and the connections between them. A connection is non-directional.
+The conceptual model is that of a state machine, in which data points have a **status**, and a user has the possibility to move a datapoint from one status to another, based on permissions.
 
 ## Data model
 We need the following data kinds:
 
-### StatusType
-Fields: id, display name, list of status id, list of connection id
-
-Usage: describes the type of status, for example 'approval workflow', or 'quality control'. Different surveys might use different status types.
-
 ### Status
 Fields: id, display name
 
-Usage: describes an individual status within a statusType, for example 'new', 'approval phase 1', 'approval phase 2', 'rejected', 'archived'.
+Usage: describes an individual status, for example 'new', 'approval phase 1', 'approval phase 2', 'rejected', 'archived'.
 
 ### StatusPermission
-Fields: id, userId, statusType, statusId1, statusId2 
+Fields: id, userId, statusId1, statusId2 
 
 Usage: determines which user can change between which statuses. The order of the statuses is not important, as the user can move a datapoint in both directions.
 
 ### StatusHistory
-Fields: id, datapointId, statusTypeId, oldStatusId, oldStatusDisplayName, newStatusId, newStatusDisplayName, timestamp, userId
+Fields: id, datapointId, oldStatusId, oldStatusDisplayName, newStatusId, newStatusDisplayName, timestamp, userId
 
 Usage: Provides a log of data point status changes, with timestamp. The displaynames are denormalised here, to guard against changes, and keep history accurate.
 
@@ -42,7 +34,7 @@ Usage: Provides a log of data point status changes, with timestamp. The displayn
 * The UI should provide options for bulk changing of statusses.
 
 ## Roles and Permissions
-* changing the definition of status types should be covered by a permission
+* changing the definition of statuses should be covered by a permission
 
 ## Questions
 * Should the approval status be on forms or on datapoints?
