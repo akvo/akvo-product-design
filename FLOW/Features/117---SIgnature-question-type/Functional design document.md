@@ -4,8 +4,10 @@ Signature question type
 -------------
 
 ### Documents
-User stories - https://docs.google.com/document/d/1b43HEjnh17FoDsS1AnyyHukvMmKHDFDKfDwOo-QP4Q4/edit
-Initial feature identification document - https://docs.google.com/document/d/1vOfkxxhP0nYel16RWK38ppjKpjIWstCVHkFr7vsRQIk/edit
+User stories
+https://docs.google.com/document/d/1b43HEjnh17FoDsS1AnyyHukvMmKHDFDKfDwOo-QP4Q4/edit
+Initial feature identification document
+https://docs.google.com/document/d/1vOfkxxhP0nYel16RWK38ppjKpjIWstCVHkFr7vsRQIk/edit
 
 ### Overview
 The ‘signature’ question type enables users to place their electronic signature in a form. An e-signature is any ‘mark’ made by the person to confirm their approval of the document, information, or transaction.
@@ -20,11 +22,27 @@ A marketing description of this feature.
 ### Initial features
 The initial list of functionalities that this feature will contain
 
+1. On the survey creation part:
+   - new question type: Signature 
+   - Settings on the question: checkbox ‘add text before the signature’. If user clicks yes, a text field opens, where the dashboard user types in the wanted text.
+
+2. On the app: 
+   - button under the question text ‘add signature’ that opens a new screen 
+   - new screen - flipped horizontally - holds the signature ‘canvas’ as wide as the phone screen lenght
+      - the canvas has a line to indicate where to sign
+      - under the canvas: 'I understand this is an electronic representation of my signature' 
+      - clear and save buttons 
+   - the signature is saved as an image and shown under the question text
+
+3. 
+
+
 ### Non goals
 What this feature will not contain
 
 ### Scenarios
-Please check User stories docuemnt - https://docs.google.com/document/d/1b43HEjnh17FoDsS1AnyyHukvMmKHDFDKfDwOo-QP4Q4/edit
+Please check User stories docuemnt 
+https://docs.google.com/document/d/1b43HEjnh17FoDsS1AnyyHukvMmKHDFDKfDwOo-QP4Q4/edit
 
 ### Technical notes
 Any technical issues or questions that are already known
