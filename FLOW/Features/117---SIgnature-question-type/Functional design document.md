@@ -28,7 +28,6 @@ The initial list of functionalities that this feature will contain
 
 1. On the survey creation part:
    - new question type: Signature 
-   - Settings on the question: checkbox ‘add text before the signature’. If user clicks yes, a text field opens, where the dashboard user types in the wanted text.
 
 2. On the app:
    - button under the question name ‘add signature’ that opens a new screen 
