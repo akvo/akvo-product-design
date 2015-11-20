@@ -33,29 +33,32 @@ The initial list of functionalities that this feature will contain
    - button under the question name ‘add signature’ that opens a new screen 
    - new screen - flipped horizontally - holds the signature ‘canvas’ as wide as the phone screen lenght
       - the canvas has a line to indicate where to sign
+      - the canvas has a 'clear' button - clear implies that the scribbled signature is removed from the canvas fully and the user can try again
       - under the canvas: 'I understand this is an electronic representation of my signature.' 
-      - 'clear' and 'save' buttons 
-         - clear implies that the scribbled signature is removed from the canvas fully and the user can try again
+      - Name: - this is a default setting, which user has to fill in
+      - 'cancel' and 'save' buttons 
+         - 'save' only available if both signature and name are filled in
    - the user adds the signature using his finger or a stylus
    - the signature is saved as an image and shown under the question name
    - if the dashboard user has added a text to the signature question (which provides a clause that the person signing should agree with, be aware of or confirm) then this text is displayed under the question name, followed by the 'add signature' button
 
 3. Collecting signatures via Webforms
-   - the webform will hold the signature canvas (identical as in the app) directly under the question name or question name + signature text
+   - the webform will hold the signature canvas (identical as in the app) directly under the question name + Name 
    - under the canvas is the default text: 'I understand this is an electronic repesentation of my signature.'
    - 'clear' and 'save' buttons
    - the user via the mouse draws the signature, saves it and the signature appears as a picture answer in the webform 
 
 4. Previewing submitted data (in Inspect data sub-tab and Monitoring sub-tab) 
-    - signature is saved as a picture and is displayed when the users views the submitted form
+    - signature is saved as a picture and is displayed when the users views the submitted form together with the name
        - Currently the users get a link to the photo, which opens the picture in a separate tab. If possible, we should show the photos and signatures directly 
    - signature will not be 'editable' (same behaviour as a picture) 
 
 5. Report
-   - same behaviour as a photo question 
+   - in the cell: 'Signed by:user name filled in under the signature'  
    - when data is collected via the app we save meta data as timestamp of submission, submission ID, Device ID, user name. These are sufficient enough to verify the signature based on the rules around electronic signature.
    - regarding data collected via the webforms we need to provide this type of meta data as well 
       - the open question is Device ID
+   - data cleaning: not allowed on signature questions
 
 ### Non goals
 What this feature will not contain
