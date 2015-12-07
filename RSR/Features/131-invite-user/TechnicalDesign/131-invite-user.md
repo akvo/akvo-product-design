@@ -4,9 +4,9 @@
 This document provides a background and a high level view of how to implement the invite user functionality.
 
 ## Tech base
-- Pure javascript or React.js (no jQuery)
-- Django templates
-- Python scripts (e.g. ```send_mail```)
+We're moving away from any use of jQuery in RSR. Instead, most of the pages use pure Javascript or React.js. The ```my-user-management.jsx``` file can be used for Javascript / React.js on the user management page. In order to use it, run ```gulp watch``` in the /scripts/devhelpers folder.
+
+For UI and styling, we try to stick to default Bootstrap styling. So probably no CSS work is needed, just default Bootstrap classes.
 
 ## User roles
 - Superuser; an RSR superuser (```user.is_superuser```)
@@ -14,10 +14,7 @@ This document provides a background and a high level view of how to implement th
 - Organisation admin; an approved admin for one or more organisations, connected to the user through the Employment model (```user.employments.approved()```, check if group name is 'Admins')
 - Organisation user manager; an approved user manager for one or more organisation, connected to the user through the Employment model (```user.employments.approved()```, check if group name is 'User Managers')
 
-## Implementation plan
-1. Create workflow for inviting users
-2. Create UI on user management page
-
+## Django templates and views
 ### Pages to be adjusted
 - User management page in MyRSR -> add invite user UI
 
@@ -64,4 +61,4 @@ Per user, and all fields are required:
 4. When the user has clicked the activation link: set ```user.is_active``` to True and direct user to the new page for filling in additional details.
 
 ## Mockup
-To do.
+__To do.__ Basically, start with an 'Invite user' button on the right top side of the user management page. When clicked, a 'table' will show with email/organisation/group per row. Also, we need a 'cancel' and 'send invitations' button.
