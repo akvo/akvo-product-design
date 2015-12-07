@@ -26,7 +26,7 @@ As an Organisation Admin, User Manager, RSR admin or Superuser I want to be able
 As an Organisation Admin, User Manager, RSR admin or Superuser I want to be able to set the permissions for every email address (e.g. User, Project Editor, User Manager, Admin).
 
 #### User story 6 
-As an Organisation Admin, User Manager, RSR admin or Superuser I want to be able to set the permissions for every email address (e.g. User, Project Editor, User Manager, Admin), based on project level (_Kasper:_ What does project level mean? Parent / child relationship?).
+As an Organisation Admin, User Manager, RSR admin or Superuser I want to be able to set the permissions for every email address (e.g. User, Project Editor, User Manager, Admin), based on project level (__Kasper:__ What does project level mean? Parent / child relationship?).
 
 #### User story 7
 As an Organisation Admin, User Manager, RSR admin or Superuser I want to be able to select an organisation for the email I want to invite.
@@ -41,10 +41,10 @@ As an Organisation Admin, User Manager, RSR admin or Superuser I want to be able
 As an Organisation Admin, User Manager, RSR admin or Superuser I want to be able so send a message to notify a user with a known email address that they have been added to a (new) organisation.
 
 #### User story 11 
-As a new user who receives an invitation, I want to be able to modify my email address (e.g. in case I was invited with my personal email and I want to use my work email instead) (_Kasper:_ I don't believe this should be in scope. It would be a different functionality: change email address or so).
+As a new user who receives an invitation, I want to be able to modify my email address (e.g. in case I was invited with my personal email and I want to use my work email instead) (__Kasper:__ I don't believe this should be in scope. It would be a different functionality: change email address or so).
 
 #### User story 12
-If a new user is invited, an email notification should be send to notify them, including an automated generated password that has to be used when logging in for the first time (_Kasper:_ Sending passwords over email might not be the best idea. I believe it's better to include a link so that they can directly login).
+If a new user is invited, an email notification should be send to notify them, including an automated generated password that has to be used when logging in for the first time (__Kasper:__ Sending passwords over email might not be the best idea. I believe it's better to include a link so that they can directly login).
 
 #### User story 13
 As an Organisation Admin, User Manager, RSR admin or Superuser I want to be able invite users for an organisation that does not yet exist in RSR by adding the name of the organisation, without having to create an organisation page first (Kasper: This sounds hard to do, out of scope for now?).
