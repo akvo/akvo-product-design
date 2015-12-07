@@ -77,6 +77,8 @@ Any known issues that need to be decided
 1. When on the app in the signature canvas - what if the user does not want to add a signature and wants to return back to the form? Will he use the device 'back arrow' or will we add a 'x' (close) / 'back arrow' for navigation?  
 
 2. In the reports, when the signature is submitted via the webforms we have not decided for a substitute of the Device ID (which is saved with each submission thruogh the app) 
+3. Checksum? 
+
 
 ### Details
 Details, details, details.
