@@ -47,7 +47,7 @@ As a new user who receives an invitation, I want to be able to modify my email a
 If a new user is invited, an email notification should be send to notify them, including an automated generated password that has to be used when logging in for the first time (__Kasper:__ Sending passwords over email might not be the best idea. I believe it's better to include a link so that they can directly login).
 
 #### User story 13
-As an Organisation Admin, User Manager, RSR admin or Superuser I want to be able invite users for an organisation that does not yet exist in RSR by adding the name of the organisation, without having to create an organisation page first (Kasper: This sounds hard to do, out of scope for now?).
+As an Organisation Admin, User Manager, RSR admin or Superuser I want to be able invite users for an organisation that does not yet exist in RSR by adding the name of the organisation, without having to create an organisation page first (__Kasper:__ This sounds hard to do, out of scope for now?).
 
 #### User story 14
 As an invited user I want to be able to change my automatically generated password after I have logged in for the first time.
