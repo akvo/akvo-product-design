@@ -4,9 +4,9 @@
 
 
 ## References
-Design Github Issue: https://github.com/akvo/akvo-product-design/issues/131
-Github Issue: https://github.com/akvo/akvo-rsr/issues/1005
-Tech Spec: https://github.com/akvo/akvo-product-design/blob/master/RSR/Features/131-invite-user/TechnicalDesign/131-invite-user.md
+- Design Github Issue: https://github.com/akvo/akvo-product-design/issues/131
+- Github Issue: https://github.com/akvo/akvo-rsr/issues/1005
+- Tech Spec: https://github.com/akvo/akvo-product-design/blob/master/RSR/Features/131-invite-user/TechnicalDesign/131-invite-user.md
 
 ## Initial features
 
