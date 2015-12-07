@@ -4,7 +4,7 @@
 This document provides a background and a high level view of how to implement the invite user functionality.
 
 ## Tech base
-We're moving away from any use of jQuery in RSR. Instead, most of the pages use pure Javascript or React.js. The ```my-user-management.jsx``` file can be used for Javascript / React.js on the user management page. In order to use it, run ```gulp watch``` in the /scripts/devhelpers folder.
+We're moving away from any use of jQuery in RSR. Instead, most of the pages use pure Javascript or React.js. The ```my-user-management.jsx``` file can be used for Javascript / React.js on the user management page. In order to compile it while developing, run ```gulp watch``` in the /scripts/devhelpers folder.
 
 For UI and styling, we try to stick to default Bootstrap styling. So probably no CSS work is needed, just default Bootstrap classes.
 
