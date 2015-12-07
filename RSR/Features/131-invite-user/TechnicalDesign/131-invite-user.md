@@ -19,8 +19,8 @@ For UI and styling, we try to stick to default Bootstrap styling. So probably no
 - User management page in MyRSR -> add invite user UI
 
 ### New pages / views
-- Provide additional account details -> new page to add first name, last name, new password (and avatar optionally)
-  - This can be the same layout as the register page, but then without the email field.
+- Provide additional details -> new page to add first name, last name, new password
+  - The layout can actually be similar to the register page without the email field
 
 ## Workflows
 On the user management page, it should be possible for anyone visiting the page (this can be a superuser, an RSR admin, an organisation admin or an organisation user manager) to invite users.
