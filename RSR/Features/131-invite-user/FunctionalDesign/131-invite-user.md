@@ -14,7 +14,7 @@ The invite user functionality will let certain users invite new users. This is a
 As an Organisation Admin or User Manager I want to be able to invite users that also work for my organisation.
 
 #### User story 2
-As an Organisation Admin or User Manager of a 'paying for RSR organisation' I want to be able to invite users that work for my partner organisation.
+As an Organisation Admin or User Manager of a 'paying for RSR organisation' I want to be able to invite users that work for my partner organisation (__Kasper:__ This feels a bit tricky to me, it means that SNV can invite someone to join Akvo, who then in turn could change all of Akvo's projects).
 
 #### User story 3
 As a Superuser or RSR Admin (Akvo staff) I want to be able to invite users of any organisation.
