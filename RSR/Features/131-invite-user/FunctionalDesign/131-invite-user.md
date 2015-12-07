@@ -41,7 +41,7 @@ As an Organisation Admin, User Manager, RSR admin or Superuser I want to be able
 As an Organisation Admin, User Manager, RSR admin or Superuser I want to be able so send a message to notify a user with a known email address that they have been added to a (new) organisation.
 
 #### User story 11 
-As a new user who receives an invitation, I want to be able to modify my email address (e.g. in case I was invited with my personal email and I want to use my work email instead) (__Kasper:__ I don't believe this should be in scope. It would be a different functionality: change email address or so).
+As a new user who receives an invitation, I want to be able to modify my email address (e.g. in case I was invited with my personal email and I want to use my work email instead) (__Kasper:__ I believe changing an email address would be a new functionality, and should not be in scope of inviting users).
 
 #### User story 12
 If a new user is invited, an email notification should be send to notify them, including an automated generated password that has to be used when logging in for the first time (__Kasper:__ Sending passwords over email might not be the best idea. I believe it's better to include a link so that they can directly login).
