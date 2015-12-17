@@ -98,7 +98,13 @@ A marketing description of this feature.
 - for this 1st implementation we propose to create only 1 new permission: 'Manage custom maps' (name depends on how we call the sub-tab) which will give the user full access to the tab. If the permission is not given to the user, she does not see this tab. Same behaviour as with cascade resources or assignments.
    
 ### Non goals
-What this feature will not contain
+What this feature will not contain:
+- map will only be based on registration forms > with surveys where monitoring is enabled, only the registration forms will be enables (monitoring forms will be dealt with in the following implementation)
+- option questions and geographic shape questions which are located in a repeated question group will not be supported either (following implementation) 
+- base map on number question
+- publishing the saved map via url and/or iframe code
+- define the size of markers 
+- change the shape of markers 
 
 ### Scenarios
 A number of scenarios for how this feature will benefit users
@@ -108,12 +114,14 @@ Any technical issues or questions that are already known
 
 ### Open issues
 Any known issues that need to be decided
+
 1. 2 new subtabs need to be named properly - to be consulted with Comms team 
+
 2. In the list of maps - will the Created by refer to the user who created the map or to the user who has done the latest edit + save of the map? 
+
 3. What to do with multi select option questions? - "pie chart style" color coding of data points? 
-4. If option question has allow other, do we need to list which 'others' were submitted by the users? 
 
-
+4. If option question has allow other, do we need to list which 'others' were submitted by the users, or is just giving the other a color enough? 
 
 ### Details
 Details, details, details.
