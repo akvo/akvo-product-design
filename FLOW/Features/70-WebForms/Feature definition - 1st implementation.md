@@ -115,6 +115,25 @@ Once the user selects a monitoring form in the form list, the list of all submit
 
 ### Feature definition - Non-Monitored surveys
 Differences in the workflow and items between monitored and non-monitored surveys
+- in the Data view the table header is not "Last update" but "Submitted"
+- after the user clicks on "New datapoint" > the form opens directly, without a list of forms
+   - "New datapoint" title
+   - "Go back to datapoints list" back link
+   - webform
+   - Submit button (no cancel button as in mockups)
+   - submission rules are the same as for monitored webforms 
+- once the user successfully submits a new webform > the Data view is opened
+   - top green header: "Form was successfully submitted." 
+- if the user clicks on a datapoint from the list > the submitted form is opened, no list of needed
+   - "View datapoint" title
+   - "Go back to datapoints list" 
+   - datapoint name and ID
+   - delete icon
+   - Datapoints 1 of 342
+   - navigation arrows to go to the next or previous data point
+   - registration form name, version, Submitted 2016-01-18 11:45
+   - question groups, questions, answers and edit icon
+   - no submit button
 
 #### To be added:
 
