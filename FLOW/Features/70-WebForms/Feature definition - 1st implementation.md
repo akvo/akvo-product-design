@@ -1,4 +1,4 @@
-## Feature definition
+## Feature definition - WORK IN PROGRESS (needs to refelect last design changes) 
 
 Based on the mock ups provided by Kiarii, here is the description of the proposed features and their expected behaviour for the 1st implementation of Webforms, when the webforms are filled in and submitted within the Akvo FLOW dashboard. The 2nd implementation will support the submission of a webform via a link.
 
@@ -154,3 +154,6 @@ Differences in the workflow and items between monitored and non-monitored survey
 
 **5. Previewing a submitted form**
 1. There is not way to navigate from one monitoring form submission to another
+
+**6. Caddifly questions**
+We are currently integrating Caddisfly tests as another question type. In the situation that a webform holds a Caddisfly question and this is set as a mandatory question, the webform needs to 'overrule' this setting and disable the question entirely, while still making it possible to submit the webform without the Caddisfly data
