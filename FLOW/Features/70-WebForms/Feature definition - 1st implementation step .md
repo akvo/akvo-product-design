@@ -42,6 +42,8 @@ Based on the mock ups provided by Kiarii, here is the description of the propose
 3. Photo upload should check that it is a suported file type 
 4. Same with video upload 
 
+Error messages should be located under the input field. 
+
 
 ### Questions
 1. We are adding geotagging to photos - how will this work with photos uploaded with a webform? 
