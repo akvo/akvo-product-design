@@ -2,62 +2,64 @@
 
 Based on the mock ups provided by Kiarii, here is the description of the proposed features and their expected behaviour for the 1st implementation of Webforms, when the webforms are filled in and submitted within the Akvo FLOW dashboard. The 2nd implementation will support the submission of a webform via a link.
 
-### Feature definition - Monitored surveys
+### Feature definition - Monitored surveys 
 
-#### 1. Data view 
-1st page in the Monitored surveys mock up
-- combine Inspect data tab and Monitoring tab into "Inspect data" 
+#### 1. Data view - combine Inspect data tab and Monitoring tab into "Data" 
 - survey selection dropdown - change, only enabling to select up to survey level, no more form selecion as we are building the data display on data points, which in themselves hold all the forms. Try to have all dropdowns in one line, if the size of screens allows.   
-- new button - **"New datapoint"** - opens webform submission screen, with the list of forms and the registration form opened by default
-- **row of filters and bulk actions:** 
-    - dropdown of Bulk actions list: now only "delete", later also data approval functionality will be added to it
-    - "Apply" button
-    - Workflow: 
-       - user selects the data points by clicking on the checkbox in each row
-       - user selects delete from Bulk actions dropdown
-       - after user clicks on apply > a warning pop-up message is shown in the screen (same pattern as when deleting a form). The message contains: 
-          - Question: "Are you sure you want to delete these XY items? This cannot be undone." where XY shows the total count of the selected data points
-          - 2 Actions: - "OK" - if selected, selected items are deleted - "Cancel" - if selected, map stays in the list
-       - After deleting the number of all data points (the last item in the row of filters) needs to change to show the current amount 
-   - search - user can search based on data point name and data point ID, not case sensitive. Once item is found it is displayed in the list and the other data points are not shown 
-   - date filter - same behaviour as in current Inspect data tab - user can type in the date or choose from date picker. 
+- **title of the page "Data"**
+- **search bar**  - user can search by datapoint name or datapoint ID, search is not case sensitive
+   - to trigger the search they user types in her text and enter 
+   - the search looks through the entire list of datapoints for the selected survey
+   - if the user has no filters applied on his list of points and types in his text in th search bar + enter
+      - an 'x' appears behind the searched item in the search bar - with this 'x' the user cancels his search that then gives him the full list of points again and the filters are visible 
+      - the date picker and filters are hidden from the screen, in there place the number of results found for the searched text - example: 4 results for "House hold" 
+      - 'Back to data points' link - same behaviour as the 'x' in the search bar - cancels the search and brings the user back to the full original list with the date picker and filters; same design as in Assignments tab 
+      - the list of data points shows only those that fit the search
+   - if user has added filters to his list of data points, the search still searches among the entire list of points and the filters are hidden and ignored. Once the search is canceled (either via the 'x' or via 'Back to datapoints') the filters become available again but none are selected and the user has the select them all from the beginning 
+- **New datapoint** - new button - opens webform submission screen, with the list of forms and the registration form opened by default
+- **date picker** - same behaviour as in current Inspect data tab - user can type in the date or choose from date picker. 
      - in the date field do not say "collected from" and "to", but show the date format: "YYYY/MM/DD"
-     - Workflow: Once the date filter is selected show all data points that have either the registration form or any monitoring form submitted within that date range
-   - form dropdown - this is available only for monitored surveys. 
-      - dropdown holds a list of forms in the survey. The first item and by default selected item is "All forms", followed by the list of forms 
-      - Workflow:
-         - if the user selects a registration form, the number of data points and list does not change
-         - if the user selects a monitored form, the list only shows those data points that have this form submitted at least once
-   - users dropdown - allows to filter based on app users. The first item and by default selected item is "All submitters", followed by the list of submitters = app users  
-      - Workflow: once a user is selected, the data points for which this user submitted either a regsitration form or a monitoring formare shown
-   - "Data points x-x of 10,000" - this shows the count of all data points and displayed data poits in the view 
+     - once the date filter is selected show all data points that have either the registration form or any monitoring form submitted within that date range
+- **Filter options** - new button - opens the filter selector, in page view (not pop-pu) 
+     - title 'Select filters to apply'
+     - followed by an indication of the selected filters, by default no filters selected > '(no filters applied)'
+     - 'Show datapoints (xx)' link - clickable link that closes the filter selector, xx stand for the number of points in the list 
+     - can filter on: Forms, Users, Workflow steps 
+     - each filter has and 'all' checkbox in the same line as the filter title and followed by the possible filters (existing forms in the selected survey, app users, created workflow steps and each has the three defauls statuses + all) 
+- **Data points x-x of 10,000** - this shows the count of all data points and displayed data poits in the view 
       - x-x - stands for the number of displayed points - example: "Data points 1-20 of 342", if the user clicks on the "next" arrow, the count changes to "Data points 21-40 of 342"
       - 10,000 - shows the total count of data points. If a filter (or group of filters) is applied, the number changes based on the selection 
       - we need to decide the maximum total amount of data points displayed in the view: 20, 50, ? 
-   - previous and next arrow buttons
-- **table header:**
-   - checkbox to select all - see question 1 in **Unanswered questions** 
+      - previous and next arrow buttons
+- **datapoint table header:**
    - "Name" = data point name
    - "ID" = data point ID
-   - "Last update" - shows the data of the last form submitted per data point, registration of monitoring. Based on this date the data points are ordered in the table view, with the latest submission on the top. In case of the Non-monitored surveys this item is: "Submitted".
-   - "Submitter" - app user
+   - "Last update" - shows the date of the last form submitted per data point, registration or monitoring. Based on this date the data points are ordered in the table view, with the latest submission on the top. In case of the Non-monitored surveys this item is: "Submitted".
+   - "Workflow status" - new - see https://github.com/akvo/akvo-product-design/issues/82
 - **data point table** 
    - follows the header structure
    - data point name - clickable link, which brings the user inside the data point to view all the submitted forms and to submit a monitoring form
    - data point ID
-   - last update date and time in the format YYYY/MM/DD
-   - app user name
+   - last update date and time 
+   - workflow status - here the user can change the status
+- **delete icon** upon mouseover on the data point row a delete icon is shown at the far right. It deletes the data point and all its data. If the user clicks on the icon a warning pop-up message is shown in the screen (same pattern as when deleting a form). The message contains:
+   - Question: "Are you sure you want to delete this item? This cannot be undone." 
+   - 2 Actions: - "OK" - if selected, the data point is deleted - "Cancel" - if selected, stays in the list  
+   - once a point is deleted the total count of points needs to change respectively 
 
 #### 2. Webform view 
-What happens after the user clicks on the "New datapoint" button? The "webfrom" screen opens with the registration form and also holding:
+What happens after the user clicks on the "New datapoint" button? The webfrom screen opens holding: 
 - survey dropdown selection - remains the same to indicate which survey the user is currently working on
-- title: **"New datapoint**" - not clickable and shown only in this workflow, thus when the user clicks on the "New datapoint" button
-- **"Go back to datapoints list"** - clickable link, acts as a back button, design consistent with the current Assignments workflow, positions in line with "New datapoint" title 
-- **list of forms** - similar as in the app, no title Forms needed
+- title: **New datapoint** - not clickable and shown only in this workflow, thus when the user clicks on the "New datapoint" button
+- **'Go back to datapoints'** - clickable link, acts as a back button, design consistent with the current Assignments workflow, positions in line with 'New datapoint' title 
+- **list of forms** - similar as in the app with title 'Forms' 
    - holds the list of all forms for this survey - their name and version
    - the registration form is 1st in the list, it is selected and opened by default
    - the monitoring forms are by default disabled
-- **registration form opened as a webform** - placed next to the list of forms, shows the form title + version, * Mandatory question (in red), question groups with questions, submit button
+- **registration form opened as a webform** - placed next to the list of forms, shows the form title + version, * Mandatory question (in red), question groups with questions, cancel button, submit button
+
+
+-------------------
    - if the user only opens the webform but does not add in any information and goes back via the "Go back to datapoints list" link, nothing is saved (no new data point is created)
    - if the user adds in an answer (mandatory or not) and clicks on the "Go back to datapoints list" list, nothing is saved 
    - if the user does not add any information to the webform, but clicks on "Submit":
@@ -114,13 +116,15 @@ Once the user selects a monitoring form in the form list, the list of all submit
 
 
 ### Feature definition - Non-Monitored surveys
+
 Differences in the workflow and items between monitored and non-monitored surveys
 - in the Data view the table header is not "Last update" but "Submitted"
 - after the user clicks on "New datapoint" > the form opens directly, without a list of forms
    - "New datapoint" title
    - "Go back to datapoints list" back link
    - webform
-   - Submit button (no cancel button as in mockups)
+   - Submit button 
+   - Cancel button
    - submission rules are the same as for monitored webforms 
 - once the user successfully submits a new webform > the Data view is opened
    - top green header: "Form was successfully submitted." 
@@ -142,8 +146,11 @@ Differences in the workflow and items between monitored and non-monitored survey
 
 ### Unanswered questions
 **1: Related to Data View**
+   - How many data points will be shown in the list of data points? 20? 
+   - 
+### Next steps
+### Decisions differing from current functionality in Inspect data tab and Monitoring tab 
 
-1. **Bulk actions** We currently do not have a way to select all the data points in the list. Proposal: add a checkbox in the table header alligned with the individual checkboxes per data point, in front of the "Name". If user clicks on the checkbox, all the items in the list are checked. If the user clicks on the checkbox again, all the items in the list get deselected. (same behaviour as gmail has) 
 2. **Instance ID** What shall we do with it? Currently we show the instance id with each form and users can filter on it in the Inspect data tab
 3. **Device ID** What shall we do with Device ID? Currently the user can filter on it the Inspect data tab, but the items are not shown in the data view list. Considering this is an item we will move away from we can decide not to add it in at all. However, if we want to keep the existing filtering functionality, we can add the "Device ID" as the last item in the table of data points and a filter dropdown after the user filter, which will filter based on device ID and the by default selected item will be "All device IDs" 
 
