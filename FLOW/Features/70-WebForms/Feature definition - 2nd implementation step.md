@@ -184,17 +184,18 @@ Differences in the workflow and items between monitored and non-monitored survey
 - How many data points will be shown in the list of data points? 20? 
 - Permission: user needs to have 'view data' permission added to his role to be able to submit a webform
     - What if we do not want the user to view the data but only submit a webform for non-monitoring forms - fine - the data is not shown in the list of data points in the Data tab. For monitoring form - is it possible? 
+- To delete a full data point do I have to first delete all the forms in it separately (to empty the data point) first? We have the same pattern with surveys, that you cannot delete a survey, only if you first delete all its forms ..
 
-### Next steps
-- create a way to submit a webform using an external link for registration forms 
-- investigate and create a way to submit a webform using an external link for monitoring forms 
-
-### Decisions taken that differ from the current functionality when viewing data in FLOW 
-1. **Instance ID** Will not be one of the filters and the user cannot search on it either
+### Next steps and desicions taken
+- next step - create a way to submit a webform using an external link for registration forms 
+- after that - investigate and create a way to submit a webform using an external link for monitoring forms
+- not allow bulk deletion of data points, nor form submissions at this point of time - will implement later in the future once we have a 'tash can' functionality that will allow users to revive their deleted data. At this moment, we found deleting in bulk a too risky operation. 
+- for the future consider capturing the version of the submission (for both webforms and app submitted forms) and show the version number in the lists. This will allow user to keep track and see who has (or has not) submitted the latest version of the form
+- **Instance ID** Will not be one of the filters and the user cannot search on it either
     - the instance ID now acts as a way to find a specific submission
     - we are moving towards searching for submissions using datapoint name/ID or filters
     - instance ID is something FLOW gives - so it is not something users determine themselves and are generally unaware of its role and purpose. Moving towards focusing on datapoint name and ID is more simpler for the users, as they create the name themselves, are familiar with it in the app and come more in contact with both 
-2. **Device ID** 
+- **Device ID** 
     - currently the user can filter on it the Inspect data tab, but the items are not shown in the data view list. 
     - this is an item we will move away from with the single app 
     - will not be added to the new filters but we will use the user name 
