@@ -1,4 +1,4 @@
-## Feature definition - 2nd implementation - WORK IN PROGRESS (needs to refelect last design changes) 
+## Feature definition - 2nd implementation 
 
 Based on the mock ups provided by Kiarii, here is the description of the proposed features and their expected behaviour for the 1st implementation of Webforms, when the webforms are filled in and submitted within the Akvo FLOW dashboard. The 2nd implementation will support the submission of a webform via a link.
 
@@ -26,7 +26,7 @@ Based on the mock ups provided by Kiarii, here is the description of the propose
      - 'Show datapoints (xx)' link - clickable link that closes the filter selector, xx stand for the number of points in the list 
      - can filter on: Forms, Users, Workflow steps 
      - each filter has and 'all' checkbox in the same line as the filter title and followed by the possible filters (existing forms in the selected survey, app users, created workflow steps and each has the three defauls statuses + all) 
-- **Data points x-x of 10,000** - this shows the count of all data points and displayed data poits in the view 
+- **Datapoints x-x of 10,000** - this shows the count of all data points and displayed data poits in the view 
       - x-x - stands for the number of displayed points - example: "Data points 1-20 of 342", if the user clicks on the "next" arrow, the count changes to "Data points 21-40 of 342"
       - 10,000 - shows the total count of data points. If a filter (or group of filters) is applied, the number changes based on the selection 
       - we need to decide the maximum total amount of data points displayed in the view: 20, 50, ? 
@@ -36,7 +36,7 @@ Based on the mock ups provided by Kiarii, here is the description of the propose
    - "ID" = data point ID
    - "Last update" - shows the date of the last form submitted per data point, registration or monitoring. Based on this date the data points are ordered in the table view, with the latest submission on the top. In case of the Non-monitored surveys this item is: "Submitted".
    - "Workflow status" - new - see https://github.com/akvo/akvo-product-design/issues/82
-- **data point table** 
+- **datapoint table** 
    - follows the header structure
    - data point name - clickable link, which brings the user inside the data point to view all the submitted forms and to submit a monitoring form
    - data point ID
@@ -48,96 +48,132 @@ Based on the mock ups provided by Kiarii, here is the description of the propose
    - once a point is deleted the total count of points needs to change respectively 
 
 #### 2. Webform view 
-What happens after the user clicks on the "New datapoint" button? The webfrom screen opens holding: 
+What happens after the user clicks on the "New datapoint" button? The webform screen opens holding: 
 - survey dropdown selection - remains the same to indicate which survey the user is currently working on
 - title: **New datapoint** - not clickable and shown only in this workflow, thus when the user clicks on the "New datapoint" button
-- **'Go back to datapoints'** - clickable link, acts as a back button, design consistent with the current Assignments workflow, positions in line with 'New datapoint' title 
+- **'Back to datapoints'** - clickable link, acts as a back button, design consistent with the current Assignments workflow, positions in line with 'New datapoint' title 
 - **list of forms** - similar as in the app with title 'Forms' 
    - holds the list of all forms for this survey - their name and version
    - the registration form is 1st in the list, it is selected and opened by default
    - the monitoring forms are by default disabled
-- **registration form opened as a webform** - placed next to the list of forms, shows the form title + version, * Mandatory question (in red), question groups with questions, cancel button, submit button
 
+##### 2.A Registration form opened as a webform 
+- placed next to the list of forms, shows the form title + version, * Mandatory question (in red), question groups with questions, cancel button, submit button
+- **working with a registration webform:** 
+    - if the user does not add any answers to the webform and clicks on 'Go back...' or 'Cancel' then nothing is saved (no new data point is created)
+    - if the user adds in an answer (mandatory or not) and clicks on the 'Go back...' or 'Cancel' then nothing is saved
+    - if the user does not add any information to the webform, but clicks on 'Submit':
+       - if there are mandatory questions, the answer field is outlined in red once the user clicks away from it without adding an answer. By clicking on Submit FLOW brings the user to the 1st not answered mandatory question, which is outlined in red and a sentence is shown under the question title (and question help text if there): "Please fill in the missing mandatory fields to submit this form." This sentence is shown under each question that is mandatory and not filled in
+       - if there are no mandatory questions, thus the user is submitting an empty form, then a sentence is shown above the Submit button: "Empty forms cannot be submitted. Please, add the corresponding responses first."
+    - if the user adds in one piece of information but does not finish the entire form and hits "Submit"
+       - if there are mandatory fields left, the answer field is outlined in red once the user clicks away from it without adding an answer. By clicking on Submit FLOW brings the user to the 1st not answered mandatory question, which is outlined in red and a sentence is shown under the question title (and question help text if there): "Please fill in the missing mandatory fields to submit this form." This sentence is shown under each question that is mandatory and not filled in
+       - if there are no mandatory fields open/left, the form is submitted 
 
--------------------
-   - if the user only opens the webform but does not add in any information and goes back via the "Go back to datapoints list" link, nothing is saved (no new data point is created)
-   - if the user adds in an answer (mandatory or not) and clicks on the "Go back to datapoints list" list, nothing is saved 
-   - if the user does not add any information to the webform, but clicks on "Submit":
-      - if there are mandatory questions, the answer field is outlined in red once the user clicks away from it without adding an answer. By clicking on Submit a sentence is shown above the Submit button: "Please fill in the missing mandatory fields to submit this form."  
-      - if there are no mandatory questions, thus the user is submitting an emplty form, then a sentence is shown above the Submit button: "Empty forms cannot be submitted. Please, add the corresponding responses first."   
-   - if the user adds in one piece of information but does not finish the entire form and hits "Submit"
-      - if there are mandatory fields left, the answer field is outlined in red once the user clicks away from it without adding an answer. By clicking on Submit a sentence is shown above the Submit button: "Please fill in the missing mandatory fields to submit this form."  
-      - if there are no mandatory fields open/left, the form is submitted > in place of the webform a info message is show: "Form was successfully submitted." and a new data point is placed on the top of the list
-- after the form is submitted 4 things change in the screen: 
-    - the data point name and ID are rendered upon the submission of the registration form and placed under the title "New datapoint"
-    - the registration form in the list of form becomes disabled and "Submitted 2016-01-18 11:64" (date and time of submission) is rendered below the form name 
-    - the monitoring forms are now enabled to be selected
-    - in place of the registration webform a message is shown: "Form was successfully submitted." 
+##### 2.B After the registration form is submitted
+- each submission creates a new data point (as if it was submitted by the app) and this data point can by synced to the app and further monitoring data can be collected
+- The page title changes from 'New datapoint' to 'View datapoint'
+- A green bar is shown above the 'View datapoint' title taking the full screen width saying 'Datapoint successfully created!'. This bar can be closed by clicking on the 'x' at its end. 
+- a new header is shown under the title and 'Back to datapoints' link holding: 
+    - datapoint name - rendered from the answers 
+    - datapoint ID
+    - workflow status changer with 1st status/step opened 
+    - delete icon that deletes the full datapoint + warning message for deletion
+    - Datapoints 1 of 2123 - counter - after submitting a registration form the number is always 1 (as the newest point is always the 1st in the list) and the total number of points
+    - navigation arrows - allow to click through the data points 
+- in the forms list: 
+    - registration form - gets a time stamp holding: Submitted + date + time; and is selected in the list
+    - monitoring forms are enabled 
+- the submitted registration form is opened, showing the questions + answers + edit link; in the title of the form - form name + version that is submitted + Submitted date and time + user name who submitted the form 
+- the user can now decide, if she wants to submit a monitoring webform, change the workflow status, delete the point, go back to the list of points or view other points 
 
-#### 3. Workflow after submitting a registration form
-##### 3A. User leaves this page by clicking on "Go back to datapoints list"
-- the newly created data point is on top of the data points list and the data point name is a clickable link, which opens the data point information - see **4. View datapoint** 
+##### 2.C User leaves this page by clicking on "Back to datapoints"
+- the newly created data point is on top of the data points list and the data point name is a clickable link, which opens the data point information 
 
-##### 3B. User continues with submitting monitoring forms for this data point
-- user selects a monitoring form from the list of forms > the monitoring webform is opened
-- all rules apply as with the registration form
-- after submitting a monitoring form, under the name of the form show: "Last submitted 2016-01-19 10:45"  
+##### 2.D User continues with submitting monitoring forms for this data point
+- user selects a monitoring form from the list of forms: 
+    - Form name stands as header
+    - as there are no submissions for this monitoring form yet, the list of submissions which would be there is empty and only and info message is shown saying: "No submissions yet" 
+    - new button above the list of submissions in the same line as the Form name header: New submission - which openes the monitoring webform > 
+- **submitting a monitoring form** 
+    - all rules apply as with the registration form, 
+    - the title of the page changes to 'Update datapoint' 
 
-#### 4. View datapoint
+##### 2.E After submitting a monitoring form 
+- page title changes to 'View datapoint' 
+- under the name of the monitoring form in the list of forms: "Last submitted 2016-01-19 10:45"  
+- Form name title remains 
+- subtitle: 1 submission - the number shows the total number of submissions per that form 
+- 'New submission' button remains
+- green bar under the subtitle taking the full width of the page - 'Datapoint successfully updated!' + 'x' to close the bar
+- submission table header: #, Submitted, User 
+    - the first submission is shown in the table
+    - the table is organized by the newest submission first 
+    - all submissions are shown - user needs to scroll to see the older submissions 
+    - to open a submission click on the row
+    - on row mouseover show 'delete' icon in the far right of the row which allows to delete the form. If the user clicks on the icon a warning pop-up message is shown in the screen (same pattern as when deleting a form). The message contains:
+       - Question: "Are you sure you want to delete this item? This cannot be undone." 
+       - 2 Actions: - "OK" - if selected, the form is deleted - "Cancel" - if selected, stays in the list  
+       - once a form is deleted the total count of forms needs to change respectively 
+
+##### 2.F User leaves this page by clicking on "Back to datapoints"
+- the newly updated data point is on top of the data points list and the data point name is a clickable link, which opens the data point information 
+
+#### 3. View datapoint
 What happens if a user is in the list of datapoints and clicks on a datapoint's name? The View data point screen opens: 
 - **"View datapoint"** title
-- **"Go back to datapoints list"** - clickable link, acts as a back button, design consistent with the current Assignments workflow, positions in line with "View datapoint" title 
+- **"Back to datapoints"** - clickable link, acts as a back button, design consistent with the current Assignments workflow, positions in line with "View datapoint" title 
 - **Data point name** and **data point ID**
-- **delete icon** - deletes the entire data point and all the submitted forms within. Once clicked on a warning message is shown:
-    - Question: "Are you sure you want to delete this data point and all its data records? This cannot be undone." 
-    - 2 Actions: - 'OK' - if selected, selected data point is deleted - 'Cancel' - if selected, nothing happens 
-- **"Data points 1 of 342"** - shows the order of the data point the user is currently previewing
-    - if a data point is deleted in this view, the total count (in this case 342) changes respectively (in this case to 341)
+- **workflow status changer**
+- **delete icon** - deletes the entire data point and all the submitted forms within + warning message for deletion 
+- **"Data points 1 of 2123"** - shows the order of the data point the user is currently previewing
+    - if a data point is deleted in this view, the total count changes respectively
     - if the user selects another point the order changes and shows "2 of 342" etc
 - **navigation arrows** to click to the next and previous data point
-- **List of forms** - shows all the forms and their version for this survey, and when the registration form was submitted (first one in the list) and when the last form for each monitoring form was submitted
-   - by default opens the registration form in preview 
-   - if the user clicks on a monitoring form in the list > opens a list of all submitted monitoring forms and "New submisssion" button
-      - checkbox - if selected a "delete" icon is shown
-      - submission date of the form - clickable link which opens the form preview 
-      - submitter's name
-      - **Outstanding questions**: Do we need to show here the Instance ID for each form? Filters as in the Data point list? Bulk actions?
-      - "New submission" button > brings the user to the same screen as when submitting a new data point, thus the webform screen with these differences:
-         - Title: "Update datapoint"
-         - holds the data point name and ID
-         - registration form is disabled
-         - the monitoring form is selected and opened by default
+- **Forms** - list of forms - shows all the forms and their version for this survey, and when the registration form was submitted (first one in the list) and when the last form for each monitoring form was submitted
+   - by default opens the registration form in preview - showing 'Submitted + date + time', name of user who submitted, the submitted answers and possibility to edit 
+- if the user clicks on a monitoring form in the list > opens a **list of all submitted monitoring forms** and **"New submisssion"** button
+    - table header: #, Submitted, User 
+    - the first submission is shown in the table
+    - the table is organized by the newest submission first 
+    - all submissions are shown - user needs to scroll to see the older submissions 
+    - to open a submission click on the row
+    - on row mouseover show 'delete' icon in the far right of the row which allows to delete the form. If the user clicks on the icon a warning pop-up message is shown in the screen (same pattern as when deleting a form). The message contains:
+       - Question: "Are you sure you want to delete this item? This cannot be undone." 
+       - 2 Actions: - "OK" - if selected, the form is deleted - "Cancel" - if selected, stays in the list  
+       - once a form is deleted the total count of forms needs to change respectively 
+            - submission date of the form - clickable link which opens the form preview 
 
-#### 5. Previewing a submitted form
-##### 5A. Previewing a submitted registration form
-Once the user clicks on a data point in the list of points, the registration form is opened by default in the View datapoint screen. All the question groups, questions and answers are shown and if the user has the right to edit the edit link is also provided.
-##### 5B. Previewing a submitted monitoring form
-Once the user selects a monitoring form in the form list, the list of all submitted forms is shown. Here she can select a specific monitoring form which is opened in the same style as the registration form. The difference is, that there is a header above the submitted form consisting of: delete icon (instead of the 21 number in the mockups to enable deleting the form), submission date, submitter and "Back to form submissions" link (which brings the user back to the list of submissions for that monitoring form)
-
+#### 4. Previewing a submitted form
+##### 4A. Previewing a submitted registration form
+Once the user clicks on a data point in the list of points, the registration form is opened by default in the View datapoint screen. All the question groups, questions and answers are shown and if the user has the right to edit the edit link is also provided. The user can also view the registration form after viewing monitoring forms by clicking on the registration form in the list of forms. 
+##### 4B. Previewing a submitted monitoring form
+Once the user selects a monitoring form in the form list, the list of all submitted forms is shown. Here she can select a specific monitoring form which is opened in the same style as the registration form. To open a submitted monitoring form she clicks on the rom. The difference is, that there is a header above the submitted form consisting of: order number of the form, 'Submitted + date + time', submitter and 'Back to form submissions' link (which brings the user back to the list of submissions for that monitoring form)
 
 ### Feature definition - Non-Monitored surveys
 
 Differences in the workflow and items between monitored and non-monitored surveys
-- in the Data view the table header is not "Last update" but "Submitted"
+- in the Data view the table header is not "Last update" but "Created"
 - after the user clicks on "New datapoint" > the form opens directly, without a list of forms
    - "New datapoint" title
-   - "Go back to datapoints list" back link
+   - "Back to datapoints list" back link
    - webform
    - Submit button 
    - Cancel button
    - submission rules are the same as for monitored webforms 
 - once the user successfully submits a new webform > the Data view is opened
-   - top green header: "Form was successfully submitted." 
-- if the user clicks on a datapoint from the list > the submitted form is opened, no list of needed
+   - top green header: "Data point successfully created!" 
+   - the new datapoint is first in the list 
+- if the user clicks on a datapoint from the list > the submitted form is opened, no list of forms needed
    - "View datapoint" title
-   - "Go back to datapoints list" 
+   - "Back to datapoints" 
    - datapoint name and ID
+   - workflow status/step change
    - delete icon
    - Datapoints 1 of 342
    - navigation arrows to go to the next or previous data point
-   - registration form name, version, Submitted 2016-01-18 11:45
+   - registration form name, version, Submitted 2016-01-18 11:45, user name 
    - question groups, questions, answers and edit icon
-   - no submit button
+   - no submit or cancel button
 
 #### To be added:
 
@@ -145,22 +181,21 @@ Differences in the workflow and items between monitored and non-monitored survey
 - Submit data via webform
 
 ### Unanswered questions
-**1: Related to Data View**
-   - How many data points will be shown in the list of data points? 20? 
-   - 
+- How many data points will be shown in the list of data points? 20? 
+- Permission: user needs to have 'view data' permission added to his role to be able to submit a webform
+    - What if we do not want the user to view the data but only submit a webform for non-monitoring forms - fine - the data is not shown in the list of data points in the Data tab. For monitoring form - is it possible? 
+
 ### Next steps
-### Decisions differing from current functionality in Inspect data tab and Monitoring tab 
+- create a way to submit a webform using an external link for registration forms 
+- investigate and create a way to submit a webform using an external link for monitoring forms 
 
-2. **Instance ID** What shall we do with it? Currently we show the instance id with each form and users can filter on it in the Inspect data tab
-3. **Device ID** What shall we do with Device ID? Currently the user can filter on it the Inspect data tab, but the items are not shown in the data view list. Considering this is an item we will move away from we can decide not to add it in at all. However, if we want to keep the existing filtering functionality, we can add the "Device ID" as the last item in the table of data points and a filter dropdown after the user filter, which will filter based on device ID and the by default selected item will be "All device IDs" 
-
-**4: Related to View data point**
-1. Do we need to add the full row of filters and bulk actions to the list of submitted monitoring forms? 
-2. Instance ID? 
-3. Device ID? 
-
-**5. Previewing a submitted form**
-1. There is not way to navigate from one monitoring form submission to another
-
-**6. Caddifly questions**
-We are currently integrating Caddisfly tests as another question type. In the situation that a webform holds a Caddisfly question and this is set as a mandatory question, the webform needs to 'overrule' this setting and disable the question entirely, while still making it possible to submit the webform without the Caddisfly data
+### Decisions taken that differ from the current functionality when viewing data in FLOW 
+1. **Instance ID** Will not be one of the filters and the user cannot search on it either
+    - the instance ID now acts as a way to find a specific submission
+    - we are moving towards searching for submissions using datapoint name/ID or filters
+    - instance ID is something FLOW gives - so it is not something users determine themselves and are generally unaware of its role and purpose. Moving towards focusing on datapoint name and ID is more simpler for the users, as they create the name themselves, are familiar with it in the app and come more in contact with both 
+2. **Device ID** 
+    - currently the user can filter on it the Inspect data tab, but the items are not shown in the data view list. 
+    - this is an item we will move away from with the single app 
+    - will not be added to the new filters but we will use the user name 
+    - this can be reconsidered after the implementation 
