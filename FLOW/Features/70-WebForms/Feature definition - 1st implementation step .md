@@ -9,15 +9,16 @@ Based on the mock ups provided by Kiarii, here is the description of the propose
 - 'New submission' button - opens the webform for submission
 - Choose survey to display + dropdown with selected survey and form - remain in the screen
 - Title 'New Datapoint' 
-- 'Go back to Datapoints list' link - enables the user to go back to the previous page (the list of submissions) without submitting a webform, same styling as in the Assignments tab 
+- 'Go back to Datapoints' link - enables the user to go back to the previous page (the list of submissions) without submitting a webform, same styling as in the Assignments tab 
 - opened webform
    - Title of the form and version in the brackets 
    - '* Mandatory question' (in red)
    - Questions groups and questions 
    - 'Submit' button in the bottow right corner 
+   - 'Cancel' button - acts the same way as the 'Go back to datapoints' link
 - **working with webforms:** 
-   - if the user does not add any answers to the webform and clicks on 'Go back...' then nothing is saved (no new data point is created)
-   - if the user adds in an answer (mandatory or not) and clicks on the 'Go back...' then nothing is saved
+   - if the user does not add any answers to the webform and clicks on 'Go back...' or 'Cancel' then nothing is saved (no new data point is created)
+   - if the user adds in an answer (mandatory or not) and clicks on the 'Go back...' or 'Cancel' then nothing is saved
    - if the user does not add any information to the webform, but clicks on 'Submit':
       - if there are mandatory questions, the answer field is outlined in red once the user clicks away from it without adding an answer. By clicking on Submit FLOW brings the user to the 1st not answered mandatory question, which is outlined in red and a sentence is shown under the question title (and question help text if there): "Please fill in the missing mandatory fields to submit this form." This sentence is shown under each question that is mandatory and not filled in
       - if there are no mandatory questions, thus the user is submitting an empty form, then a sentence is shown above the Submit button: "Empty forms cannot be submitted. Please, add the corresponding responses first."
@@ -43,7 +44,6 @@ Based on the mock ups provided by Kiarii, here is the description of the propose
 4. Same with video upload 
 
 Error messages should be located under the input field. 
-
 
 ### Questions
 1. We are adding geotagging to photos - how will this work with photos uploaded with a webform? 
