@@ -3,6 +3,7 @@ Workflow DRAFT
 
 ### Overview
 A short overview of what we try to accomplish
+
 - The problem we are solving with this feature is to enable the user to track different phases of a workflow when viewing the data collected with Akvo FLOW.
 - Workflow consistest of steps - they translate to statuses on datapoint, which allows you to see which data point is in which step of your workflow. 
 - Two types of workflows: ordered and un-ordered.
@@ -15,11 +16,11 @@ A marketing description of this feature.
 ### Initial features
 
 #### Creating a workflow 
-- **new tab "Library"** which will hold: Cascade resources (move them away from Data tab here) and "Workflows" 
-- in **"Workflows" tab** - title "Workflows" 
-- "New workflow" button which enables you to create a new workflow
-- "No workflows yet" in the middle of the screen if the user did not create a workflow, if he did > then the list of workflows is shown there
-- list of workflows - structure for both header and table: 
+- **new tab "Library"** which will hold: Cascade resources (move them away from Data tab here) and 'Workflows' 
+- in **"Workflows" tab** - title 'Workflows' 
+- 'New workflow' button which enables you to create a new workflow
+- 'No workflows yet' in the middle of the screen if the user did not create a workflow, if he did > then the list of workflows is shown there
+- list of workflows - structure for both header and table: (unify design with Survey list, Custom map list) 
    - Name - name of the workflow, clicable link which opens the webform view  
    - Type - ordered or un-ordered 
    - Used in - shows the number of surveys this workflow is added to - 'x surveys', where the number is a clickable link and if the user clicks on it, it shows the list of surveys 
@@ -36,122 +37,155 @@ A marketing description of this feature.
     - 'Workflow type:' - user can select from the 2 given types: 
        - 'Ordered' + description text 'A step in the workflow can only be changed to its adjacent steps.' This step is selected by default for each new workflow  
        - 'Un-ordered' + description text 'A step in the workflow can be changed to any other step'
-    - 'Steps:' - here the user creates the different steps that make up the workflow
+    - 'Steps:' + two text boxes - here the user creates the different steps that make up the workflow
        - in front of the two text boxes - for ordered workflows > show the order number for each step, for un-ordered workflows do not show anything 
        - text box for step code - in the empty box show in grey font 'Code'
        - text box for step name - in the empty box show in grey font 'Step name' 
           - each step name can only have 25 characters - also shown in the empty text box at the far right end '25'
           - when the user starts typing in the name the counter shows with each new character the number of remaining characters 
-          - if the user reached 25 characters, the input counter shows 0 and it is not possible to add another one without deleting first
+          - if the user reached 25 characters, the input counter shows 0 and it is not possible to add another character without deleting one first
        - between the order number and code text box (or for un-ordered workflows in front of the code text box) icon indicating drag-n-drop > this allows the user to move and shuffle the order of the created steps 
        - 'x' behind the second step and the following ones deletes the step 
        - under the last step 'Add step' - adds a new following step
     - 'Cancel' button - brings users back to the list of workflows
-    - 'Save' button - saves the workflow, only enabled once the user adds the workflow name and names at least one step 
+    - 'Save' button - saves the workflow, only enabled once the user adds the workflow name and the name of at least one (the first) step
+    - for un-ordered workflows - behind the 1st text box - 'Default status' - this means that this is the 1st status a new datapoint gets by default after submission 
 - **clicking on 'Save', 'Cancel', 'Back to workflows' when defining a new workflow**
     - **Situation 1: I opened a new empty workflow and I did not add anything:**
-       - I hit Back to workflows > I go back to workflow list, nothing changed nor saved
-       - I hit Cancel > I go back to workflow list, nothing changed nor saved
-       - I hit Save > Cannot. Save button is not enabled without the Name added + 1st step name added by the user 
+       - I hit 'Back to workflows' > I go back to workflow list, nothing changed nor saved
+       - I hit 'Cancel' > I go back to workflow list, nothing changed nor saved
+       - I hit 'Save' > Cannot. 'Save' button is not enabled without the Name added + 1st step name added by the user 
     - **Situation 2: I open a new emplty workflow, only type in the name, leave the type as selected by default on 'ordered', but do not type in a step name**
-       - I hit Back to workflows > an error pop-up is shown asking “Do you want to save the changes you made to this workflow?” + 3 actions:
+       - I hit 'Back to workflows' > an error pop-up is shown asking 'Do you want to save the changes you made to this workflow?' + 2 actions:
           - ‘Don’t save’ - nothing is saved and I go to the list of workflows, 
-          - ‘Cancel’ - I stay on the workflow, 
-          - ‘Save’ - workflow is saved, Save button is disabled (and enabled once I make another change) and I remain on my workflow edit screen as I still need to add the step name
-       - I hit Cancel > same applies as for Back
-       - I hit Save > Cannot. Save button is not enables without the Name changes and the 1st step name added 
+          - ‘Save’ - workflow is saved, I go back to the list of workflows and my workflow is on the top of the list 
+       - I hit 'Cancel' > same applies as for 'Back...'
+       - I hit 'Save' > Cannot. 'Save' button is not enabled without the Name being changed and the 1st step name added 
     - **Situation 3: I type in the name, select a type, add the 1st step and leave the 2nd step empty**
-       - I hit Back > an error pop-up is shown asking “Do you want to save the changes you made to this workflow?” + 3 actions:
+       - I hit 'Back...' > an error pop-up is shown asking 'Do you want to save the changes you made to this workflow?' + 2 actions:
           - ‘Don’t save’ - nothing is saved and I go to the list of workflows, 
-          - ‘Cancel’ - I stay on the workflow, 
-          - ‘Save’ - workflow is saved, Save button is disabled (and enabled once I make another change) and I remain on my workflow edit screen
-       - I hit Cancel > same applies as for Back
-       - I hit Save > Save button is now enabled as I have added all the needed fields (name of workflow and name of 1st step). Workflow is saved. The 2nd step, which I kept empty, will not be saved at all. I remain in the edit screen where I have only 1 step to my workflow. Save button is disabled. I can go back to the list of workflows via Back button and I see my new workflow on the top of the list. Or I stay in the edit workflow screen and continue making changes. If so, the Save button gets enabled again with the 1st changes that I make. 
+          - ‘Save’ - workflow is saved, I go back to the list of workflows and my workflow in on the top of the list
+       - I hit 'Cancel' > same applies as for 'Back...'
+       - I hit 'Save' > 'Save' button is now enabled as I have added all the needed fields (name of workflow and name of 1st step). Workflow is saved. The 2nd step, which I kept empty, will not be saved at all. I remain in the edit screen where I have only 1 step to my workflow. 'Save' button is disabled. I can go back to the list of workflows via 'Back...' button and I see my new workflow on the top of the list. Or I stay in the edit workflow screen and continue making changes. If so, the 'Save' button gets enabled again with the 1st changes that I make. 
     - **Situation 4: I type in the name, select a type, add the 1st step, 2nd and 3rd** 
-       - I hit Back > an error pop-up is shown asking “Do you want to save the changes you made to this workflow?” + 3 actions:
+       - I hit 'Back...' > an error pop-up is shown asking 'Do you want to save the changes you made to this workflow?' + 2 actions:
           - ‘Don’t save’ - nothing is saved and I go to the list of workflows, 
-          - ‘Cancel’ - I stay on the workflow, 
-          - ‘Save’ - workflow is saved, Save button is disabled (and enabled once I make another change) and I remain on my workflow edit screen
-       - I hit Cancel > same applies as for Back
-       - I hit Save > Save button is enabled and all is saved. I remain in the edit screen where I have all 3 steps. Save button is disabled. I can go back to the list of workflows via Back button and I see my new workflow on the top of the list. Or I stay in the edit workflow screen and continue making changes. If so, the Save button gets enabled again with the 1st changes that I make.   
+          - ‘Save’ - workflow is saved, I go back to the list of workflows and my workflow in on the top of the list
+       - I hit 'Cancel' > same applies as for Back
+       - I hit 'Save' > 'Save' button is enabled and all is saved. I remain in the edit screen where I have all 3 steps. 'Save' button is disabled. I can go back to the list of workflows via 'Back...' button and I see my new workflow on the top of the list. Or I stay in the edit workflow screen and continue making changes. If so, the 'Save' button gets enabled again with the 1st changes that I make.   
 - **clicking on the workflow name in the list of workflows**
     - opens view workflow screen - title 'View workflow'
     - 'Back to workflows' link
-    - name of the workflow + type under
+    - name of the workflow + type located under
     - 'edit' icon > opens the edit workflow screen 
     - 'delete' icon > clicking on the icon a warning pop-up message is shown in the screen (same pattern as when deleting a form). The message contains: 
        - Question: 'Are you sure you want to delete this workflow?' 
-       - 2 Actions: - 'OK' - if selected, workflow is deleted - 'Cancel' - if selected, workflow stays in the list 
+       - 2 Actions: 
+          - 'OK' - if selected, workflow is deleted and the user goes back to the list of workflows 
+          - 'Cancel' - if selected, workflow is not deleted and the user remains viewing the workflow
     - 'Steps' title
     - list of steps - if this is an ordered workflow, then shows also the order number. If it is an un-ordered workflow, shows just the list as it was created
 - **clicking on the 'edit' icon in the list of workflows**
-    - brings user to the worflow edit screen >
-    - identical with the new workflow screen 
-    - the title of the page is 'Edit workflow'
-    - all the settings (name, type, steps) are already selected for that workflow 
+    - brings user to the worflow edit screen > identical with the new workflow screen, but the title of the page is 'Edit workflow'
+    - all the settings (name, type, steps) are already selected and defined for that workflow 
     - **When editing a workflow and nothing is changed:** 
-       - I hit on 'Back to workflows" > nothing is changed and I return back to the list of workflows
+       - I hit on 'Back to workflows' > nothing is changed and I return back to the list of workflows
        - I hit on 'Cancel' > nothing is changed and I return back to the list of workflows 
-       - 'Save' - if no changes were made, Save is not enabled 
+       - 'Save' - as no changes were made, 'Save' is not enabled. 
     - **When something is changed:**
-       - I hit Back > an error pop-up is shown asking “Do you want to save the changes you made to this workflow?” + 3 actions:
+       - I hit 'Back...' > an error pop-up is shown asking 'Do you want to save the changes you made to this workflow? + 2 actions:
           - ‘Don’t save’ - nothing is saved and I go to the list of workflows, 
-          - ‘Cancel’ - I stay on the workflow, 
-          - ‘Save’ - workflow is saved, Save button is disabled (and enabled once I make another change) and I remain on my workflow edit screen
-       - I hit Cancel > same applies as for Back
-       - I hit Save > Save button is enabled and all is saved. I remain in the edit screen. Save button is disabled. I can go back to the list of workflows via Back button and I see my new workflow on the top of the list. Or I stay in the edit workflow screen and continue making changes. If so, the Save button gets enabled again with the 1st changes that I make.   
+          - ‘Save’ - workflow is saved, I go back to the list of workflows and my edited workflow is on top of the list 
+       - I hit 'Cancel' > same applies as for 'Back...'
+       - I hit 'Save' > 'Save' button is enabled and all is saved. I remain in the edit screen. 'Save' button is disabled. I can go back to the list of workflows via 'Back...' button and I see my workflow on the top of the list. Or I stay in the edit workflow screen and continue making changes. If so, the 'Save' button gets enabled again with the 1st changes that I make.   
 - **clicking on the 'delete' icon in the list of workflows** 
     - a warning pop-up message is shown in the screen (same pattern as when deleting a form). The message contains: 
        - Question: 'Are you sure you want to delete this workflow?' 
-       - 2 Actions: - 'OK' - if selected, workflow is deleted - 'Cancel' - if selected, workflow stays in the list 
+       - 2 Actions: 
+          - 'OK' - if selected, workflow is deleted and the user remains in the list of workflows 
+          - 'Cancel' - if selected, workflow stays in the list 
 
 #### Adding a workflow to a survey 
-- to add a workflow to a survey, the user needs to click on 'Advanced settings' in the survey edit screen (same location as where monitoring is enabled and same design) 
-- checkbox (not selected by default) + 'Enable workflow features' + '?' with help text: "With enabling workflow features you... **BLA BLA BLA - TO BE ADDED**
-- once checkbox is selected a dropdown in shown - the 1st line in the dropdown says 'Select workflow' and holds the list of all existing workflows
+- to add a workflow to a survey, the user needs to be in the survey edit screen and click on 'Advanced settings' in the survey edit screen (same location as where monitoring is enabled and same design) 
+- checkbox (not selected by default) + 'Enable workflow features' + '?' with help text: "With enabling workflow features you... **needs to be written** 
+- once checkbox is selected a dropdown is shown - the 1st line in the dropdown says 'Select workflow' and holds the list of all existing workflows - here is where the use selects which workflow she wants to add to this survey 
 - under the dropdown 'Show workflow' link 
     - shown at the same time the dropdown in shown = once the user selects the checkbox
-    - by default de-active - is activated once a workflow is selected from the dropdown
+    - by default disabled - is activated once a workflow is selected from the dropdown
 - if user clicks on 'Show workflow' link > a in-page view of the workflow is shown
     - workflow name + type
     - steps - name + users added to the particular step
     - 'Responsible users' - clickable link with which the survey creator can decide who from the dashboard users is to apply the workflow step
-- the 'Show workflow' changes to 'Hide workflow' - clicking on hide, the workflow view if folded back in and 'Hide workflow' changes back to 'Show workflow'
+- the 'Show workflow' changes to 'Hide workflow' - clicking on hide, the workflow view is folded back in and 'Hide workflow' changes back to 'Show workflow'
 
 #### Adding users to a workflow 
-- once a workflow is added to a survey no users are assigned to actually implement the workflow steps, thus the survey editor needs to decide who is responsible for which step in the workflow 
+- once a workflow is added to a survey no users are assigned to actually implement the workflow steps, thus the survey editor needs to decide who is responsible for which step in the workflow
+- ! without adding users to the worflow steps, the workflow statuses cannot be applied on the datapoints, thus the workflow cannot be used !  
 - to add users to a workflow, the survey editor must go to Advanced settings and click on Show workflow
 - for each workflow step there is a link available 'Responsible users' 
+    - in the case of a un-ordered workflow the 'default' status cannot have a responsible user as the datapoint is automatically given this status once submitted 
 - after clicking on the link a pop-up opens
     - 'O users selected' - counts the number of users selected to be responsible for this step
     - 'Done' - confirms the selection and closes the pop-up
-    - search bar which serached the user list by user name, is not case sentitive 
-    - list of users with checkboxes - users are organized alphabetically, show max 10 users and then you need to scroll the see the following ones 
+    - search bar which lets you to search the user list by user name, is not case sentitive 
+    - list of users with checkboxes - users are organized alphabetically, show max 10 users and then you need to scroll in the pop-up to see the following users 
 - the users shown in the list of users are only those users who have the permission to 'view data' for that specific survey 
-- once users are added to a workflow, they are shown under the workflow name and is the list is too long '+number more' is used to sum up the following users for that step. The '+number more' is a clicable link which shows the users who are not visible already (so those who belong under the '+number') 
+- once users are added to a workflow, they are shown under the workflow name and if the list is too long '+number more' is used to sum up the following users for that step. The '+number more' is a clicable link which shows the users who are not visible already (so those who belong under the '+number') 
 
 #### Changing a workflow status for a data point 
-Each workflow consists of steps. You can imagine workflow steps as a desk. Once your form is submitted it goes to one desk. Once the work there is done the form moves to another desk. We identify two types of worflows - ordereded and unordered. The difference between the two is in the way how steps can happen, so how can to form move through the desks. For an ordered workflow the steps happen in a specific order and you cannot skip from one desk to a third one, for example. With the un-ordered workflow the consequesnce of the desk is not pre set. In order to see which submission (data point) is in which stage/step of the workflow you mark the datapoint with a status. The status is derived from the workflow step.
+Each workflow consists of steps. You can imagine workflow steps as a desk. Once your form is submitted it goes to one desk. Once the work there is done the form moves to another desk. We identify two types of worflows - ordereded and unordered. The difference between the two is in the way how steps can happen, so how can a form move through the desks. For an ordered workflow the steps happen in a specific order and you cannot skip from one desk to a third one, for example. With the un-ordered workflow the sequence of the desks is not pre-set. In order to see which submission (data point) is in which stage/step of the workflow you mark the datapoint with a status. The status is derived from the workflow step.
 
 ##### Changing an ordered workflow status 
 - the order of steps is defined when the user creates the workflow
 - ordered steps can have 3 statuses: 'Pending', 'Approved', 'Rejected'
     - a new data point by default gets into the 1st step with the status 'pending' 
-    - 'Pending' - means that the data point is in the workflow step, but the work is not finalized, thus the step in not marked as apporoved and the datapoint remains in this step. Pending means in a current workflow step.
-    - 'Approved' - once the point is given the status 'approved' for a workflow step, the work for this step in done and the point moved to the following step in the workflow and gets by default the status 'pending'. Approved mean moveing forward in the workflow.   
-    - 'Rejected' - once the point is marked in a workflow step as 'rejected' the workflow comes to an end and no more movement to the following steps is enabled. Rejected means the workflow came to a halt. 
-
-There are two places where the responsible user can change the workflow for the particular data point: when viewing the datapoints in the new Data tab or when directly checking one specific data point. 
-
+    - 'Pending' - means that the data point is in the workflow step, but the work is not finalized, thus the step in not marked as 'apporoved' and the datapoint remains in this step. 'Pending' means being in a current workflow step.
+    - 'Approved' - once the point is given the status 'approved' for a workflow step, the work for this step in done and the point moves to the following step in the workflow and gets by default the status 'pending'. 'Approved' means moving forward in the workflow.   
+    - 'Rejected' - once the point is marked in a workflow step as 'rejected' the workflow comes to an end and no more movement to the following steps is enabled. 'Rejected' means the workflow came to a halt. 
 
 ##### Changing an un-ordered workflow
+- the order for un-ordered workflows is not important. The datapoint can move from desk A to B, then to F and to A again. 
+- when creating the un-ordered workflow the user does not define the sequence and only the existing steps
+- this means that un-ordered workflows have only one status = same as the name of the step
+- the status indicates that the datapoing is currently in that step/stage of the workflow 
 
 ##### Where can the workflow be applied on a datapoint/workflow status can be changed? 
+- There are two places where the responsible user can change the workflow for the particular data point: 
+    - when viewing the datapoints in the new Data tab 
+    - when directly checking one specific data point
+- **in the list of datapoints**
+    - the new 'Data' tab shows the list of datapoints for a selected survey and in there is a column 'Workflow status'
+    - this column indicates the current workflow status for the datapoint = in which step/stage of the workflow the specific point is 
+    - for ordered workflows - next to the workflow status three possible indications:
+       - a tick - for datapoints where the step is 'approved'
+       - a dropdown arrow - for datapoints where the step is in 'pending'
+       - a circle - for datapoints where the step in in 'rejected' 
+    - the workflow status is a clickable link that opens a pop-up
+    - in this pop-up the user sees what is the current status, what the following status can be, and the history of all the statuses given to the datapoint so far (status name + time stamp when it was submitted + user who made the change) 
+    - **for an ordered workflow**
+       - title of pop-up window: 'Workflow status'
+       - 1st step of the workflow consists of: 
+          - '1.' 
+          - name of workflow step
+          - status dropdown: 'Pending'; 'Approved'; 'Rejected' - where 'pending' is set by default for each new data point and every time the uses selects 'approved' for a step, the new workflow step opens up and starts with the 'pending' status  
+          - comment text + 'Comment' in the box - for the user to type in 
+          - 'Submit' button with which the user confirms the status change 
+       - following steps hold the same sturcture 
+       - once the status is 'Approved' - a tick is shown and a line indicating the next step is shown, the next step gets 'pending' 
+       - once the status is 'Rejected' - no line to the next step as the workflow has ended + the new step is not opened nor given the status 'pending' 
+    - **for an un-ordered workflow** 
+       - title of pop-up window: 'Workflow status' 
+       - Dropdown with 'Select new status' - gives the list of all the steps in the workflow which are used as workflow statuses on the datapoint to indicate in which step/stage of the workflow the point is/has currently fulfilled 
+       - text box with 'Comment' 
+       - 'Submit' button - user confirms the status and it is added to the workflow once clicked on
+       - followed by the history - with the latest on the top - status name + time stamp + user + comment 
+- **in the datapoint view** 
+- the same pattern applies as above 
 
 ##### Responsible users and applying workflow steps
 - Example: workflow of 5 steps: 1 (default), 2, 3, 4, 5 - unordered 
     - situation A: Jana is responsible for step 2 > Jana can only select step 2 in the dropdown when changing the workflow status
-    - situation B: Jana is responsible for status 1,3,4 > Jana can only select step 1,3,4 in the dropdown
+    - situation B: Jana is responsible for status 1, 3, 4 > Jana can only select steps 1, 3, 4 in the dropdown
 - Example: workflow of 5 steps: 1 (default), 2, 3, 4, 5 - ordered
    - situation: Jana is responsible for step 2. Datapoint was just marked as ‘approved’ in step 1, so now it is in step 2 as pending. Jana has the edit rights. Jana can change pending into approved (or rejected) > datapoint moved to step 3 - pending. How can Jana change it back to step 2 pending, because she made a mistake? Cannot. Not supported in this implementation. If Jana selected 'rejected', she can then change it to 'pending' or 'apporved' again, as she is still in the step that she has rights for.
 - all changes made to the workflow status for a datapoint are logged in and shown (with timestamp and the user who has made the change) 
@@ -203,8 +237,7 @@ There are two places where the responsible user can change the workflow for the 
 
 ### Non goals
 What this feature will not contain: 
-- reports containing worflow? 
-- selecting first the type of workflow and then the respective workflow when adding a workflow to a survey
+- When adding a workflow to a survey - selecting first the type of workflow and then the respective workflow 
     - this is something that will come in hand once the users have a longer list of workflows
     - for the time being the user will get directly the full list of workflows 
 - backwards movement when changing a datapoint workflow status - in the cases that I make a mistake and what to move the status from a step I have no responsibity assigned back one step
@@ -220,6 +253,7 @@ Any technical issues or questions that are already known
 Any known issues that need to be decided:
 - Do we need to add a short text explaining what workflows are into the Workflows tab in the dashboard? 
 - If we have a workflow that is added to multiple surveys and the user edits this workflow - this means that all the changes need to apply backwards for the existing suvreys and their points. Should be add some sorf of warning about this action before saving the edits or is this implied? 
+- We need to look into displaying the workflow status in a raw data report, if this is needed and then how and when will we implement? 
 
 ### Details
 Details, details, details.
