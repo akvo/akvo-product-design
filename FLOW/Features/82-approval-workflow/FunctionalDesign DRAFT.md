@@ -1,19 +1,37 @@
-Workflow DRAFT
+Workflow 
 -------------
 
 ### Overview
 A short overview of what we try to accomplish
 
-- The problem we are solving with this feature is to enable the user to track different phases of a workflow when viewing the data collected with Akvo FLOW.
-- Workflow consistest of steps - they translate to statuses on datapoint, which allows you to see which data point is in which step of your workflow. 
-- Two types of workflows: ordered and un-ordered.
-- User role: to create, edit, delete a workflow - so to have access to the Library tab and Workflows subtab
-and to actually apply the workflow and its steps 
+Many daily tasks are created around the data collected with Akvo FLOW and these tasks are a part of a larger process where the submitted forms play a crucial role. Currently you cannot see the relationship between the submitted data and the different tasks and processes an organization has in place. Akvo FLOW is a data collection tool and we do not aim to change it to a tool that manages processes in organizations, however, enabling our partners to see in which stage of their process the data currently is will vastly ease the way the data is used. 
+
+This feature aims to enable users add a basic workflow to the Akvo FLOW dashboard and to track in which of the different stages of the process the submitted data is currently being used in. This means that our users can create a workflow, add it to their data and track the steps of the workflow over time. 
+
+During our research we have looked into mutliple types of workflows and different situations where processes relate to data. Workflows can be hybrid or linear, the order of the different steps (or workflow stages) can have a defined sequence or not, one user can be responsible for one or multiple steps in the workflow, etc. 
+
+In order to create a feature that can support the widest array of use cases, we focused on three different scenarios. Their simplified version is: 
+
+A) Biogas installation: The biogas installation is first registered using Akvo FLOW. After the form is checked by the programme officer it goes to the technical department as it is ready for technical check, who assesses the submitted data based on the technical criteria. From here the result can either be that the installation has passed the check or did not pass check. The result of the technical check determines whether the biogas installation is being dealt with by another department in the organization, is ready for the external audit or more data needs to be collected. 
+   
+B) Patient in a hospital: The patient is first admitted at the hospital and his general information is written down. The doctor performs a 1st check and captures this information as well. Then the scan is done, the results come in from the scan and all this information is added to the patient's file. The patient can either be sent home with needing a final check in a week or he needs another scan and further examination. After for example a surgery, he continues being in the hospital and goes through 3 different stages in the workflow (another scan, same test again, further tests, etc.). Many patients die during this process or get sent home for further recovery.  
+
+C) Small farmer applying for micro-loan: The general information about the farmer is first saved in the database. The following step is to inspect the farmers yield and investigate more on the crops he produces. All this data is stored. Then his farm is checked by an external auditor from the bank to see whether he passes the initial bank critetia to be considered for the micro-load. Now a person in the bank looks at all farmers who have passed the first audit and decides whether they pass their second requirements and gives them 3 different stamps on their application: “Passed - ready for trial month”, “Needs follow up check” or “Not accepted”. This stamp then determines what the following procedure is. 
+
+All these cases have a different process around them, but they share common characteristics: 
+- the process consistes of different tasks/steps/stages/desks
+- the subject's path in the workflow is based on moving from one stage to another (linear) but it came move in a given order or based on the current situation (he can enter in one stage multiple times over the course of time)
+- to see in which step of the workflow process the subject currently is it gets a certain mark/stamp/status
+- in a different stage of the workflow a new user plays a role and is responsible for completing the task
+
+Based on the initial research we decided to create the feature to enable two types of worflows: ordered and un-ordered. The user can create an unlimited amount of steps (stages of the workflow/desks/tasks) his worflow consists of and assign responsible users for the steps. A workflow can be reused with multiple surveys. To see in which step of the workflow the submitted form is currently in, we will translate the names of the steps into statuses (stamps/marks) that are given to the submitted data. 
 
 ### Marketing description 
 A marketing description of this feature.
 
 ### Initial features
+
+This feature will bring multiple changes to the Akvo FLOW dashboard, from creating a new main tab called 'Library' holding the cascades and workflows, changing the way submitted data is being viewed, to enlarging survey settings, and creating a new permission. 
 
 #### Creating a workflow 
 - **new tab "Library"** which will hold: Cascade resources (move them away from Data tab here) and 'Workflows' 
@@ -190,7 +208,19 @@ Each workflow consists of steps. You can imagine workflow steps as a desk. Once 
    - situation: Jana is responsible for step 2. Datapoint was just marked as ‘approved’ in step 1, so now it is in step 2 as pending. Jana has the edit rights. Jana can change pending into approved (or rejected) > datapoint moved to step 3 - pending. How can Jana change it back to step 2 pending, because she made a mistake? Cannot. Not supported in this implementation. If Jana selected 'rejected', she can then change it to 'pending' or 'apporved' again, as she is still in the step that she has rights for.
 - all changes made to the workflow status for a datapoint are logged in and shown (with timestamp and the user who has made the change) 
 
-##### Changed Data tab + search + filters 
+#### New permission - Manage workflows
+- a new user permission will be added to he current list of permission called 'Manage workflows'
+- if a user has this permission assigned, then he will see the main tab 'Library', its subtab 'Workflows' and will have full view, create, edit and delete rights in this subtab
+- if a user does not have this permission assigned, then he will not see the 'Workflows' subtab in his dashboard
+- in order to be able to add a workflow to a survey, the user needs to have 'Edit folder' permissions linked to the particular survey (or to all surveys) 
+    - with 'Edit folder' permission the user can make changes on the survey level and can view the form, but cannot edit the form 
+- in order to be able to add the 'Responsible users' to a survey step, the user needs to have 'Edit folder' permission and 'Administrator - Create, Modify and Delete users' as well
+    - the user who has only the 'Edit folder' permission can add a workflow to a survey, but he cannot add users to the workflow steps. He does not see the 'Responsible users' links at each step
+    - the users who can be assigned as 'Responsible users' for that workflow step, are selected in the dropdown per each step separately, and these users have at least the permissions to 'view data' for the particular survey
+- viewing the workflow status on a data point is part of the 'view data' permission 
+- however, only users who were assigned as 'responsible users' in the survey for a particular workflow step, will have the right to change the status of the data point for this step 
+
+#### Changed Data tab + search + filters 
 - new subtab that is the result of the combination of the Inspect data tab and Monitoring tab. Viewing data will be based on data points for both types of surveys. Name of the tab 'Data'
 - in 'Choose a survey to display' - change, only enabling to select up to survey level, no more form selecion as we are building the data display on data points, which in themselves hold all the forms. Try to have all dropdowns in one line, if the size of screens allows.
 - **title of the page "Data"**
@@ -241,6 +271,7 @@ What this feature will not contain:
     - this is something that will come in hand once the users have a longer list of workflows
     - for the time being the user will get directly the full list of workflows 
 - backwards movement when changing a datapoint workflow status - in the cases that I make a mistake and what to move the status from a step I have no responsibity assigned back one step
+- at this point it will not be possible to see in the User tab as part of the user information if he/she is a 'responsible user' for a workflow step for a survey 
 
 ### Scenarios
 - User stories - https://drive.google.com/open?id=1BKJCBYmlgrgVcJ4W7FzLLQQCxPJVm-A0NofiAW4pZVY
@@ -253,7 +284,7 @@ Any technical issues or questions that are already known
 Any known issues that need to be decided:
 - Do we need to add a short text explaining what workflows are into the Workflows tab in the dashboard? 
 - If we have a workflow that is added to multiple surveys and the user edits this workflow - this means that all the changes need to apply backwards for the existing suvreys and their points. Should be add some sorf of warning about this action before saving the edits or is this implied? 
-- We need to look into displaying the workflow status in a raw data report, if this is needed and then how and when will we implement? 
+- We need to look into displaying the workflow status in a raw data report, if this is needed then how and when will we implement? 
 
 ### Details
 Details, details, details.
