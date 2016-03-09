@@ -4,9 +4,9 @@ Workflow
 ### Overview
 A short overview of what we try to accomplish
 
-Many daily tasks are created around the data collected with Akvo FLOW and these tasks are a part of a larger process where the submitted forms play a crucial role. Currently you cannot see the relationship between the submitted data and the different tasks and processes an organization has in place. Akvo FLOW is a data collection tool and we do not aim to change it to a tool that manages processes in organizations, however, enabling our partners to see in which stage of their process the data currently is will vastly ease the way the data is used. 
+Many daily tasks are created around the data collected with Akvo FLOW and these tasks are usually part of a larger process where the submitted forms play a crucial role. Currently you cannot see the relationship between the submitted data and the different tasks and processes an organization has in place. Akvo FLOW is a data collection tool and we do not aim to change it to a tool that manages processes in organizations, however, enabling our partners to see in which stage of their process the data currently is will vastly ease the way the data is used. 
 
-This feature aims to enable users add a basic workflow to the Akvo FLOW dashboard and to track in which of the different stages of the process the submitted data is currently being used in. This means that our users can create a workflow, add it to their data and track the steps of the workflow over time. 
+With this feature users will be able to add a basic workflow to the Akvo FLOW dashboard and track in which stage of the process the submitted data is currently being used in. 
 
 During our research we have looked into mutliple types of workflows and different situations where processes relate to data. Workflows can be hybrid or linear, the order of the different steps (or workflow stages) can have a defined sequence or not, one user can be responsible for one or multiple steps in the workflow, etc. 
 
@@ -24,7 +24,7 @@ All these cases have a different process around them, but they share common char
 - to see in which step of the workflow process the subject currently is it gets a certain mark/stamp/status
 - in a different stage of the workflow a new user plays a role and is responsible for completing the task
 
-Based on the initial research we decided to create the feature to enable two types of worflows: ordered and un-ordered. The user can create an unlimited amount of steps (stages of the workflow/desks/tasks) his worflow consists of and assign responsible users for the steps. A workflow can be reused with multiple surveys. To see in which step of the workflow the submitted form is currently in, we will translate the names of the steps into statuses (stamps/marks) that are given to the submitted data. 
+Based on the initial research we decided to enable two types of worflows: ordered and un-ordered. The user can create an unlimited amount of steps (stages of the workflow/desks/tasks) his worflow consists of and assign responsible users for the steps. A workflow can be reused with multiple surveys. To see in which step of the workflow the submitted form is currently in, we will translate the names of the steps into statuses (stamps/marks) that are given to the submitted data. 
 
 ### Marketing description 
 A marketing description of this feature.
