@@ -5,6 +5,7 @@ Custom maps - 1st implementation
 
 ### Documents
 Product design issue: https://github.com/akvo/akvo-product-design/issues/133
+
 FLOW issue: https://github.com/akvo/akvo-flow/issues/1407
 
 ### Overview
@@ -18,22 +19,22 @@ A marketing description of this feature.
 ### Initial features
 
 **1. Create 2 subtabs under main Maps tab:**
-    - **Data map** - subtab - will open by default once user selects the main Maps tab. This holds the current Akvo FLOW map, where user selects her survey and sees (and inspects) the submitted data points. No funtionality change to this map.
-    - **Custom maps** - subtab - is the place where the users see her list of created custom maps, creates new maps, edits them, deletes them
+- **Data map** - subtab - will open by default once user selects the main Maps tab. This holds the current Akvo FLOW map, where user selects her survey and sees (and inspects) the submitted data points. No funtionality change to this map.
+- **Custom maps** - subtab - is the place where the users see her list of created custom maps, creates new maps, edits them, deletes them
 
 **2. List of created custom maps** 
 - holds all previously saved maps, maps are ordered by the date, when map was saved (also edited and saved) 
 - with the latest map on the top 
-- the design of the list of maps copies the design of the list of surveys. 
+- the design of the list of maps is based on the design of the list of surveys. 
 - **If there is no maps created**
     - Page header: Custom maps
-    - 'New map' button - located on the top right side of the screen
+    - 'New map' button - which brings the user to a new empty custom map screen, button is located in the top right of the screen
     - 'No maps yet' text in the middle of the screen
 - **If there are already maps created** 
     - page header: Custom maps
     - 'New map' button - which brings the user to a new empty custom map screen, button is located in the top right of the screen
     - List header: Name, Survey, Modified, Created by
-       - Title: holdes the map title ( = clickable link that brings the user to the map view), map description (not compulsory field) is located below the title
+       - Name: holdes the map name ( = clickable link that brings the user to the map view), and map description (not compulsory field) is located below the title
        - Survey: Name of the survey the user based this map on
        - Modified: date of when the map was either created or edited
        - Created by: name of the dashboard user 
@@ -50,7 +51,7 @@ A marketing description of this feature.
 - Page titple - 'New map' 
 - 'Back to maps' link (same design as in the Assignments sub-tab) - brings the user back to the list of maps. 
 - 'Save' button - becomes active only once the user makes a change in the map name. Saves the new map and shows it on the top of the list of maps. 
-- 'Cancel button' - this button is originally not in the mockups, however - if we look at the mockups of Worflow and Webforms (which hold the newset design changes) there is also a 'Cancel' button besides the 'save and 'back' buttons. The location of all 3 action buttons needs review, so they are placed all in the same location - in order to start introducing more consistency in the dashabord with these new changes. 
+- 'Cancel button' - this button is originally not in the mockups, however - if we look at the mockups of Worflow and Webforms (which hold the newset design changes) there is also a 'Cancel' button besides the 'save' and 'back' buttons. The location of all 3 action buttons needs review, so they are placed all in the same location if possible and suitable - in order to start introducing more consistency in the dashabord with these new changes. 
 - Map name text field - holds in the name of the new map. When empty, in grey - 'Map name'. If user clicks into the text field, this sentence disappears and the user can start typing directly
 - Map description text field - same behaviour as map title, When empty, in grey - 'Map description (optional)'
 - 'Map settings icon' - opens and closes the 'Map settings' menu
@@ -67,7 +68,6 @@ A marketing description of this feature.
        - and only option questions are listed - can colour code the points depending on the selected answers. 
        - We still need to solve how to deal with multiple select options?
     - once the user selects an **option question**:
-       - data points are generated on the map 
        - the options are listed down 
        - each option get by default a color - indicated next to the options and data points are colored respectively. The color picker is located in the same spot. (This differs from Kiarii's mockups and follows the colour picker Charles has already implemented) 
        - each option also shows in brackets the number of data points, where this particular option was selected 
@@ -95,11 +95,11 @@ A marketing description of this feature.
     - I hit 'Cancel' > same applies as for 'Back...'
     - I hit 'Save' > 'Save' button is now enabled as I have added all the name field. Map is saved. I remain in the edit screen where I can continue working on my map. 'Save' button is disabled. I can go back to the list of maps via 'Back...' button and I see my new map on the top of the list. Or I stay in the edit map screen and continue making changes. If so, the 'Save' button gets enabled again with the 1st changes that I make. 
 - **Situation 3: I type in the name and adjust many settings to the map** 
-    - I hit 'Back...' > an error pop-up is shown asking 'Do you want to save the changes you made to this map?' + 2 actions:
+     - I hit 'Back...' > an error pop-up is shown asking 'Do you want to save the changes you made to this map?' + 2 actions:
           - ‘Don’t save’ - nothing is saved and I go to the list of maps, 
           - ‘Save’ - map is saved, I go back to the list of maps and my map in on the top of the list
-       - I hit 'Cancel' > same applies as for Back
-       - I hit 'Save' > 'Save' button is enabled and all is saved. I remain in the edit screen. 'Save' button is disabled. I can go back to the list of maps via 'Back...' button and I see my new map on the top of the list. Or I stay in the edit map screen and continue making changes. If so, the 'Save' button gets enabled again with the 1st changes that I make.   
+     - I hit 'Cancel' > same applies as for Back
+     - I hit 'Save' > 'Save' button is enabled and all is saved. I remain in the edit screen. 'Save' button is disabled. I can go back to the list of maps via 'Back...' button and I see my new map on the top of the list. Or I stay in the edit map screen and continue making changes. If so, the 'Save' button gets enabled again with the 1st changes that I make.   
 
 **6. Viewing a saved custom map**
 - user clicks on the map name in the list of maps and is re-directed to the View map screen 
@@ -110,6 +110,7 @@ A marketing description of this feature.
        - 2 Actions: 
           - 'OK' - if selected, map is deleted and the user is brought back to the list of maps, where this map is no longer in the list
           - 'Cancel' - if selected, map stays in the list
+- if a user clicks on one of the points on the map, the side bar is opened with the submission information (as currently works in the map tab)
 
 **6. Needed permissions**
 - for this 1st implementation we propose to create only 1 new permission: 'Manage custom maps' which will give the user full access to the tab. If the permission is not given to the user, she does not see this tab. Same behaviour as with cascade resources or assignments.
