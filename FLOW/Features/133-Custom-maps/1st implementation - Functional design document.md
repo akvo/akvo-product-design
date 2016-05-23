@@ -11,10 +11,7 @@ FLOW issue: https://github.com/akvo/akvo-flow/issues/1407
 ### Overview
 The custom maps will enable data-driven styling of markers and custom icons on the Akvo FLOW maps. This will expand the basic map functionality to the current FLOW maps and will give the users a chance to understand their collected data better in geographic context. We will implement this feature in separate steps, starting with the most basic functionality and supporting the simplest data structure, followed by tackling more complex items (as monitoring and repeated question groups for example). The users will be able to save their created maps and publish them on their website or share with other partners.
 
-The initial implementation will enable to base a map only on option questions per selected registration form and on a selected geographic shape question. No custom icons will be supported and the user can only save the visualisations (no publishing). We will also add a set of permissions covering this new feature.
-
-### Marketing description
-A marketing description of this feature.
+The initial implementation will enable to base a map only on option questions per selected registration form. 
 
 ### Initial features
 
@@ -26,7 +23,7 @@ A marketing description of this feature.
 - holds all previously saved maps, maps are ordered by the date, when map was saved (also edited and saved) 
 - with the latest map on the top 
 - the design of the list of maps is based on the design of the list of surveys. 
-- **If there is no maps created**
+- **If there are no maps created**
     - Page header: Custom maps
     - 'New map' button - which brings the user to a new empty custom map screen, button is located in the top right of the screen
     - 'No maps yet' text in the middle of the screen
@@ -37,7 +34,6 @@ A marketing description of this feature.
        - Name: holdes the map name ( = clickable link that brings the user to the map view), and map description (not compulsory field) is located below the title
        - Survey: Name of the survey the user based this map on
        - Modified: date of when the map was either created or edited
-       - Created by: name of the dashboard user 
        - two action icons 
             - edit - brings user to the map edit screen (identical with the new map screen with all the settings already selected)
             - delete - a warning pop-up message is shown in the screen (same pattern as when deleting a form or a workflow). The message contains: 
@@ -50,8 +46,8 @@ A marketing description of this feature.
 - after user clicks on the 'New map' button, he enters the map editing screen. This is ideantical for also editing the map (after clicking on the 'edit' icon) only the page titles differ
 - Page titple - 'New map' 
 - 'Back to maps' link (same design as in the Assignments sub-tab) - brings the user back to the list of maps. 
-- 'Save' button - becomes active only once the user makes a change in the map name. Saves the new map and shows it on the top of the list of maps. 
-- 'Cancel button' - this button is originally not in the mockups, however - if we look at the mockups of Worflow and Webforms (which hold the newset design changes) there is also a 'Cancel' button besides the 'save' and 'back' buttons. The location of all 3 action buttons needs review, so they are placed all in the same location if possible and suitable - in order to start introducing more consistency in the dashabord with these new changes. 
+- 'Save' button - becomes active only once the user makes a change in the map name. Saves the new map and shows it on the top of the list of maps.  
+- 'Cancel button' - this button is originally not in the mockups. Needs design review. If we look at the mockups of Worflow and Webforms (which hold the newset design changes) there is also a 'Cancel' button besides the 'save' and 'back' buttons. The location of all 3 action buttons needs review, so they are placed all in the same location if possible and suitable - in order to start introducing more consistency in the dashabord with these new changes. 
 - Map name text field - holds in the name of the new map. When empty, in grey - 'Map name'. If user clicks into the text field, this sentence disappears and the user can start typing directly
 - Map description text field - same behaviour as map title, When empty, in grey - 'Map description (optional)'
 - 'Map settings icon' - opens and closes the 'Map settings' menu
@@ -61,26 +57,25 @@ A marketing description of this feature.
 **4. 'Map settings' menu**
 - title 'Map settings'
 - 'Data' setting: 
-    - dropdown - choose folder or survey > once first item selected further dropdowns are generated (same behaviour as in Data tab for example). The last level  to select is questions. The folders and surveys visible are in respect to the users permissions and given resource access. 
+    - dropdown - choose folder or survey > once first item selected further dropdowns are generated (same behaviour as in Data tab for example). The last level to select is questions. The folders and surveys visible are in respect to the users permissions and given resource access. 
     - Limitations: 
-       - only support registration forms in the 1st implementation. If a survey with monitoring is selected, both types of forms are given, but only one the registration form is selected, the dropdown with the questions opens. If a monitoring form is selected, no dropdown with questions is shown. Datapoints are shown on the map for the monitored form, but you cannot colour code as you cannot specify the question.
+       - only support registration forms in the 1st implementation. If a survey with monitoring is selected, both types of forms are given, but only once the registration form is selected, the dropdown with the questions opens. If a monitoring form is selected, no dropdown with questions is shown. Datapoints are shown on the map for the monitored form, but you cannot colour code as you cannot specify the question.
        - in the dropdown list holding the questions, only questions that are not in repeated groups are shown 
        - and only option questions are listed - can colour code the points depending on the selected answers. 
-       - We still need to solve how to deal with multiple select options?
+       - option questions that have multiple select enabled are not supported in this iteration - not shown in the dropdown
+       - if a registration form has no question that fits the criteria for the mvp (only option questions, not multi select, not in a repeated question group) then no further question dropdown is given
     - once the user selects an **option question**:
        - the options are listed down 
-       - each option get by default a color - indicated next to the options and data points are colored respectively. The color picker is located in the same spot. (This differs from Kiarii's mockups and follows the colour picker Charles has already implemented) 
+       - each option gets by default a color - indicated next to the options, and data points are colored respectively. The color picker is located in the same spot. (This differs from Kiarii's mockups and follows the colour picker Charles has already implemented) 
        - each option also shows in brackets the number of data points, where this particular option was selected 
        - if the option question has 'allow other' > 'other' is listed as the last option with a given color and data point count 
        - if the option question has codes to the values as well, codes follow the same pattern as in the Inspect data tab
-- 'Time range': filters the data points on submission date. 
-    - if no form and question are selected, the dates are blank
-    - if a form and question are selected, the dates show by default the submission time range (date of the first submitted form on one end and last submitted form on the other) 
 - 'Legend': allows user to select whether she wants a legend to be shown on her map and what fields it contains. She has 4 items to select from in the form of checkboxes.
     - Show legend - selected by default with all new maps 
-    - Title + a text box (holding 'New legend' as default name) 
-    - Show question - by default selected with all new maps
+    - Title + a text box (holding 'New legend' as default name and the text box is only shown once the checkbox is selected) 
+    - Show question 
     - Show the total number of data points 
+- the mockups also hold a Time filter which will not be part of the initial mvp implementation
 - 'Theme' - this was originally proposed by Kiarii in the mockups as the place where users can select the colours. Charles has implemented this in a different way which allows the user change the colour in the options list
 
 **5. clicking on 'Save', 'Cancel', 'Back to maps' when creating a new map** 
@@ -115,15 +110,15 @@ A marketing description of this feature.
 **6. Needed permissions**
 - for this 1st implementation we propose to create only 1 new permission: 'Manage custom maps' which will give the user full access to the tab. If the permission is not given to the user, she does not see this tab. Same behaviour as with cascade resources or assignments.
    
-### Non goals
-What this feature will not contain:
+### Non goals - MVP definition:
 - map will only be based on registration forms > with surveys where monitoring is enabled, only after clicking on the registration forms the question dropdown will be shown
 - option questions located in a repeated question group will not be supported either (following implementation) 
-- to base map on number question, geoshape, photo (following implementation) 
-- publishing the saved map via url and/or iframe code
-- to define the size of markers 
-- to change the shape of markers 
-- to use the map as the public facing map of the dashboard 
+- only option questions that are signle select will be supported (multi select will not be supported) 
+- no time filter will be enabled 
+- will not be able to base map on number question, geoshape, photo (following implementation) 
+- will not be able to publish the saved map via url and/or iframe code
+- not possible to define the size of markers or to change the shape of markers 
+- not possible to use the map as the public facing map of the dashboard 
 
 ### Scenarios
 A number of scenarios for how this feature will benefit users - this feature is based on the maps Charles and others are creating for partners from the data collected with FLOW. These maps are created using CartoDB map features. 
