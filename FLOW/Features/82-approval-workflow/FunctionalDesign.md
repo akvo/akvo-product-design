@@ -155,7 +155,7 @@ Each workflow consists of steps. You can imagine workflow steps as a desk. Once 
 
 ##### Changing an ordered workflow status 
 - the order of steps is defined when the user creates the workflow
-- ordered steps can have 3 statuses: 'Pending', 'Approved', 'Rejected'
+- ordered steps can have 3 statuses: 'Pending', 'Approved', 'Rejected' (or 'Disapproved')
     - a new data point by default gets into the 1st step with the status 'pending' 
     - 'Pending' - means that the data point is in the workflow step, but the work is not finalized, thus the step in not marked as 'apporoved' and the datapoint remains in this step. 'Pending' means being in a current workflow step.
     - 'Approved' - once the point is given the status 'approved' for a workflow step, the work for this step in done and the point moves to the following step in the workflow and gets by default the status 'pending'. 'Approved' means moving forward in the workflow.   
@@ -166,6 +166,26 @@ Each workflow consists of steps. You can imagine workflow steps as a desk. Once 
 - when creating the un-ordered workflow the user does not define the sequence and only the existing steps
 - this means that un-ordered workflows have only one status = same as the name of the step
 - the status indicates that the datapoing is currently in that step/stage of the workflow 
+
+##### How does the data point status change with the approval steps? 
+- surveys that have a workflow added to them will also have an extra column in the data preview (as well as in reports) which will show the current status of the data point
+- the status is based on the approval given (or not given) to a data point 
+- **Unordered workflow** 
+    - for an unordered workflow the status change is straigforward. 
+    - if there are 6 possible levels in the approval workflow, and the user selects 'level 3' when approving the data point in the Data tab > 'level - 3' is also the status of the data point 
+- **Ordered approval workflow**
+    - Example case: data approval holding 5 steps and each step has a different user responsible 
+    - data point is submitted and by default gets the status: 'step 1 - pending'
+    - user 1 deliberately selects pending > point status: 'step 1 - pending' + history log - timestamp - user 1 - step 1 - pending - comment
+    - user 1 approves step 1 > point status: 'step 2 - pending' + history log with timestamap - user 1 - step 1 - approved - comment 
+    - user 1 disapproves step 1 > point status: 'step 1 - disapproved' + history log with timestamp - user 1 - step 1 - disapproved - comment
+    - user 3 opens point that was approved by user 2 in step 2 and now has the status 'step 3 - pending'
+    - user 3 approves step 3 > point status: 'step 4 - pending' + history log with timestamp - user 3 - step 3 - approved - comment 
+    - user 3 disapproves step 3 > point status: 'step 2 - pending' + history log with timestamp - user 3 - step 3 - disapproved - comment
+    - user 5 opens point that was approved by user 4 in step 4 and how has the status 'step - 5 pending'
+    - user 5 approves step 5 (last step) > point status: 'step 5 - approved' + history log with timestamp - user 5 - step 5 - approved - comment 
+    - user 5 disapproves step 5 > point status: 'step 4 - pending' + history log with timestamp - user 5 - step 5 - disapproved - comment
+- This needs to be discussed within the team 
 
 ##### Where can the workflow be applied on a datapoint/workflow status can be changed? 
 - There are two places where the responsible user can change the workflow for the particular data point: 
